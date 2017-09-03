@@ -1,0 +1,37 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/macro/clojure-works/first-example/src/" . "first_example/")
+ ("/home/macro/clojure-works/first-example/" . "src/")
+ ("/home/macro/clojure-works/" . "first-example/")
+ ("/home/macro/" . "clojure-works/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/macro/clojure-works/first-example/src/first_example/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "core.clj"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/macro/clojure-works/first-example/src/first_example/" (22956 21332 656408 422000) "core.clj" "../" "./")
+
+ ("/home/macro/clojure-works/first-example/src/" (22956 23291 140293 985000) "first_example/" "../" "./")
+
+ ("/home/macro/clojure-works/first-example/" (22956 23261 273281 993000) "CHANGELOG.md" "../" "LICENSE" "./" "src/" "resources/" "README.md" ".gitignore" ".lein-repl-history" "target/" "doc/" ".hgignore" "test/" "project.clj")
+
+ ("/home/macro/clojure-works/" (22956 21332 648377 617000) "../" "./" ".git/" "first-example/" "readme.md")
+
+ ("/home/macro/" (22956 23320 664088 323000) ".chezscheme_history" ".vim/" ".cache/" "Downloads/" "Videos/" ".bash_it/" ".emacs.d/" ".xsession-errors" "Pictures/" "../" ".local/" ".bashrc.bak" ".viminfo" ".config/" "Public/" ".bash_logout" "clojure-works/" "./" "examples.desktop" "Documents/" ".vim_mru_files" "jdk1.8.0_144/" ".profile" "ChezScheme/" "Templates/" ".bash_history" ".bashrc" ".dmrc" "Music/" "Desktop/" ".gitconfig" ".lein/" ".vimrc" ".gnupg/" ".mozilla/" ".Xauthority" ".notebook/" ".sudo_as_admin_successful" ".ICEauthority" "lein" "vimwiki/" ".dbus/")
+
+ ("/home/macro/.emacs.d/" (22956 23547 223752 13000) "../" "customizations/" "./" "themes/" "README.md" "elpa/" "jiacai/" "init.el")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
