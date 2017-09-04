@@ -96,7 +96,7 @@ and ubuntu, all valid for newer.
 
 Okey, below is the new interface,
 
-![][]
+![image][1]
 # this is a Clojure-friendly emacs config
 
 If you're new to emacs, check out
@@ -190,4 +190,4 @@ Emacs has decent support for CSS, HTML, JS, and many other file types out of the
 
 In general, if you want to add support for a language then you should be able to find good instructions for it through Google. Most of the time, you'll just need to install the "x-lang-mode" package for it.
 
-[1]:
+[1]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/new.jpg
