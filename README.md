@@ -5,6 +5,8 @@ and ubuntu, all valid for newer.
 
 ### 1.为了引入clj-refactor(一个好用的补全包的工具)
 
+click [clj-refactor][2]
+
 1. M-X package-install clj-refactor(感觉每次得装上2遍)
 然后在setup-clojure.el添加配置代码
 
@@ -21,6 +23,9 @@ and ubuntu, all valid for newer.
 
 ### 2.为了使用类似nerdtree的neotree(ui.el)
 
+click [neotree][3]
+
+click [all-the-icons][4]
 1. 在init.el添加了 
 ```
      neotree
@@ -38,6 +43,7 @@ and ubuntu, all valid for newer.
 ```
 3. 额外增加了git配置
 
+click [magit][5]
 ```
 
 ;; set up some useful mode
@@ -52,16 +58,14 @@ and ubuntu, all valid for newer.
 ### 3.增加了一些其他插件
 
 放在了init.el
-```
-    auto-complete
-    dracula-theme
-    hlinum
-    which-key
-    restclient
-    browse-kill-ring
+[auto-complete][10]
+[dracula-theme][11]
+[hlinum][7]
+[which-key][6]
+[restclient][8]
+[browse-kill-ring][9]
 
 
-```
 对应的auto-complete配置如下
 
 ```
@@ -191,3 +195,13 @@ Emacs has decent support for CSS, HTML, JS, and many other file types out of the
 In general, if you want to add support for a language then you should be able to find good instructions for it through Google. Most of the time, you'll just need to install the "x-lang-mode" package for it.
 
 [1]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/new.jpg
+[2]:https://github.com/clojure-emacs/clj-refactor.el 
+[3]:https://github.com/jaypei/emacs-neotree 
+[4]:https://github.com/domtronn/all-the-icons.el 
+[5]:https://github.com/magit/magit 
+[6]:https://github.com/justbur/emacs-which-key 
+[7]:https://github.com/tom-tan/hlinum-mode 
+[8]:https://github.com/pashky/restclient.el 
+[9]:https://github.com/T-J-Teru/browse-kill-ring 
+[10]:https://github.com/auto-complete/auto-complete 
+[11]:https://github.com/dracula/dracula-theme 
