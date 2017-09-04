@@ -82,7 +82,19 @@
     tagedit
 
     ;; git integration
-    magit))
+    magit
+    
+    auto-complete
+    dracula-theme
+    hlinum
+    which-key
+    restclient
+    browse-kill-ring
+
+     neotree
+     all-the-icons   ;;;you need to download fonts
+    
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -122,6 +134,7 @@
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
+(load "font-lock+.el")
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
 (load "shell-integration.el")
@@ -161,3 +174,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+
+; (load
+;  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+; 'noerror)
+;
+

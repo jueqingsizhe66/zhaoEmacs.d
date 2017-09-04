@@ -26,7 +26,12 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'tomorrow-night-bright t)
+;(load-theme 'tomorrow-night-bright t)
+(load-theme 'dracula t)
+;; workaround blue problem https://github.com/bbatsov/solarized-emacs/issues/18
+(custom-set-faces
+(if (not window-system)
+  '(default ((t (:background "nil"))))))
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
@@ -67,3 +72,19 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+
+(require 'neotree)
+(global-set-key [f6] 'neotree-toggle)
+(require 'all-the-icons)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+
+
+;; set up some useful mode
+(which-key-mode)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
+

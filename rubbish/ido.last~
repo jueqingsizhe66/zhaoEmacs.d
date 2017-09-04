@@ -1,0 +1,40 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("e:/clojure-home/first-example/" . "src/")
+ ("e:/clojure-home/first-example/src/" . "first_example/")
+ ("e:/clojure-home/" . "first-example/")
+ ("e:/" . "clojure-home/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "e:/clojure-home/first-example/src/first_example/"
+ "e:/clojure-home/first-example/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "core.clj"
+ "project.clj"
+ "CHANGELOG.md"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("e:/clojure-home/first-example/src/first_example/" (22956 20164 0 0) "core.clj" "../" "./")
+
+ ("e:/clojure-home/first-example/src/" (22954 55182 0 0) "first_example/" "../" "./")
+
+ ("e:/clojure-home/first-example/" (22956 5471 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "first-example.iml" "doc/" "CHANGELOG.md" ".nrepl-port" ".idea/" ".hgignore" ".gitignore" "../" "./")
+
+ ("e:/clojure-home/" (22956 3183 0 0) "testClojure.iml" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "first-example/" "examples/" "emacs-25.2-x86_64/" ".idea/" "../" "./")
+
+ ("e:/clojure-home/emacs-25.2-x86_64/" (22956 16954 0 0) "var/" "share/" "libexec/" "hello.clj" "el.md" "bin/" ".emacs.d.jiacai/" ".emacs.d.fuck/" ".cs_files" ".#hello.clj" "#hello.clj#" "../" "./")
+
+ ("e:/clojure-home/emacs-25.2-x86_64/bin/" (22956 3299 0 0) "runemacs.exe" "libXpm-noX4.dll" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-25.2.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

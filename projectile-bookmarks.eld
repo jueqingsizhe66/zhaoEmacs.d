@@ -1,1 +1,1 @@
-("~/clojure-works/")
+("e:/clojure-home/first-example/" "~/.emacs.d/" "~/clojure-works/")

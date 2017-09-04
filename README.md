@@ -3,6 +3,100 @@ I have test in the two systems windows10
 and ubuntu, all valid for newer.
 
 
+### 1.为了引入clj-refactor(一个好用的补全包的工具)
+
+1. M-X package-install clj-refactor(感觉每次得装上2遍)
+然后在setup-clojure.el添加配置代码
+
+```
+(require 'clj-refactor)
+
+(defun my-clojure-mode-hook ()
+    (clj-refactor-mode 1)
+    (yas-minor-mode 1) ; for adding require/use/import statements
+    ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+    (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+```
+
+### 2.为了使用类似nerdtree的neotree(ui.el)
+
+1. 在init.el添加了 
+```
+     neotree
+     all-the-icons   ;;;you need to download fonts
+```
+2. 并且在ui.el添加了
+```
+
+(require 'neotree)
+(global-set-key [f6] 'neotree-toggle)
+(require 'all-the-icons)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+
+```
+3. 额外增加了git配置
+
+```
+
+;; set up some useful mode
+(which-key-mode)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
+
+```
+
+### 3.增加了一些其他插件
+
+放在了init.el
+```
+    auto-complete
+    dracula-theme
+    hlinum
+    which-key
+    restclient
+    browse-kill-ring
+
+
+```
+对应的auto-complete配置如下
+
+```
+
+```
+对应的dracula-theme(ui.el)配置如下
+```
+(load-theme 'dracula t)
+;; workaround blue problem https://github.com/bbatsov/solarized-emacs/issues/18
+(custom-set-faces
+(if (not window-system)
+  '(default ((t (:background "nil"))))))
+
+```
+
+对应的which-key(ui.el)和hlinum配置如下
+```
+;; set up some useful mode
+(which-key-mode)
+
+
+```
+
+### 4. 修正rainbow(editing.el)
+
+```
+;; yay rainbows!
+;;(global-rainbow-delimiters-mode t)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+```
+
+Okey, below is the new interface,
+
+![][]
 # this is a Clojure-friendly emacs config
 
 If you're new to emacs, check out
@@ -96,3 +190,4 @@ Emacs has decent support for CSS, HTML, JS, and many other file types out of the
 
 In general, if you want to add support for a language then you should be able to find good instructions for it through Google. Most of the time, you'll just need to install the "x-lang-mode" package for it.
 
+[1]:

@@ -1,0 +1,20 @@
+
+
+
+(ns first-example.core
+  (:require [clojure.string :as str]))
+
+(defn foo
+  "I don't do a whole lot."
+  [x]
+  
+
+  [x]
+  (println (map inc (range 10)))
+  (println x "Hello Wor
+
+"))
+
+(defn greet [greeting]
+  (println (str/trim greeting))
+)
