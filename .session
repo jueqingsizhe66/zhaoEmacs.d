@@ -1,0 +1,68 @@
+;;; Automatically generated on Tue Sep  5 16:49:43 2017
+;;; Invoked by YeZhao@DESKTOP-YeZhao using 25.2.1
+(setq-default kill-ring '(#("1. Ca" 0 3 (detail 0 cause 1 invisible nil collapsed nil) 3 5 (font-lock-face font-lock-comment-face detail 0 cause 1 invisible nil collapsed nil)) #("use" 0 3 (font-lock-face font-lock-comment-face detail 0 cause 1 invisible nil collapsed nil)) #(";; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+" 0 3 (fontified t face font-lock-comment-delimiter-face) 3 73 (fontified t face font-lock-comment-face) 73 74 (fontified t)) "http://www.yinwang.org/blog-cn/2013/04/11/scheme-setup" #("k Format Version 1 ;;;;
+o be slightly human-readable;
+ably don't want to edit it.
+le Format Version Stamp -*-
+-stored\" 0 24
+#))
+
+
+" 0 2 (fontified t) 2 8 (face font-lock-type-face fontified t) 8 9 (fontified t) 9 16 (face font-lock-type-face fontified t) 16 19 (fontified t) 19 23 (face font-lock-comment-delimiter-face fontified t) 23 24 (face font-lock-comment-face fontified t) 24 52 (fontified t) 52 54 (face font-lock-comment-face fontified t) 54 81 (fontified t) 81 82 (fontified t) 82 85 (fontified t) 85 91 (face font-lock-type-face fontified t) 91 92 (fontified t) 92 99 (face font-lock-type-face fontified t) 99 100 (fontified t) 100 105 (face font-lock-type-face fontified t) 105 110 (fontified t) 110 117 (fontified t) 117 118 (face font-lock-string-face fontified t) 118 124 (face font-lock-string-face fontified t) 124 125 (face font-lock-string-face fontified t) 125 126 (face font-lock-string-face fontified t) 126 127 (face font-lock-string-face fontified t) 127 128 (fontified t) 128 129 (fontified t face font-lock-string-face) 129 130 (fontified t)) #(")
+
+
+les maximizing, mouse-3 displays a popup-menu\")))
+ne\")
+)
+
+region-string)
+  (created . #2#)£¬£¬£¬
+48))
+er-last-stored<2>\" 0 24
+record #1#))
+
+
+~/.emacs.d/GTD/newgtd.org\")
+.
+#(\"newgtd.org\" 0 10
+  (help-echo \"Mouse-2 toggles maximizing, mouse-3 displays a popup-menu\")))
+t-string . \"** TODOS Combine\")
+" 0 1 (fontified t face font-lock-string-face) 1 2 (fontified t face font-lock-string-face) 2 3 (face font-lock-string-face fontified t) 3 4 (fontified t face font-lock-string-face) 4 49 (face font-lock-string-face fontified t) 49 50 (face font-lock-string-face fontified t) 50 51 (face \.\.\. fontified t) 51 52 (face \.\.\. fontified t) 52 53 (face \.\.\. fontified t) 53 54 (fontified t) 54 55 (fontified t) 55 56 (fontified t) 56 57 (face font-lock-string-face fontified t) 57 58 (face font-lock-string-face fontified t) 58 59 (face font-lock-string-face fontified t) 59 60 (face font-lock-string-face fontified t) 60 61 (fontified t face font-lock-string-face) 61 62 (fontified t face font-lock-string-face) 62 75 (fontified t face font-lock-string-face) 75 76 (fontified t face font-lock-string-face) 76 77 (fontified t face font-lock-string-face) 77 79 (fontified t face font-lock-string-face) 79 80 (fontified t face font-lock-string-face) 80 93 (fontified t face font-lock-string-face) 93 94 (fontified t face font-lock-string-face) 94 97 (fontified t face font-lock-string-face) 97 98 (fontified t face font-lock-string-face) 98 100 (fontified t face font-lock-string-face) 100 101 (fontified t face font-lock-string-face) 101 102 (fontified t face font-lock-string-face) 102 103 (fontified t face font-lock-string-face) 103 120 (fontified t face font-lock-string-face) 120 121 (fontified t face font-lock-string-face) 121 127 (fontified t) 127 137 (fontified t) 137 138 (fontified t face \.\.\.) 138 139 (fontified t face \.\.\.) 139 140 (face font-lock-string-face fontified t) 140 141 (fontified t) 141 142 (fontified t) 142 143 (fontified t) 143 153 (face font-lock-type-face fontified t) 153 156 (face font-lock-type-face fontified t) 156 157 (face default fontified t) 157 167 (fontified t) 167 168 (face font-lock-string-face fontified t) 168 169 (face font-lock-string-face fontified t) 169 170 (face font-lock-string-face fontified t) 170 171 (face font-lock-string-face fontified t) 171 172 (fontified t face font-lock-string-face) 172 173 (fontified t face font-lock-string-face) 173 174 (fontified t face font-lock-string-face) 174 175 (fontified t face font-lock-string-face) 175 185 (fontified t face font-lock-type-face) 185 186 (fontified t face font-lock-string-face) 186 192 (fontified t face font-lock-string-face) 192 194 (fontified t face font-lock-string-face) 194 195 (fontified t face font-lock-string-face) 195 205 (fontified t face font-lock-string-face) 205 206 (fontified t face font-lock-string-face) 206 254 (fontified t) 254 257 (fontified t) 257 263 (fontified t) 263 264 (fontified t face font-lock-string-face) 264 265 (fontified t face font-lock-string-face) 265 266 (fontified t face font-lock-string-face) 266 267 (fontified t face font-lock-string-face) 267 268 (fontified t face font-lock-string-face) 268 279 (fontified t face font-lock-string-face) 279 280 (fontified t face font-lock-string-face) 280 282 (fontified t face font-lock-variable-name-face) 282 283 (fontified t) 283 288 (fontified t face font-lock-constant-face) 288 289 (fontified t) 289 296 (fontified t face font-lock-type-face) 296 297 (fontified t face font-lock-string-face) 297 298 (fontified t face font-lock-string-face) 298 299 (face font-lock-string-face fontified t)) "http://blog.csdn.net/PfanAya/article/details/7068710" "Global" "https://www.emacswiki.org/emacs/BookmarkPlus"))
+(setq-default session-file-alist '(("~/.emacs.d/GTD/newgtd.org" 676 1 1 nil nil 643 (overwrite-mode)) ("e:/clojure-home/first-example/src/first_example/core.clj" 74 72 1 nil nil 74 (overwrite-mode)) ("e:/EOPL2014/5010-Program-Design-paradigms/01-5-area-of-ring.rkt" 814 1692 1 nil nil 1778 (overwrite-mode)) ("e:/EOPL2014/5010-Program-Design-paradigms/01-1-f2c.rkt" 949 690 1 nil nil 3 (overwrite-mode)) ("~/.emacs.d/elpa/scheme-complete-20170824.713/scheme-complete-autoloads.el" 256 nil 1 nil nil 256 (overwrite-mode)) ("~/.emacs.d/init.el" 1 nil 1 nil nil 6036 (overwrite-mode)) ("~/.emacs.d/elpa/chicken-scheme-20141116.1139/chicken-scheme-autoloads.el" 254 nil 1 nil nil 254 (overwrite-mode)) ("~/.emacs.d/elpa/org-plus-contrib-20170904/org-loaddefs.el" 121974 nil 1 nil nil 121974 (overwrite-mode)) ("~/.emacs.d/elpa/0blayout-20161007.2307/0blayout-autoloads.el" 782 nil 1 nil nil 782 (overwrite-mode)) ("~/.emacs.d/elpa/org-plus-contrib-20170904/org-plus-contrib-autoloads.el" 45706 nil 1 nil nil 45706 (overwrite-mode)) ("i:/xinranUbunutu/MyOrgMode/orgTest.org" 34 34 1 nil nil 34 (overwrite-mode))))
+(setq-default file-name-history '("~/.emacs.d/GTD/newgtd.org" "~/.emacs.d/bookmarks" "e:/clojure-home/first-example/src/first_example/core.clj" "e:/EOPL2014/5010-Program-Design-paradigms/09-2A-space-invaders-2.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/11-3-unify-try1.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/05-4-sets.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/05-2-pizza.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/06-1-recursive-structures.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/04-2-books.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/01-5-area-of-ring.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/01-2-template-examples.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/01-1-f2c.rkt" "e:/EOPL2014/5010-Program-Design-paradigms/01-4-velocity.rkt" "~/.emacs.d/elpa/scheme-complete-20170824.713/scheme-complete-autoloads.el" "~/.emacs.d/init.el" "~/.emacs.d/elpa/chicken-scheme-20141116.1139/chicken-scheme-autoloads.el" "~/.emacs.d/elpa/0blayout-20161007.2307/0blayout-autoloads.el" "~/.emacs.d/elpa/org-plus-contrib-20170904/org-loaddefs.el" "~/.emacs.d/elpa/org-plus-contrib-20170904/org-plus-contrib-autoloads.el" "i:/xinranUbunutu/MyOrgMode/orgTest.org" "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" "~/.emacs.d/GTD/orgBoss/Someday/someday.org" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org" "~/.emacs.d/GTD/orgBoss/Journal/journal.org" "~/.emacs.d/GTD/orgBoss/Film/film.org" "~/.emacs.d/GTD/orgBoss/Financial/finances.org" "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org" "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org" "~/.emacs.d/GTD/orgBoss/Book/book.org" "~/.emacs.d/ido.last" "~/.emacs.d/elpa/session-20120510.1700/session-autoloads.el" "i:/xinranUbunutu/MyOrgMode/newLearningTakecar.org" "i:/xinranUbunutu/MyOrgMode/usecase.org" "i:/xinranUbunutu/MyOrgMode/testChines.org" "i:/xinranUbunutu/MyOrgMode/testgraph.org" "i:/xinranUbunutu/MyOrgMode/state.org" "i:/xinranUbunutu/MyOrgMode/schemeToTime.org" "i:/xinranUbunutu/MyOrgMode/digraph2.png" "i:/xinranUbunutu/MyOrgMode/thinking.org" "~/.emacs.d/elpa/org-plus-contrib-20170828/org-loaddefs.el" "~/.emacs.d/elpa/org-plus-contrib-20170828/org-plus-contrib-autoloads.el" "e:/clojure-home/hello.md" "~/.emacs.d/elpa/clj-refactor-20170720.712/clj-refactor-autoloads.el" "~/.emacs.d/elpa/yasnippet-20170828.1908/yasnippet-autoloads.el" "~/.emacs.d/elpa/multiple-cursors-20170831.1633/multiple-cursors-autoloads.el" "~/.emacs.d/elpa/edn-20160215.419/edn-autoloads.el" "~/.emacs.d/elpa/peg-20150707.2341/peg-autoloads.el"))
+(setq-default regexp-search-ring '("println"))
+(setq-default bookmark-history '("core.clj" #("org-remember-last-stored" 0 24 (bmkp-full-record \.\.\.)) #("org-agenda learning<2>" 0 19 (bmkp-full-record \.\.\.)) #("org-agenda learning" 0 19 (bmkp-full-record \.\.\.)) #("cheinsetest<2>" 0 11 (bmkp-full-record \.\.\.)) #("cheinsetest" 0 11 (bmkp-full-record \.\.\.))))
+(setq-default command-history '((cider-jack-in nil) (find-file "e:/clojure-home/first-example/src/first_example/core.clj") (find-file "e:/EOPL2014/5010-Program-Design-paradigms/01-5-area-of-ring.rkt") (find-file "e:/EOPL2014/5010-Program-Design-paradigms/01-2-template-examples.rkt") (find-file "e:/EOPL2014/5010-Program-Design-paradigms/01-1-f2c.rkt") (paredit-mode (quote toggle)) (run-scheme "scheme") (package-install (quote scheme-complete) nil) (package-install (quote chicken-scheme) nil) (package-list-packages nil) (package-autoremove) (goto-line 3 nil) (query-replace "foo" "hello" t (if \.\.\. \.\.\.) (if \.\.\. \.\.\.) nil nil) (query-replace "x" "file" nil (if \.\.\. \.\.\.) (if \.\.\. \.\.\.) nil nil) (query-replace "hel" "file" nil (if \.\.\. \.\.\.) (if \.\.\. \.\.\.) nil nil) (bookmark-bmenu-list) (bookmark-write) (bookmark-save nil) (bookmark-jump #("org-agenda learning" 0 19 ...)) (bookmark-load "~/.emacs.d/bookmarks")))
+(setq-default extended-command-history '("cider-jack-in" "paredit-mode" "run-scheme" "package-install" "package-list-packages" "package-autoremove" "bookmark-bmenu-list" "bookmark-write" "bookmark-save" "bookmark-jump" "bookmark-load"))
+(setq-default hi-lock-face-history '("hi-yellow" "hi-pink" "hi-green" "hi-blue" "hi-black-b" "hi-blue-b" "hi-red-b" "hi-green-b" "hi-black-hb"))
+(setq-default ido-file-history '("core.clj" "01-5-area-of-ring.rkt" "01-2-template-examples.rkt" "01-1-f2c.rkt"))
+(setq-default minibuffer-history '("scheme-complete" "chicken-scheme" "3" "core.clj"))
+(setq-default occur-collect-regexp-history '("\\1"))
+(setq-default query-replace-history '("hello" "foo" "file" "x" "hel"))
+(setq-default serial-name-history '("COM1"))
+(setq-default serial-speed-history '("9600" "1200" "2400" "4800" "14400" "19200" "28800" "38400" "57600" "115200"))
+(setq-default smex-history '(paredit-mode run-scheme package-install package-list-packages package-autoremove bookmark-bmenu-list bookmark-write))
+(setq-default table-capture-columns-history '(""))
+(setq-default table-capture-justify-history '("left"))
+(setq-default table-capture-min-cell-width-history '("5"))
+(setq-default table-cell-height-history '("1"))
+(setq-default table-cell-span-direction-history '("right"))
+(setq-default table-cell-split-contents-to-history '("split"))
+(setq-default table-cell-split-orientation-history '("horizontally"))
+(setq-default table-cell-width-history '("5"))
+(setq-default table-col-delim-regexp-history '(""))
+(setq-default table-columns-history '("3"))
+(setq-default table-insert-row-column-history '("row"))
+(setq-default table-justify-history '("center"))
+(setq-default table-row-delim-regexp-history '(""))
+(setq-default table-rows-history '("3"))
+(setq-default table-sequence-count-history '("0"))
+(setq-default table-sequence-increment-history '("1"))
+(setq-default table-sequence-interval-history '("1"))
+(setq-default table-sequence-justify-history '("left"))
+(setq-default table-sequence-string-history '("0"))
+(setq-default table-source-caption-history '("Table"))
+(setq-default table-source-language-history '("html"))
+(setq-default table-target-history '("cell"))

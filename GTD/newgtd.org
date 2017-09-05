@@ -1,0 +1,21 @@
+* Tasks
+** TODO java learning,you should take care the XML                              :javaxml:
+
+Added: [2015-05-03 Sun 19:04]
+** TODO finish a learning report about the java                                 :javaxml:
+   - 
+Added: [2015-05-03 Sun 19:17]
+** TODO TestTodo                                                      :@Test:
+*** TODO [#A] little [100%]                                                     :funnny:
+ - [X] first
+ - [X] second
+ - [X] last
+ - :q
+
+Added: [2015-05-03 Sun 21:38]
+** BUG TODOS Combine Plan into org-mode                           :Plan:mode:
+
+
+
+   - State "BUG"        from              [2017-09-05 ÖÜ¶þ 16:48]
+   Addd: [2015-05-04 Mon 02:37]

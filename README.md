@@ -66,9 +66,13 @@ click [magit][5]
 [browse-kill-ring][9]
 
 
-对应的auto-complete配置如下
+对应的auto-complete(editing.el)配置如下
 
 ```
+;; init auto-complete
+(require 'auto-complete-config)
+(ac-config-default)
+
 
 ```
 对应的dracula-theme(ui.el)配置如下
@@ -81,12 +85,24 @@ click [magit][5]
 
 ```
 
-对应的which-key(ui.el)和hlinum配置如下
+对应的which-key(ui.el)和hlinum(editing.el)配置如下
 ```
 ;; set up some useful mode
 (which-key-mode)
 
 
+(require 'hlinum)
+(hlinum-activate)
+(set-face-attribute 'linum nil :background nil)
+(set-face-foreground 'linum "#f8f8f2")
+(setq linum-format "%d ")
+;; (set-face-attribute 'hl-line nil :foreground nil :background "#330")
+(set-face-attribute 'hl-line nil :foreground nil :background "#353535")
+
+;; 2017/7/13
+(browse-kill-ring-default-keybindings)
+
+ 
 ```
 
 ### 4. 修正rainbow(editing.el)
@@ -97,6 +113,69 @@ click [magit][5]
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ```
+
+### 5. expand-region(editing.el)
+
+click [expand-region][12]
+```
+;; init expand-region
+(require 'expand-region)
+(global-unset-key (kbd "M--"))
+(global-set-key (kbd "M-=") 'er/expand-region)
+(global-set-key (kbd "M--") 'er/contract-region)
+
+
+```
+
+可以快选择。
+
+### 6. bookmark
+
+click [bookmark+][15]
+
+快捷键
+```
+c-x r l : 查询bookmark
+c-x r m : 添加
+c-x r b : 跳转
+```
+
+### 7. org-mode
+[特详细的org-mode教程][13]
+
+[GTD Workflow][14]
+
+常用快捷键：
+
+```
+Tab打开标题
+c-c c-n 光标沿标题方向向下移动
+c-c c-p 光标沿标题方向向上移动
+c-c c-q 添加标题的tag
+c-c a 打开agender
+c-c c-t 添加当前标题的todo
+c-c c-d 添加当前标题deadline
+c-c c-s 添加当前标题的schedule
+<s Tab 添加src块
+<e Tab  添加example快
+
+c-c shift-< 打开calendar
+c-c shift-> 添加calendar鼠标下的日期
+
+```
+
+### 8. chez-scheme的集成(scheme-editing.el)
+
+注意你的scheme路径，参考 [emacs][16]
+```
+
+(require 'cmuscheme)
+(setq scheme-program-name "E:\\ChezScheme\\a6nt\\bin\\a6nt\\scheme")         ;; 如果用 Petite 就改成 "petite"
+
+```
+
+打开ss,scm,rkt结尾的文件即可执行F5和F7(其他文件未绑定)
+
 
 Okey, below is the new interface,
 
@@ -205,3 +284,8 @@ In general, if you want to add support for a language then you should be able to
 [9]:https://github.com/T-J-Teru/browse-kill-ring 
 [10]:https://github.com/auto-complete/auto-complete 
 [11]:https://github.com/dracula/dracula-theme 
+[12]:https://github.com/magnars/expand-region.el 
+[13]:http://doc.norang.ca/org-mode.html#HowToUseThisDocument 
+[14]:http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html#sec-1 
+[15]:https://www.emacswiki.org/emacs/BookmarkPlus 
+[16]:http://www.yinwang.org/blog-cn/2013/04/11/scheme-setup 

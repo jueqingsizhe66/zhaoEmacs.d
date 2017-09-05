@@ -73,18 +73,15 @@
 ;; no bell
 (setq ring-bell-function 'ignore)
 
-
 (require 'neotree)
 (global-set-key [f6] 'neotree-toggle)
+
+
+
+
+; 语法高亮。除 shell-mode 和 text-mode 之外的模式中使用语法高亮。
+;进行语法加亮。
+
 (require 'all-the-icons)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-
-
-
-;; set up some useful mode
-(which-key-mode)
-
-;; magit
-(global-set-key (kbd "C-x g") 'magit-status)
-
+ (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 

@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("e:/EOPL2014/" . "5010-Program-Design-paradigms/")
+ ("e:/" . "EOPL2014/")
  ("e:/clojure-home/first-example/src/" . "first_example/")
  ("e:/clojure-home/first-example/" . "src/")
  ("e:/clojure-home/" . "first-example/")
@@ -13,22 +15,44 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "e:/EOPL2014/5010-Program-Design-paradigms/"
  "e:/clojure-home/first-example/src/first_example/"
+ "e:/clojure-home/"
  "e:/clojure-home/first-example/"
  "/home/macro/clojure-works/first-example/src/first_example/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "01-5-area-of-ring.rkt"
+ "01-2-template-examples.rkt"
+ "01-1-f2c.rkt"
  "core.clj"
+ "hello.md"
  "CHANGELOG.md"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("e:/clojure-home/first-example/src/first_example/" (22957 30709 0 0) "core.clj" "../" "./")
+ ("e:/EOPL2014/5010-Program-Design-paradigms/" (22138 23892 0 0) "sets.rkt" "README.md" "LICENSE" "extras.rkt" "cat.png" "13-interp/" "11-mvc-f15/" "11-interface-proposal.rkt" "11-7-separate-files/" "11-6-after-review.rkt" "11-5-generalize-methods-in-superclass.rkt" "11-4-turn-differences-into-methods.rkt" "11-3-unify-try1.rkt" "11-2-squares.rkt" "11-1-flashing-balls.rkt" "10-8-interacting-objects.rkt" "10-7-callbacks.rkt" "10-6-push-model-fixed.rkt" "10-5-push-model.rkt" "10-4-ball-factory.rkt" "10-3-stateful-world.rkt" "10-2B-stateful-wall.rkt" "10-2A-ball-and-wall.rkt" "10-1-communicating-objects.rkt" "09-7-coding-standards.rkt" "09-6-testing.rkt" "09-5-shapes-with-interfaces.rkt" "09-4-shapes-separate-functions.rkt" "09-3-shapes-functional.rkt" "09-2A-space-invaders-2.rkt" "09-2-space-invaders-1.rkt" "09-1-basics.rkt" "08-9-queens.rkt" "08-8-square-roots.rkt" "08-8-queens.rkt" "08-7-linear-search.rkt" "08-6-function-sum.rkt" "08-5a-implicit-graphs.rkt" "08-5-reachability.rkt" "08-4-binary-search.rkt" "08-3-fib.rkt" "08-2-merge-sort.rkt" "08-1-decode.rkt" "07-4-foldl.rkt" "07-3-fredexps.rkt" "07-2-mark-depth.rkt" "07-1-number-list-with-stress-tests.rkt" "06-6-descendants.rkt" "06-5-sos-and-loss.rkt" "06-4-lasns.rkt" "06-3-tree-folds.rkt" "06-2-trees.rkt" "06-1-recursive-structures.rkt" "05-4-sets.rkt" "05-3-map.rkt" "05-2-pizza.rkt" "05-1-find-dog.rkt" "04-2-books.rkt" "04-1-lists.rkt" "03-3-two-draggable-cats.rkt" "03-2-draggable-cat.rkt" "03-2-draggable-cat-corrected.rkt" "03-1-falling-cat.rkt" "02-6-ball-after-mouse-with-tests.rkt" "02-5-balls-collide.rkt" "02-4-ball-after-mouse.rkt" "02-3-traffic-light-with-timer.rkt" "02-2-traffic-light.rkt" "02-1-book-receipts.rkt" "01-5-area-of-ring.rkt" "01-4-velocity.rkt" "01-3-rocket-examples.rkt" "01-2-template-examples.rkt" "01-1-f2c.rkt" ".gitignore" ".git/" "../" "./")
 
- ("e:/clojure-home/" (22957 29626 0 0) "testClojure.iml" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "first-example/" "examples/" "emacs-25.2-x86_64/" ".idea/" "../" "./")
+ ("e:/EOPL2014/" (22160 48932 0 0) "xracket/" "rakcet-2048/" "racket-smoke/" "racket-eopl/" "eopl/" "dissertation/" "DF-eopl/" "5010-Program-Design-paradigms/" "../" "./")
+
+ ("c:/Users/" (22652 56939 0 0) "YeZhao/" "Public/" "desktop.ini" "Default User/" "Default/" "All Users/" "../" "./")
+
+ ("c:/Users/YeZhao/" (22958 16724 0 0) "「开始」菜单/" "_vim_mru_files" "_vimtags" "_viminfo" "_.swp" "_.swo" "_.swn" "vimwiki_html/" "vimwiki/" "Videos/" "Unnamed.cfx.bak" "udfconfig.h" "udfconfig-host.h" "timu.md" "testQiuYo.f90" "testLine.cse" "testHello.pl.html" "testHello.pl" "test.pl" "Templates/" "tags" "ShuangHuayi.cfx.bak" "SendTo/" "Searches/" "Saved Games/" "s809Modified.cfx.bak" "Recent/" "PrintHood/" "ppt.md" "pod2htmd.tmp" "Pictures/" "phaseVI_5transientCol.cst" "phaseVI_0newtransientShearCollect_003.mp4" "phaseVI_0newtransientShearCollect.cfx.bak" "phaseVI_0DYNWithStartTime.cfx.bak" "phaseVI_0dyn720.cfx" "phaseVI_0DYN2.cfx" "phaseVI_0alltransient.cfx.bak" "phaseVI20170802(good).tin" "phaseVI20170802(good).prj" "perl/" "originLab/" "OneDrive/" "ntuser.ini" "NTUSER.DAT{f5243fe0-7f1f-11e5-80c4-90b11c2510c3}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{f5243fe0-7f1f-11e5-80c4-90b11c2510c3}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{f5243fe0-7f1f-11e5-80c4-90b11c2510c3}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "nrelPrepareWithSurface.tin" "nrelPrepareTry.tin" "nrelPrepareTry.prj" "nrelPrepareExcellent.tin" "nrelPrepare2.tin" "nrelPrepare.tin" "nrelPrepare.prj" "nrel5MWWithBendHub(+shroudV4.tin" "nrel5mwSW.tin" "nrel5mwNew.tin" "nrel5mwNew.prj" "nrel5mwNew.fbc_old" "nrel5mwNew.fbc" "nrel5mwNew.atr" "Nrel5MWMaybe.igs" "nrel5mw3p5RNewRotor.tin" "nrel5mw3p5RNew.tin" "nrel5mw3p5R.tin" "nrel5mw3p5R.prj" "nrel5mw3p5R.fbc_new" "nrel5mw3p5R.fbc" "nrel5mw3p5R.atr" "nrel5mw.tin" "nrel5mw.prj" "nrel5mw.fbc_old" "nrel5mw.fbc" "nrel5mw.atr" "NetHood/" "My Documents/" "Music/" "multiRotor.cfx.bak" "mpeg_statistics" "mpeg.param" "Local Settings/" "Links/" "hex.uns" "hello.txt" "GitBook/" "ffmpeg_command.txt" "Favorites/" "farfieldForNrel5MW.tin" "farfieldForNrel5MW.prj" "farfieldForNrel5MW.fbc_old" "farfieldForNrel5MW.fbc" "farfieldForNrel5MW.atr" "f89ae57b-1e8a-43ec-99cb-12b3c91fe3e1.dmp" "export.csv" "excel_60_0.95 .csv" "excel_60_0.8 .csv" "excel_60_0.63 .csv" "excel_60_0.47 .csv" "excel_60_0.3 .csv" "excel_5_0.95 .csv" "excel_5_0.8 .csv" "excel_5_0.63 .csv" "excel_5_0.47 .csv" "excel_5_0.3 .csv" "excel_30_0.95 .csv" "excel_30_0.8 .csv" "excel_30_0.63 .csv" "excel_30_0.47 .csv" "excel_30_0.3 .csv" "excel_25_0.95 .csv" "excel_25_0.8 .csv" "excel_25_0.63 .csv" "excel_25_0.47 .csv" "excel_25_0.3 .csv" "excel_15_0.95 .csv" "excel_15_0.8 .csv" "excel_15_0.63 .csv" "excel_15_0.47 .csv" "excel_15_0.3 .csv" "excel_10_0.95 .csv" "excel_10_0.8 .csv" "excel_10_0.63 .csv" "excel_10_0.47 .csv" "excel_10_0.3 .csv" "excel_0_0.95 .csv" "excel_0_0.8 .csv" "excel_0_0.63 .csv" "excel_0_0.47 .csv" "excel_0_0.3 .csv" "DynamicYaw_002.mp4" "Downloads/" "Documents/" "Desktop/" "CS273a-Introduction-to-Machine-Learning/" "Creative Cloud Files/" "coursera_matlab/" "Cookies/" "Contacts/" "cleanup-fluent-DESKTOP-YeZhao-9888.bat" "cleanup-fluent-DESKTOP-YeZhao-9384.bat" "cleanup-fluent-DESKTOP-YeZhao-8112.bat" "cleanup-fluent-DESKTOP-YeZhao-46632.bat" "cleanup-fluent-DESKTOP-YeZhao-15924.bat" "cleanup-fluent-DESKTOP-YeZhao-13832.bat" "AutoSaveState.cst" "Application Data/" "AppData/" "aerodynamicNote.md" "ack-2.18-single-file" "a.nb" "a.m" "a.exe" "60shearmomentforce.csv" "60momentforce.csv" "5shearmomentforce.png" "5shearmomentforce.csv" "5shearmoment.csv" "5shearforce.csv" "5momentforce.png" "5momentforce.csv" "5forcex.csv" "5force.csv" "5895_full.png" "5044_full.mp4" "45shearmomentforce.png" "45shearmomentforce.csv" "45momentforce.png" "45momentforce.csv" "30shearmomentforce.csv" "30momentforce.csv" "25shearmomentforce.png" "25shearmomentforce.csv" "25momentforce.csv.png" "25momentforce.csv" "20shearmomentforce.png" "20shearmomentforce.csv" "20momentforce.csv" "15shearmomentforce.csv" "15momentforce.csv" "13.tin" "12.tin" "10shearmomentforce.csv" "10momentforce.csv" "1.csv" "0shearmomentforce.png" "0shearmomentforce.csv" "0degreeWithTransientMiddle.txt.csv" "0degreeWithTransientMiddle.txt" "0degreeWithTransientMiddle.csv" "0degreeWithoutTransientMiddle.txt.csv" "0degreeWithoutTransientMiddle.txt" "0degreeWithoutTransientMiddle.csv" "0degree.txt" ".WebStorm2017.1/" ".WebStorm2016.3/" ".vue-templates/" ".vscode/" ".viminfo" ".vim/" ".v8flags.5.1.281.101.fb40b221f46882d2d85ab448ab0febe2.json" ".ssh/" ".rdm/" ".pylint.d/" ".PyCharm2017.1/" ".pdfbox.cache" ".oracle_jre_usage/" ".numeca/" ".notebook/" ".netrc" ".NERDTreeBookmarks" ".multiRotor.cfx.bak.swp" ".m2/" ".lein/" ".IntelliJIdea2017.2/" ".IntelliJIdea2017.1/" ".IntelliJIdea2016.3/" ".groovy/" ".gradle/" ".gitconfig" ".flrecent" ".dubbo/" ".DataGrip2017.1/" ".cxlayout.ini" ".ctags" ".cs_cache" ".cscope.vim/" ".cpanm/" ".config/" ".cfx/" ".cache/" ".bash_history" ".android/" ".aienv_options" ".aienv_fea2.017.0_cache/" ".a.nb.swp" "%LEIN_INSTALL_DIR%/" "%1" "../" "./")
+
+ ("c:/Users/YeZhao/AppData/" (22818 53202 0 0) "Roaming/" "LocalLow/" "Local/" "../" "./")
+
+ ("c:/Users/YeZhao/AppData/Roaming/" (22958 11979 0 0) "ytmediacenter/" "youku/" "XnViewMP/" "XnView/" "XMind/" "XLGameBox/" "WinRAR/" "vstelemetry/" "VMware/" "Visual Studio Setup/" "Vim-R-plugin/" "uTorrent/" "Tencent/" "Teiron/" "TechSmith/" "TeamViewer/" "systray/" "syntevo/" "Sun/" "Subversion/" "SQLyog/" "sqlitestudio/" "SpaceClaim/" "SOLIDWORKS/" "SolidDocuments/" "SFY6.DLL" "security/" "SciTools/" "Scene Builder/" "RStudio/" "RegexTester/" "Racket/" "R/" "QWei.dll" "QW8.dll" "PTC/" "Nvim-R/" "NuGet/" "npm-cache/" "npm/" "NoteExpress2/" "NoteExpress/" "navplugin/" "Mozilla/" "Microsoft/" "Maxthon3/" "MathWorks/" "Macromedia/" "Luxology/" "Ludashi/" "lockhomepage/" "Local/" "LDSGameCenterSpecLog/" "LDSGameCenter/" "Launcher/" "Kits/" "JetBrains/" "java/" "Intel/" "InstallShield/" "HistCite/" "help_images_otherUI/" "Golden Software/" "GitKraken/" "GitHubVisualStudio/" "gitbook-editor/" "GHISLER/" "Foxmail7/" "Everything/" "ER3R.DLL" "ensemble.EnsembleApp/" "ensemble.Ensemble2/" "DrvMgr/" "downer/" "Docker/" "Design Science/" "DassaultSystemes/" "coreavc.ini" "Code/" "CleanTrash/" "Chez Scheme/" "byteexec/" "BaiduYunKongMing/" "BaiduYunKernel/" "BaiduYunGuanjia/" "Autodesk/" "Ansys/" "AliWangWang/" "alipay/" "Adobe/" "ackrc" "5w1R24S1o.kUu" "360se6/" "360safe/" "360Quarant/" "360mobilemgr/" "360Login/" "360DrvMgr/" "360CloudWifi/" "360CloudUI/" "360AP/" "11Game/" ".gitkraken/" ".emacs.d/" "../" "./")
+
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22958 16663 0 0) "themes/" "server/" "rubbish2/" "rubbish/" "README.md" "projectile-bookmarks.eld" "init.el" "ido.last" "GTD/" "elpa/" "customizations/" "custom.el" "cider-history" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf" ".orgConf.el.swp" ".orgConf.el" ".init.el.swp" ".git/" "../" "./")
+
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/" (22958 15949 0 0) "remember-2.0/" "planner-3.42/" "package/" "orgTemplate/" "orgBoss/" "newgtd.org" "myPlan/" "muse-3.20/" ".notes.org" ".git/" "../" "./")
+
+ ("e:/clojure-home/first-example/src/first_example/" (22958 7479 0 0) "core.clj" "../" "./")
+
+ ("e:/clojure-home/" (22958 6743 0 0) "testClojure.iml" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "hello.md" "first-example/" "examples/" "emacs-25.2-x86_64/" ".idea/" "../" "./")
 
  ("e:/clojure-home/first-example/src/" (22954 55182 0 0) "first_example/" "../" "./")
 

@@ -1,0 +1,42 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("core.clj"
+ (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
+ (front-context-string)
+ (rear-context-string . "m greeting))\n)\n\n")
+ (position . 158))
+#1=(#("org-remember-last-stored" 0 24
+      (bmkp-full-record #1#))
+    (annotation)
+    (tags)
+    (filename . "~/.emacs.d/GTD/newgtd.org")
+    (buffer-name .
+                 #("newgtd.org" 0 10
+                   (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")))
+    (front-context-string . "** TODOS Combine")
+    (rear-context-string . "5-03 Sun 21:38]\n")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(21830 27421 809600 768000))
+    (created . #2#)
+    (position . 448))
+#1=(#("org-remember-last-stored<2>" 0 24
+      (bmkp-full-record #1#))
+    (annotation)
+    (tags)
+    (filename . "~/.emacs.d/GTD/newgtd.org")
+    (buffer-name .
+                 #("newgtd.org" 0 10
+                   (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")))
+    (front-context-string . "** TODOS Combine")
+    (rear-context-string . "5-03 Sun 21:38]\n")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(21830 27421 809600 768000))
+    (created . #2#)
+    (position . 448))
+)

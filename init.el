@@ -83,6 +83,8 @@
 
     ;; git integration
     magit
+
+    expand-region
     
     auto-complete
     dracula-theme
@@ -93,6 +95,8 @@
 
      neotree
      all-the-icons   ;;;you need to download fonts
+
+     session
     
     ))
 
@@ -155,6 +159,7 @@
 
 ;; For editing lisps
 (load "elisp-editing.el")
+(load "scheme-editing.el")
 
 ;; Langauage-specific
 (load "setup-clojure.el")
@@ -164,16 +169,26 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(coffee-tab-width 2)
+ '(describe-char-unidata-list
+   (quote
+    (name old-name general-category decomposition numeric-value iso-10646-comment uppercase lowercase titlecase)))
+ '(git-gutter:handled-backends (quote (svn hg git)))
+ '(muse-project-alist
+   (quote
+    (("WikiPlanner"
+      ("~/.emacs.d/GTD/myPlan/" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
  '(package-selected-packages
    (quote
-    (cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+ '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold))) t))
 
 
 
@@ -181,4 +196,34 @@
 ;  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 ; 'noerror)
 ;
+(setq default-directory "e:/clojure-home")
+; (require 'org-install)
+;
+; ;; The following lines are always needed. Choose your own keys.
+; (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+; (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+; (global-set-key "\C-cl" 'org-store-link)
+; (global-set-key "\C-ca" 'org-agenda)
+; (global-set-key "\C-cb" 'org-iswitchb)
+; (setq org-src-fontify-natively t)
+;
+
+;; my personal setup, other major-mode specific setup need it.
+;; It's dependent on init-site-lisp.el
+(if (file-exists-p "~/.emacs.d/.custom.el") (load-file "~/.emacs.d/.custom.el"))
+(if (file-exists-p "~/.emacs.d/.orgConf.el") (load-file "~/.emacs.d/.orgConf.el"))
+
+;;不起作用
+;(if (server-running-p)
+;"server-running"
+;(server-start))
+
+
+;(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+; '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold))) t))
+
 

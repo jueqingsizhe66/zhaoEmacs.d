@@ -1,20 +1,28 @@
 
 ;; ----- smex-history -----
 (
- package-install
  cider-jack-in
- package-autoremove
+ paredit-mode
+ run-scheme
+ package-install
  package-list-packages
- list-packages
- cd
- 5x5
+ package-autoremove
+ bookmark-bmenu-list
 )
 
 ;; ----- smex-data -----
 (
- (cider-jack-in . 9)
+ (cider-jack-in . 12)
  (list-packages . 1)
- (package-list-packages . 1)
- (package-autoremove . 1)
- (package-install . 1)
+ (package-list-packages . 4)
+ (package-autoremove . 3)
+ (package-install . 9)
+ (cljr-add-missing-libspec . 3)
+ (bookmark-load . 1)
+ (bookmark-jump . 1)
+ (bookmark-bmenu-list . 5)
+ (bookmark-save . 1)
+ (bookmark-write . 1)
+ (run-scheme . 1)
+ (paredit-mode . 1)
 )

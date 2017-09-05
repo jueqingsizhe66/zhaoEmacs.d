@@ -1,0 +1,8 @@
+** <Practical Common Lisp> <2015-05-03 Sun>                                     :BOOK:
+ :PROPERTIES:
+ :Title:    
+ :Author:  
+ :Year:      
+ :Publisher:
+ :END:
+ Comments:

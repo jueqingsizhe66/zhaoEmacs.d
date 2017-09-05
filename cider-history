@@ -2,4 +2,4 @@
 ;; Automatically written history of CIDER REPL session
 ;; Edit at your own risk
 
-("(foo \"fo\")" "(+ 3 6)" "（+ 3 6）")
+("(greet \"hdfg\")" "(foo \"hi\")" "(foo \"fo\")" "(+ 3 6)" "（+ 3 6）")

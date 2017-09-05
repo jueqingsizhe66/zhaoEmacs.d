@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "dracula-theme" "dracula-theme.el" (22957 10772
+;;;### (autoloads nil "dracula-theme" "dracula-theme.el" (22958 20721
 ;;;;;;  0 0))
 ;;; Generated autoloads from dracula-theme.el
 

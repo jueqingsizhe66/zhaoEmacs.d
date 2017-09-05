@@ -70,3 +70,53 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+
+
+
+
+;; init expand-region
+(require 'expand-region)
+(global-unset-key (kbd "M--"))
+(global-set-key (kbd "M-=") 'er/expand-region)
+(global-set-key (kbd "M--") 'er/contract-region)
+
+;; init auto-complete
+(require 'auto-complete-config)
+(ac-config-default)
+
+
+;; Rename file and buffer added on 2016/09/16
+
+(defun rename-this-buffer-and-file ()
+  "Renames current buffer and file it is visiting."
+  (interactive)
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (error "Buffer '%s' is not visiting a file!" name)
+      (let ((new-name (read-file-name "New name: " filename)))
+        (cond ((get-buffer new-name)
+               (error "A buffer named '%s' already exists!" new-name))
+              (t
+               (rename-file filename new-name 1)
+               (rename-buffer new-name)
+               (set-visited-file-name new-name)
+               (set-buffer-modified-p nil)
+               (message "File '%s' successfully renamed to '%s'" name (file-name-nondirectory new-name))))))))
+
+(global-set-key (kbd "C-c r") 'rename-this-buffer-and-file)
+
+;; 璁剧疆瀛椾綋涓庣獥鍙ｅぇ灏
+;; (set-default-font "Monaco 12")
+;; (global-set-key (kbd "<f2>") 'toggle-frame-fullscreen)
+(require 'hlinum)
+(hlinum-activate)
+(set-face-attribute 'linum nil :background nil)
+(set-face-foreground 'linum "#f8f8f2")
+(setq linum-format "%d ")
+;; (set-face-attribute 'hl-line nil :foreground nil :background "#330")
+(set-face-attribute 'hl-line nil :foreground nil :background "#353535")
+
+;; 2017/7/13
+(browse-kill-ring-default-keybindings)
