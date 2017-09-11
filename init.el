@@ -97,6 +97,7 @@
      all-the-icons   ;;;you need to download fonts
 
      session
+     markdown-mode+
     
     ))
 
@@ -221,10 +222,10 @@ Added: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
      ("Contact" 112 "
 * %^{Name} :CONTACT:
 %[l:/contemp.txt]
-" "F:/gtd/privnotes.org"))))
+" "F:/gtd/privnotes.org"))) t)
  '(package-selected-packages
    (quote
-    (scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

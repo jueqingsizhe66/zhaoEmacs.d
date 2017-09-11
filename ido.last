@@ -36,7 +36,7 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("e:/clojure-home/first-example/src/first_example/" (22966 34523 0 0) "test.md" "core.clj" "../" "./")
+ ("e:/clojure-home/first-example/src/first_example/" (22966 43908 0 0) "test.md" "hello.md" "core.clj" "../" "./")
 
  ("e:/clojure-home/" (22958 42392 0 0) "testClojure.iml" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "hello.md" "first-example/" "examples/" "emacs-25.2-x86_64/" "a.org" ".idea/" "../" "./")
 

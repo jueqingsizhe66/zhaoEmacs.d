@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ package-install
  server-start
  cider-jack-in
  cua-mode
  customize
  make-frame
  paredit-mode
- run-scheme
 )
 
 ;; ----- smex-data -----
@@ -16,7 +16,7 @@
  (list-packages . 1)
  (package-list-packages . 4)
  (package-autoremove . 3)
- (package-install . 9)
+ (package-install . 10)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)

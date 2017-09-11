@@ -31,6 +31,11 @@ click [all-the-icons][4]
      neotree
      all-the-icons   ;;;you need to download fonts
 ```
+
+注意，在第一次使用时候，执行`M-x  all-the-icons-install-fonts`,会提示安装字体，不然
+打开neotree会出现部分无法显示。
+
+
 2. 并且在ui.el添加了
 ```
 
@@ -190,6 +195,44 @@ M-up/dowm 上下移动列表项
 Okey, below is the new interface,
 
 ![image][1]
+
+
+### 9. cua mode(deleted)
+本来想着配置[cua(Common User Access) mode][18],后来想着ctrl-v和传统的kill-ring 冲突，于是就把它删掉，
+而且传统的[kill-ring][17] 队列的风格也是不错。
+
+当前的配置文档使用M-y就可以调用(注意ctrl+y表示黏贴 M-W表示添加到黏贴板)
+(browse-kill-ring-default-keybindings),这样可以看到所有删除和剪切的历史，
+通过多次摁M-y可以切换不同的历史(还得多熟练),查看editing.el最后一行。
+
+### 10. 想着安装上markdown-mode+(major-mode)
+
+```
+M-x package-install  markdown-mode+
+```
+
+在init.el的my-package list 增加markdown-mode+，这样每次打开markdown的md后缀结尾的后缀名就会自动渲染，这也是emacs的[mode][18]的一种运用.
+
+### 11. server+clinet
+
+emacs经常地使用方式是
+   
+     长时间打开server(通过runemacs daemon，并敲入M-x server-start)
+     然后就可以在ubuntu系统的命令行使用emacsclient 文件名
+     或者 windows系统的TotalCommander通过emacsclientw(相比于emacsclient,他能够直接跳转到serve断)查看文件，这样打开的文件
+     就会出现在server端的屏幕上，使用ctrl+x #来关闭
+
+这样启动emacs方便些。
+
+现在在配置文件init.el增加了(server start) 这样就不需要每次runemacs daemon的时候还需要启动server。
+
+<hr/>
+<hr/>
+到目前位置，ubuntu和windows的配置能够同时使用！！！Excellent!
+
+![new Pic][19]
+
+-------
 # this is a Clojure-friendly emacs config
 
 If you're new to emacs, check out
@@ -299,3 +342,6 @@ In general, if you want to add support for a language then you should be able to
 [14]:http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html#sec-1 
 [15]:https://www.emacswiki.org/emacs/BookmarkPlus 
 [16]:http://www.yinwang.org/blog-cn/2013/04/11/scheme-setup 
+[17]:http://www.cnblogs.com/robertzml/archive/2010/02/19/1669204.html
+[18]: https://www.masteringemacs.org/article/beginners-guide-to-emacs
+[19]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/holyshit.jpg
