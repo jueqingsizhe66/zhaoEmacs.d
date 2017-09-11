@@ -293,10 +293,15 @@ C-x 5 2 打开当前window相同的frame
 ### 15. 括号相关的跳转
 
 `C-M-d`  Move down into a  list
+
 `C-M-u`  Move up   out  of a list
+
 `C-M-n`  Move forward to the next list
+
 `C-M-p`  Move backward to the previous list
+
 `C-M-a`  Move to beginning of defun
+
 `C-M-e`  Move to end       of defun
 
 <hr/>
