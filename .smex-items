@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ info
  package-install
  server-start
  cider-jack-in
  cua-mode
  customize
  make-frame
- paredit-mode
 )
 
 ;; ----- smex-data -----
@@ -29,4 +29,5 @@
  (customize . 1)
  (cua-mode . 1)
  (server-start . 1)
+ (info . 1)
 )

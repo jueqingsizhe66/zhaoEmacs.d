@@ -232,13 +232,81 @@ emacs经常地使用方式是
 
 ![new Pic][19]
 
--------
-# this is a Clojure-friendly emacs config
 
-If you're new to emacs, check out
-[this introductory tutorial](http://www.braveclojure.com/basic-emacs/)!
+### 12. info window
 
-## WARNING
+类似于vim的help系统，emacs的info系统也做得很强大，
+
+使用 `C-h i` 可以得到一个info window, 一个不错的帮助平台
+
+1. 使用space键执行翻屏(scroll one screen at a time)
+2. [ and ] Previous /Next node
+3. 使用n和p跳转上下章节(同级目录跳转）(Previous/next sibling node)
+4. l and r可以返回和向前跳转(in history)(l and r go back /forward in history)
+类似于浏览器的回退和前进
+5. Tab 表示在links之间跳转
+6. Enter进入链接, m 弹出一个prompt minibuffer, for a menu item name to choose it.
+7. q 推出info browser
+
+        Everyday reading
+        For everyday reading, you want SPACE for browsing and reading 
+        as it "does what you want". It thumbs through a page until it
+        reaches the end. Then, it either picks the next sub node or the
+        next chapter. For browsing ,use [ and ] to cycle back and forth
+        through nodes.
+
+
+在`c-h i` 具有menu的文档下，可以输入`m` 命令得到menu菜单，执行定义到某个manual下，
+常用的组合过程`c-h i m`
+
+`C-h F` 函数说明`M-x describe-function`
+
+`C-h V` 变量说明`M-x describe-variable`
+
+`C-h a` 打开apropos symbol的regex字符关联的系统说明
+
+`C-h d` 类似于apropos的regex字符关联的系统文档
+
+`C-h k` 查看绑定快捷键的说明，比如你想查看`C-x #`表示什么意思，就可以执行该命令
+
+### 13. mode helper system
+
+使用`C-h m`等效于`M-x describe-mode` 可以很方便打开当前的buffer后缀对应的major-mode的帮助信息(一般一个
+文件后缀对应一个major-mode和多个minor-modes)
+
+比如在打开的markdown md后缀文件下，会打开markdown major-mode的帮助信息，有相关的
+快捷键等帮助信息
+
+
+### 14. 多窗口
+
+C-x 5 2 打开当前window相同的frame
+如果关掉当前frame，执行`C-x 5 0` 
+如果关掉其他frame，执行`C-x 5 1` 
+
+`C-x 1` delete other windows.
+`C-x 2` split window below.
+`C-x 3` split window right.
+`C-x 0` delete the actie window right.
+
+
+### 15. 括号相关的跳转
+
+`C-M-d`  Move down into a  list
+`C-M-u`  Move up   out  of a list
+`C-M-n`  Move forward to the next list
+`C-M-p`  Move backward to the previous list
+`C-M-a`  Move to beginning of defun
+`C-M-e`  Move to end       of defun
+
+<hr/>
+
+<hr/>
+
+this is a Clojure-friendly emacs config
+
+If you're new to emacs, check out [this introductory tutorial][20]!
+WARNING
 
 This project uses an outdated version of
 [CIDER](https://github.com/clojure-emacs/cider), the package that
@@ -345,3 +413,4 @@ In general, if you want to add support for a language then you should be able to
 [17]:http://www.cnblogs.com/robertzml/archive/2010/02/19/1669204.html
 [18]: https://www.masteringemacs.org/article/beginners-guide-to-emacs
 [19]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/holyshit.jpg
+[20]:https://www.braveclojure.com/basic-emacs/
