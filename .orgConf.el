@@ -68,7 +68,7 @@
 ;(add-hook 'after-init-hook 'ibus-mode-on)
 
 ;;; 注意路径得写对了
-(add-to-list 'load-path "/usr/share/emacs/24.3/lisp/org/")
+;(add-to-list 'load-path "/usr/share/emacs/24.3/lisp/org/")
  (add-to-list 'load-path "~/.emacs.d/GTD/muse-3.20/lisp")
  (add-to-list 'load-path "~/.emacs.d/GTD/planner-3.42")
  (add-to-list 'load-path "~/.emacs.d/GTD/remember-2.0")

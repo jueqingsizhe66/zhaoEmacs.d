@@ -162,6 +162,16 @@ c-c c-s 添加当前标题的schedule
 c-c shift-< 打开calendar
 c-c shift-> 添加calendar鼠标下的日期
 
+
+
+M-RET 插入同级列表项
+M-S-RET 插入有 checkbox的同级列表项
+C-c C-c 改变 checkbox状态
+M-left/right 改变列表项层级关系
+M-up/dowm 上下移动列表项
+
+输入C-c . 会出现一个日历，我们点选相应的时间即可插入。
+
 ```
 
 ### 8. chez-scheme的集成(scheme-editing.el)

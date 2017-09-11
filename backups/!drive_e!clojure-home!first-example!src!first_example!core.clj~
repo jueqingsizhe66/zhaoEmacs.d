@@ -3,4 +3,6 @@
   [x]
   (println "hello" x))
 ;;; el
-
+(defn finny
+  [x]
+  (println "dff" x))

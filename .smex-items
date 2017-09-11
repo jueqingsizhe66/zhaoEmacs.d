@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
+ server-start
  cider-jack-in
+ cua-mode
+ customize
+ make-frame
  paredit-mode
  run-scheme
- package-install
- package-list-packages
- package-autoremove
- bookmark-bmenu-list
 )
 
 ;; ----- smex-data -----
 (
- (cider-jack-in . 12)
+ (cider-jack-in . 15)
  (list-packages . 1)
  (package-list-packages . 4)
  (package-autoremove . 3)
@@ -25,4 +25,8 @@
  (bookmark-write . 1)
  (run-scheme . 1)
  (paredit-mode . 1)
+ (make-frame . 1)
+ (customize . 1)
+ (cua-mode . 1)
+ (server-start . 1)
 )

@@ -18,6 +18,7 @@
 ;; Highlight current line
 (global-hl-line-mode 1)
 
+(cua-mode 1)
 ;; Interactive search key bindings. By default, C-s runs
 ;; isearch-forward, so this swaps the bindings.
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
@@ -70,6 +71,7 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
 
 
 

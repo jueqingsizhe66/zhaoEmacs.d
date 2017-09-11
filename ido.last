@@ -16,8 +16,8 @@
 ;; ----- ido-work-directory-list -----
 (
  "e:/clojure-home/first-example/src/first_example/"
- "e:/EOPL2014/5010-Program-Design-paradigms/"
  "e:/clojure-home/"
+ "e:/EOPL2014/5010-Program-Design-paradigms/"
  "e:/clojure-home/first-example/"
  "/home/macro/clojure-works/first-example/src/first_example/"
 )
@@ -25,16 +25,20 @@
 ;; ----- ido-work-file-list -----
 (
  "core.clj"
+ "test.md"
+ "hello.md"
+ "a.org"
  "01-5-area-of-ring.rkt"
  "01-2-template-examples.rkt"
  "01-1-f2c.rkt"
- "hello.md"
  "CHANGELOG.md"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("e:/clojure-home/first-example/src/first_example/" (22958 17765 0 0) "core.clj" "../" "./")
+ ("e:/clojure-home/first-example/src/first_example/" (22966 34523 0 0) "test.md" "core.clj" "../" "./")
+
+ ("e:/clojure-home/" (22958 42392 0 0) "testClojure.iml" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "hello.md" "first-example/" "examples/" "emacs-25.2-x86_64/" "a.org" ".idea/" "../" "./")
 
  ("e:/EOPL2014/5010-Program-Design-paradigms/" (22138 23892 0 0) "sets.rkt" "README.md" "LICENSE" "extras.rkt" "cat.png" "13-interp/" "11-mvc-f15/" "11-interface-proposal.rkt" "11-7-separate-files/" "11-6-after-review.rkt" "11-5-generalize-methods-in-superclass.rkt" "11-4-turn-differences-into-methods.rkt" "11-3-unify-try1.rkt" "11-2-squares.rkt" "11-1-flashing-balls.rkt" "10-8-interacting-objects.rkt" "10-7-callbacks.rkt" "10-6-push-model-fixed.rkt" "10-5-push-model.rkt" "10-4-ball-factory.rkt" "10-3-stateful-world.rkt" "10-2B-stateful-wall.rkt" "10-2A-ball-and-wall.rkt" "10-1-communicating-objects.rkt" "09-7-coding-standards.rkt" "09-6-testing.rkt" "09-5-shapes-with-interfaces.rkt" "09-4-shapes-separate-functions.rkt" "09-3-shapes-functional.rkt" "09-2A-space-invaders-2.rkt" "09-2-space-invaders-1.rkt" "09-1-basics.rkt" "08-9-queens.rkt" "08-8-square-roots.rkt" "08-8-queens.rkt" "08-7-linear-search.rkt" "08-6-function-sum.rkt" "08-5a-implicit-graphs.rkt" "08-5-reachability.rkt" "08-4-binary-search.rkt" "08-3-fib.rkt" "08-2-merge-sort.rkt" "08-1-decode.rkt" "07-4-foldl.rkt" "07-3-fredexps.rkt" "07-2-mark-depth.rkt" "07-1-number-list-with-stress-tests.rkt" "06-6-descendants.rkt" "06-5-sos-and-loss.rkt" "06-4-lasns.rkt" "06-3-tree-folds.rkt" "06-2-trees.rkt" "06-1-recursive-structures.rkt" "05-4-sets.rkt" "05-3-map.rkt" "05-2-pizza.rkt" "05-1-find-dog.rkt" "04-2-books.rkt" "04-1-lists.rkt" "03-3-two-draggable-cats.rkt" "03-2-draggable-cat.rkt" "03-2-draggable-cat-corrected.rkt" "03-1-falling-cat.rkt" "02-6-ball-after-mouse-with-tests.rkt" "02-5-balls-collide.rkt" "02-4-ball-after-mouse.rkt" "02-3-traffic-light-with-timer.rkt" "02-2-traffic-light.rkt" "02-1-book-receipts.rkt" "01-5-area-of-ring.rkt" "01-4-velocity.rkt" "01-3-rocket-examples.rkt" "01-2-template-examples.rkt" "01-1-f2c.rkt" ".gitignore" ".git/" "../" "./")
 
@@ -51,8 +55,6 @@
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22958 16663 0 0) "themes/" "server/" "rubbish2/" "rubbish/" "README.md" "projectile-bookmarks.eld" "init.el" "ido.last" "GTD/" "elpa/" "customizations/" "custom.el" "cider-history" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf" ".orgConf.el.swp" ".orgConf.el" ".init.el.swp" ".git/" "../" "./")
 
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/" (22958 15949 0 0) "remember-2.0/" "planner-3.42/" "package/" "orgTemplate/" "orgBoss/" "newgtd.org" "myPlan/" "muse-3.20/" ".notes.org" ".git/" "../" "./")
-
- ("e:/clojure-home/" (22958 6743 0 0) "testClojure.iml" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "hello.md" "first-example/" "examples/" "emacs-25.2-x86_64/" ".idea/" "../" "./")
 
  ("e:/clojure-home/first-example/src/" (22954 55182 0 0) "first_example/" "../" "./")
 
