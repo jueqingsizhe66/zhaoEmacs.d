@@ -533,5 +533,5 @@ In general, if you want to add support for a language then you should be able to
 [26]:http://oremacs.com/swiper/
 [27]:https://github.com/abo-abo/swiper
 [28]:https://github.com/emacs-helm/helm
-[29]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/calendar.jpg
+[29]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/calenar.jpg
 
