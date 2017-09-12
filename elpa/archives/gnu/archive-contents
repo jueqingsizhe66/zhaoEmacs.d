@@ -89,7 +89,7 @@
 	      ((:url . "http://user42.tuxfamily.org/aumix-mode/index.html")
 	       (:keywords "multimedia" "mixer" "aumix"))])
  (auto-correct .
-	       [(1 0)
+	       [(1 1)
 		nil "Remembers and automatically fixes past corrections" single
 		((:url . "http://elpa.gnu.org/packages/auto-correct.html")
 		 (:keywords "editing"))])
@@ -129,7 +129,7 @@
 	     ((:url . "http://elpa.gnu.org/packages/caps-lock.html")
 	      (:keywords))])
  (captain .
-	  [(1 0)
+	  [(1 0 1)
 	   nil "CAPiTalization is Automatic IN emacs" single
 	   ((:url . "http://elpa.gnu.org/packages/captain.html")
 	    (:keywords "editing"))])
@@ -475,7 +475,7 @@
 		 ((:keywords "gnome" "c" "coding style")
 		  (:url . "http://elpa.gnu.org/packages/gnome-c-style.html"))])
  (gnorb .
-	[(1 2 3)
+	[(1 2 4)
 	 ((cl-lib
 	   (0 5)))
 	 "Glue code between Gnus, Org, and BBDB" tar
@@ -763,7 +763,7 @@
 	     ((:url . "https://github.com/michael-heerdegen/on-screen.el")
 	      (:keywords "convenience"))])
  (org .
-      [(20170904)
+      [(20170911)
        nil "Outline-based notes management and organizer" tar nil])
  (org-edna .
 	   [(1 0 -3 1)
@@ -943,8 +943,10 @@
 	       ((:keywords "soap" "web-services" "comm" "hypermedia")
 		(:url . "http://elpa.gnu.org/packages/soap-client.html"))])
  (sokoban .
-	  [(1 4 5)
-	   nil "Implementation of Sokoban for Emacs." tar
+	  [(1 4 6)
+	   ((emacs
+	     (23 1)))
+	   "Implementation of Sokoban for Emacs." tar
 	   ((:keywords "games")
 	    (:url . "http://elpa.gnu.org/packages/sokoban.html"))])
  (sotlisp .

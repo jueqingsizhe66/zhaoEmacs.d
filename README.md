@@ -304,6 +304,70 @@ C-x 5 2 打开当前window相同的frame
 
 `C-M-e`  Move to end       of defun
 
+
+### 16. multiple-cursors(editiing.el)
+
+按照官网简单配置
+
+在没有[multiple-cursors][21]的前提下，你也可以使用`C-x r t` 来标记当前
+光标前的所有行，当作一个矩形区域，然后可以多行编辑
+
+当然你也可以使用`C-x Space Esc Down Down `等操作来标记多行
+
+而有了multiple-cursors, 你现在可以配合`M-h` 选择一个段落，然后`C-S-c C-S-c`
+
+或者你可以使用`C->` 来mark当前光标下单词，并查找下一处出现的地方，最终摁下`Enter`
+键，表示确认
+。
+
+### 17. vim-surround to evil-surround
+
+有时候需要给单词或者字段组合增加个双引号或者单引号， 亦或者括号，
+在emcas可以使用[evil-surround][22](vim中使用[vim-surround][23])
+
+add `(global-evil-surround-mode 1)` in the editing.el
+
+add `evil-surround` into my-package list
+
+### 18. mo-git-blame
+
+阅读[emacs教程][25]安装了git blame
+git blame 安装
+ivy ivy-dired-history all-the-icons-ivy ivy-rich
+
+[ivy][27]是一个类似[emacs helm][28]的东西，可以方便查找buffer和file，
+
+```
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> l") 'counsel-find-library)
+(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+```
+
+我现在都是使用`M-x swiper` `M-x-git` `M-x counsel-find-file`
+
+`M-x counsel-find-library` `M-x counsel-git` 来做实验，看看速度怎么样，
+发现`M-x counsel-git-grep`速度很慢，没必要用~ `M-x swiper` 搜索buffer，vim的
+对应功能是[vimfiler][25],挺好用的!
+
+[ivy使用手册][26]
+
+于是现在也在navigation.el增加了ivy-mode.
 <hr/>
 
 <hr/>
@@ -419,3 +483,11 @@ In general, if you want to add support for a language then you should be able to
 [18]: https://www.masteringemacs.org/article/beginners-guide-to-emacs
 [19]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/holyshit.jpg
 [20]:https://www.braveclojure.com/basic-emacs/
+[21]:https://github.com/magnars/multiple-cursors.el
+[22]:https://github.com/tpope/vim-surround
+[23]:https://github.com/emacs-evil/evil-surround
+[24]:http://blog.csdn.net/redguardtoo/article/details/7222501/
+[25]:https://github.com/Shougo/vimfiler.vim
+[26]:http://oremacs.com/swiper/
+[27]:https://github.com/abo-abo/swiper
+[28]:https://github.com/emacs-helm/helm

@@ -176,7 +176,7 @@
                         ("@office" . ?o)
                         ("@home" . ?H)
                         ("@farm" . ?f)
-                        ("@NCEPU" . ?f)
+                        ("@NCEPU" . ?n)
                         ("@F708" . ?f)
 
                       (:endgroup . nil)

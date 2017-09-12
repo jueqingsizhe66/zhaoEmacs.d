@@ -1,22 +1,22 @@
 
 ;; ----- smex-history -----
 (
- info
  package-install
- server-start
- cider-jack-in
- cua-mode
- customize
- make-frame
+ package-autoremove
+ package-list-packages
+ dired
+ markdown-export-pdf
+ swiper
+ counsel-git-grep
 )
 
 ;; ----- smex-data -----
 (
  (cider-jack-in . 15)
  (list-packages . 1)
- (package-list-packages . 4)
- (package-autoremove . 3)
- (package-install . 10)
+ (package-list-packages . 7)
+ (package-autoremove . 5)
+ (package-install . 23)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -30,4 +30,18 @@
  (cua-mode . 1)
  (server-start . 1)
  (info . 1)
+ (mc/mark-next-lines . 8)
+ (mc/edit-lines . 11)
+ (visual-line-mode . 1)
+ (undo-tree-visualizer-mode . 1)
+ (ivy-mode . 1)
+ (counsel-ag . 1)
+ (counsel-git . 1)
+ (counsel-el . 1)
+ (ivy-resume . 1)
+ (swiper . 2)
+ (counsel-find-file . 1)
+ (counsel-git-grep . 2)
+ (markdown-export-pdf . 1)
+ (dired . 1)
 )

@@ -98,6 +98,10 @@
 
      session
      markdown-mode+
+     evil-surround
+     ivy
+     ivy-rich
+     
     
     ))
 
@@ -225,7 +229,7 @@ Added: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
 " "F:/gtd/privnotes.org"))) t)
  '(package-selected-packages
    (quote
-    (markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
