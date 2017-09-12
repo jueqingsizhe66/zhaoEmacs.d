@@ -101,7 +101,7 @@
      evil-surround
      ivy
      ivy-rich
-     
+     cal-china-x
     
     ))
 
@@ -188,48 +188,9 @@
    (quote
     (("WikiPlanner"
       ("~/.emacs.d/GTD/myPlan/" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
- '(org-capture-templates
-   (quote
-    (("Todo" 116 "* TODOS %^{To Do What?(Brief Description)} %^g
-%?
-Added: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
-     ("IDEA" 105 "* TODO %^{What's your IDEA (Briefly)} 
- %?" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")
-     ("Journal" 106 "** %^{Head Line} %U %^g
-%i%?" "~/.emacs.d/GTD/orgBoss/Journal/journal.org")
-     ("Clipboard" 99 "** %^{Head Line} %U %^g
-%c
-%?" "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")
-     ("Receipt" 114 "** %^{BriefDesc} %U %^g
-%?" "~/.emacs.d/GTD/orgBoss/Financial/finances.org")
-     ("Book" 98 "** %^{Enter the Book Name} %t :BOOK: 
-%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]
-" "~/.emacs.d/GTD/orgBoss/Book/book.org")
-     ("Film" 102 "** %^{Enter the Film Name} %t :FILM: 
-%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]
-" "~/.emacs.d/GTD/orgBoss/Film/film.org")
-     ("Daily Review" 100 "** %t :COACH: 
-%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]
-" "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")
-     ("SITES" 119 "* %^{Enter the Name of the Site}
- %?" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES")
-     ("Someday" 115 "** %^{Someday Heading} %U
-%?
-" "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
-     ("Vocab" 118 "** %^{Word?}
-%?
-" "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org")
-     ("Private" 112 "
-* %^{topic} %T 
-%i%?
-" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")
-     ("Contact" 112 "
-* %^{Name} :CONTACT:
-%[l:/contemp.txt]
-" "F:/gtd/privnotes.org"))) t)
  '(package-selected-packages
    (quote
-    (0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

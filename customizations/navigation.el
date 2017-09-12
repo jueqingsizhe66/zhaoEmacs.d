@@ -93,5 +93,3 @@
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 
 
-
-

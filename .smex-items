@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ calendar
  package-install
- package-autoremove
- package-list-packages
- dired
- markdown-export-pdf
- swiper
- counsel-git-grep
+ holidays
+ customize-variable
+ remember
+ remember-notes
+ cider-jack-in
 )
 
 ;; ----- smex-data -----
@@ -16,7 +16,7 @@
  (list-packages . 1)
  (package-list-packages . 7)
  (package-autoremove . 5)
- (package-install . 23)
+ (package-install . 29)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -44,4 +44,12 @@
  (counsel-git-grep . 2)
  (markdown-export-pdf . 1)
  (dired . 1)
+ (remember . 3)
+ (remember-notes . 2)
+ (plan . 1)
+ (org-indent-mode . 2)
+ (customize-variable . 1)
+ (calendar . 4)
+ (holidays . 3)
+ (calendar-list-holidays . 1)
 )

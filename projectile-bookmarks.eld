@@ -1,1 +1,1 @@
-("~/.emacs.d/" "e:/clojure-home/first-example/" "e:/clojure-home/clojure/" "e:/EOPL2014/5010-Program-Design-paradigms/" "~/.emacs.d/GTD/" "i:/xinranUbunutu/MyOrgMode/" "~/clojure-works/" "c:/Users/YeZhao/")
+("~/.emacs.d/" "c:/Users/YeZhao/" "c:/Users/YeZhao/Desktop/emacsWithRemember/GTD/" "e:/clojure-home/first-example/" "e:/clojure-home/clojure/" "e:/EOPL2014/5010-Program-Design-paradigms/" "~/.emacs.d/GTD/" "i:/xinranUbunutu/MyOrgMode/" "~/clojure-works/")

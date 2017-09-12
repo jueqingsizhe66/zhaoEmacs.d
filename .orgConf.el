@@ -12,12 +12,15 @@
 ;(global-set-key "\C-c l" 'org-store-link) ;;有问题
 ;(global-set-key "\C-c a" 'org-agenda) ;; 有问题
 ;(global-set-key "\C-c b" 'org-iswitchb)  ;; 有问题
-(global-set-key "\C-cl" 'org-store-link) ;;
-(global-set-key "\C-ca" 'org-agenda) ;; 
-(global-set-key "\C-cb" 'org-iswitchb)  ;; 原来是因为多了一个空格
+(global-set-key (kbd "C-c l") 'org-store-link)    ;;
+(global-set-key (kbd "C-c a")  'org-agenda)           ;; 
+(global-set-key (kbd "C-c b") 'org-iswitchb) ;; 原来是因为多了一个空格
 
 (setq org-hide-leading-starts t)
 (setq org-log-done t)
+
+(setq org-startup-indented t)  ;; or M-x org-indent-mode  to clean the org file 
+(setq auto-image-file-mode t)  ;;  let emacs show image
 
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subTodo Entries are done,to TODO otherwise."
@@ -82,6 +85,7 @@
              :major-mode planner-mode
 	     :visit-link planner-visit-link))))
      (require 'planner)
+(require 'remember)
 ;(org-remember-insinuate) 
 ;; You cannot use ctrl+alt+f12 ubuntu  terminal global key
  ;(setq org-default-notes-file  "~/.emacs.d/GTD/.notes.org") 
@@ -100,53 +104,117 @@
  (setq remember-annotation-functions '(org-remember-annotation))
  (setq remember-handler-functions '(org-remember-handler))
  (add-hook 'remember-mode-hook 'org-remember-apply-template)
- (define-key global-map "\C-cr" 'org-remember)
- (define-key global-map "\C-cc" 'org-capture)
+ (define-key global-map (kbd "C-c r") 'org-remember)
+ (define-key global-map (kbd "C-c c") 'org-capture)
 
+;("j" "Journal"   "~/.emacs.d/GTD/orgBoss/Journal/journal.org" "** %^{Head Line} %U %^g\n%i%?"  )
+(setq org-capture-templates 
+      '(("l" "灵感" entry (file+headline "~/.emacs.d/GTD/writing.org" "创意") 
+                        "* %?\n %i\n %a") 
+        ("j" "Journal" entry (file+datetree "~/.emacs.d/GTD/orgBoss/Journal/journal.org" ) 
+                        "* %?\n输入于： %U\n %i\n %a")
+        ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")  
+                        "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" )
+        ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")  
+                        "* TODO %^{What's your IDEA (Briefly)} \n %?" )
+          ("c" "Clipboard" entry (file+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")  
+                        "** %^{Head Line} %U %^g\n%c\n%?"  )
+          ("r" "Receipt" entry  (file+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" ) 
+                        "** %^{BriefDesc} %U %^g\n%?"   )
+          ("b" "Book" entry  (file+datetree "~/.emacs.d/GTD/orgBoss/Book/book.org")   
+                        "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n")
+          ("f" "Film" entry (  file+datetree "~/.emacs.d/GTD/orgBoss/Film/film.org")  
+                        "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n")
+          ("d" "Daily Review" entry   (file+datetree "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")  
+                        "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n")
+        ("w" "SITES" entry  (file+headline "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES")  
+                        "* %^{Enter the Name of the Site}\n %?" )
+          ("s" "Someday"  entry   (file+datetree "~/.emacs.d/GTD/orgBoss/Someday/someday.org") 
+                        "** %^{Someday Heading} %U\n%?\n"  )
+          ("v" "Vocab"  entry (file+datetree  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" ) 
+                        "** %^{Word?}\n%?\n"  )
+          ( "p" "Private" entry (file+datetree "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")  
+                         "\n* %^{topic} %T \n%i%?\n")
+         ("a" "contact"  entry  (file+datetree "~/.emacs.d/gtd/phone.org" ) 
+                        "\n* %^{name} :contact:\n\n")
 
-(setq org-remember-templates
-    '(("Todo" ?t "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
-    ("IDEA" ?i "* TODO %^{What's your IDEA (Briefly)} \n %?" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")
-      ("Journal"   ?j "** %^{Head Line} %U %^g\n%i%?"  "~/.emacs.d/GTD/orgBoss/Journal/journal.org")
-      ("Clipboard" ?c "** %^{Head Line} %U %^g\n%c\n%?"  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")
-      ("Receipt"   ?r "** %^{BriefDesc} %U %^g\n%?"   "~/.emacs.d/GTD/orgBoss/Financial/finances.org")
-      ("Book" ?b "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n" 
-         "~/.emacs.d/GTD/orgBoss/Book/book.org")
-      ("Film" ?f "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n" 
-         "~/.emacs.d/GTD/orgBoss/Film/film.org")
-      ("Daily Review" ?d "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n" 
-         "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")
-    ("SITES" ?w "* %^{Enter the Name of the Site}\n %?" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES") 
-      ("Someday"   ?s "** %^{Someday Heading} %U\n%?\n"  "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
-      ("Vocab"   ?v "** %^{Word?}\n%?\n"  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org")
-     ("Private" ?p "\n* %^{topic} %T \n%i%?\n" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")
-     ("Contact" ?p "\n* %^{Name} :CONTACT:\n%[l:/contemp.txt]\n" 
-               "F:/gtd/privnotes.org")
-        
-     )
-   )
-(setq org-capture-templates
-    '(("Todo" ?t "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
-    ("IDEA" ?i "* TODO %^{What's your IDEA (Briefly)} \n %?" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")
-      ("Journal"   ?j "** %^{Head Line} %U %^g\n%i%?"  "~/.emacs.d/GTD/orgBoss/Journal/journal.org")
-      ("Clipboard" ?c "** %^{Head Line} %U %^g\n%c\n%?"  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")
-      ("Receipt"   ?r "** %^{BriefDesc} %U %^g\n%?"   "~/.emacs.d/GTD/orgBoss/Financial/finances.org")
-      ("Book" ?b "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n" 
-         "~/.emacs.d/GTD/orgBoss/Book/book.org")
-      ("Film" ?f "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n" 
-         "~/.emacs.d/GTD/orgBoss/Film/film.org")
-      ("Daily Review" ?d "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n" 
-         "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")
-    ("SITES" ?w "* %^{Enter the Name of the Site}\n %?" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES") 
-      ("Someday"   ?s "** %^{Someday Heading} %U\n%?\n"  "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
-      ("Vocab"   ?v "** %^{Word?}\n%?\n"  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org")
-     ("Private" ?p "\n* %^{topic} %T \n%i%?\n" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")
-     ("Contact" ?p "\n* %^{Name} :CONTACT:\n%[l:/contemp.txt]\n" 
-               "F:/gtd/privnotes.org")
-        
-     )
-   )
+    ))
 
+; (setq org-capture-templates
+;     '(("Todo" ?t "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
+;     ("IDEA" ?i "* TODO %^{What's your IDEA (Briefly)} \n %?" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")
+;       ("Journal"   ?j "** %^{Head Line} %U %^g\n%i%?"  "~/.emacs.d/GTD/orgBoss/Journal/journal.org")
+;       ("Clipboard" ?c "** %^{Head Line} %U %^g\n%c\n%?"  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")
+;       ("Receipt"   ?r "** %^{BriefDesc} %U %^g\n%?"   "~/.emacs.d/GTD/orgBoss/Financial/finances.org")
+;       ("Book" ?b "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n"
+;          "~/.emacs.d/GTD/orgBoss/Book/book.org")
+;       ("Film" ?f "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n"
+;          "~/.emacs.d/GTD/orgBoss/Film/film.org")
+;       ("Daily Review" ?d "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n"
+;          "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")
+;     ("SITES" ?w "* %^{Enter the Name of the Site}\n %?" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES")
+;       ("Someday"   ?s "** %^{Someday Heading} %U\n%?\n"  "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
+;       ("Vocab"   ?v "** %^{Word?}\n%?\n"  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org")
+;      ("Private" ?p "\n* %^{topic} %T \n%i%?\n" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")
+;      ("Contact" ?p "\n* %^{Name} :CONTACT:\n%[l:/contemp.txt]\n"
+;                "F:/gtd/privnotes.org")
+;      )
+;    )
+;
+;
+; (setq org-remember-templates
+;       '(("l" "灵感" entry (file+headline "~/.emacs.d/GTD/writing.org" "创意")
+;                         "* %?\n %i\n %a")
+;         ("j" "Journal" entry (file+datetree "~/.emacs.d/GTD/orgBoss/Journal/journal.org" )
+;                         "* %?\n输入于： %U\n %i\n %a")
+;         ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")
+;                         "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" )
+;         ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")
+;                         "* TODO %^{What's your IDEA (Briefly)} \n %?" )
+;           ("c" "Clipboard" entry (file+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")
+;                         "** %^{Head Line} %U %^g\n%c\n%?"  )
+;           ("r" "Receipt" entry  (file+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" )
+;                         "** %^{BriefDesc} %U %^g\n%?"   )
+;           ("b" "Book" entry  (file+datetree "~/.emacs.d/GTD/orgBoss/Book/book.org")
+;                         "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n")
+;           ("f" "Film" entry (  file+datetree "~/.emacs.d/GTD/orgBoss/Film/film.org")
+;                         "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n")
+;           ("d" "Daily Review" entry   (file+datetree "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")
+;                         "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n")
+;         ("w" "SITES" entry  (file+headline "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES")
+;                         "* %^{Enter the Name of the Site}\n %?" )
+;           ("s" "Someday"  entry   (file+datetree "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
+;                         "** %^{Someday Heading} %U\n%?\n"  )
+;           ("v" "Vocab"  entry (file+datetree  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" )
+;                         "** %^{Word?}\n%?\n"  )
+;           ( "p" "Private" entry (file+datetree "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")
+;                          "\n* %^{topic} %T \n%i%?\n")
+;          ("a" "contact"  entry  (file+datetree "~/.emacs.d/gtd/phone.org" )
+;                         "\n* %^{name} :contact:\n\n")
+;     ))
+;
+; (setq org-remember-templates
+;     '(("Todo" ?t "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
+;     ("IDEA" ?i "* TODO %^{What's your IDEA (Briefly)} \n %?" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")
+;       ("Journal"   ?j "** %^{Head Line} %U %^g\n%i%?"  "~/.emacs.d/GTD/orgBoss/Journal/journal.org")
+;       ("Clipboard" ?c "** %^{Head Line} %U %^g\n%c\n%?"  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")
+;       ("Receipt"   ?r "** %^{BriefDesc} %U %^g\n%?"   "~/.emacs.d/GTD/orgBoss/Financial/finances.org")
+;       ("Book" ?b "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n"
+;          "~/.emacs.d/GTD/orgBoss/Book/book.org")
+;       ("Film" ?f "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n"
+;          "~/.emacs.d/GTD/orgBoss/Film/film.org")
+;       ("Daily Review" ?d "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n"
+;          "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")
+;     ("SITES" ?w "* %^{Enter the Name of the Site}\n %?" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES")
+;       ("Someday"   ?s "** %^{Someday Heading} %U\n%?\n"  "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
+;       ("Vocab"   ?v "** %^{Word?}\n%?\n"  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org")
+;      ("Private" ?p "\n* %^{topic} %T \n%i%?\n" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")
+;      ("Contact" ?p "\n* %^{Name} :CONTACT:\n%[l:/contemp.txt]\n"
+;                "F:/gtd/privnotes.org")
+;      )
+;    )
+;
+;
 ; “|”用来分隔“未完成”和“完成”两种状态的关键词，前面为未完成项，后面为完成项。如果没有“|”符号，最后一个关键词将被设为完成项，其余为未完成项。
 ; ! 表示时间
 ; 所有的TODO都只有 两种类  Undo and  done 用 |分隔

@@ -368,6 +368,48 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 [ivy使用手册][26]
 
 于是现在也在navigation.el增加了ivy-mode.
+
+### 19. 改进org-mode配置
+
+在.orgConf.el中添加的正确org-capture-templates，使用快捷键`C-c c`来捕捉你的想法并进行记录。 org-remember打算删掉。
+
+有趣的大纲查看命令 
+`C-c \`
+
+有趣的添加当前日期命令
+`C-c .`
+
+在查看org-agenda 的时候可以使用`v`来选择你要看的日、月、年视图等
+
+有趣的org帮助 `LINK:info:org:Top`.
+
+为了显示clean的org文档，在.org.conf添加了
+`(setq org-startup-indented t)`
+
+为了显示图片，在.org.conf 添加了
+`(setq auto-image-fill-mode t)`
+
+### 20. add calendar and bookmark shortkey
+
+edit the ui.el, and add the below information,and also add the
+cal-china-x农历信息
+
+```
+
+;; in the digital keyboard add calendar and bookmark
+(global-set-key [kp-7] 'calendar)
+(global-set-key [kp-8] 'list-bookmarks)
+(setq bookmark-save-flag 1) ;; everytime bookmark is changed, automatically save it
+(setq bookmark-save-flag t) ;; save bookmark when emacs quit
+
+
+```
+
+注意，有可能第一次按下7和8没有反应，得emacs启动之后，就会有效果了
+
+农历的效果。(按下S 可以查看cursor所在的日出日落时间)
+![calendar][29]
+
 <hr/>
 
 <hr/>
@@ -491,3 +533,5 @@ In general, if you want to add support for a language then you should be able to
 [26]:http://oremacs.com/swiper/
 [27]:https://github.com/abo-abo/swiper
 [28]:https://github.com/emacs-helm/helm
+[29]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/calendar.jpg
+

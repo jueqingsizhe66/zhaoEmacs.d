@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("core.clj"
+(("org-capture-last-stored"
+ (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
+ (front-context-string . "** www.orgmode.o")
+ (rear-context-string)
+ (position . 9))
+("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)
  (rear-context-string . "m greeting))\n)\n\n")
