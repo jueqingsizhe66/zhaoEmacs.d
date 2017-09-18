@@ -3,10 +3,10 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
- (front-context-string . "** www.orgmode.o")
- (rear-context-string)
- (position . 9))
+ (filename . "~/.emacs.d/GTD/newgtd.org")
+ (front-context-string . "** TODOS PhaseVi")
+ (rear-context-string . "/slash/\n** sdfd\n")
+ (position . 841))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

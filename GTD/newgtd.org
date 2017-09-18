@@ -26,4 +26,6 @@ Added: [2015-05-03 Sun 21:38]
 *dfdf* 
  /slash/
 ** sdfd
-
+** TODOS PhaseVi mesh manufactory                                    :@work:
+1. do for the nacelle yaw
+Added: [2017-09-18 ÷‹“ª 11:07]

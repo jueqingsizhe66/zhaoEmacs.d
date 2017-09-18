@@ -83,9 +83,10 @@
 (global-set-key (kbd "M-=") 'er/expand-region)
 (global-set-key (kbd "M--") 'er/contract-region)
 
+;; subsititude by compltee
 ;; init auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
+;;(require 'auto-complete-config)
+;;(ac-config-default)
 
 
 ;; Rename file and buffer added on 2016/09/16
@@ -130,3 +131,8 @@
 
 (require 'evil-surround)
 (global-evil-surround-mode 1)
+
+
+
+;; company anything!
+(add-hook 'after-init-hook 'global-company-mode)

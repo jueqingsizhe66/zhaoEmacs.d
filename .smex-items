@@ -1,22 +1,22 @@
 
 ;; ----- smex-history -----
 (
- calendar
+ package-reinstall
+ list-packages
  package-install
+ calendar
  holidays
  customize-variable
- remember
- remember-notes
  cider-jack-in
 )
 
 ;; ----- smex-data -----
 (
  (cider-jack-in . 15)
- (list-packages . 1)
+ (list-packages . 3)
  (package-list-packages . 7)
  (package-autoremove . 5)
- (package-install . 29)
+ (package-install . 33)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -52,4 +52,6 @@
  (calendar . 4)
  (holidays . 3)
  (calendar-list-holidays . 1)
+ (company-mode . 1)
+ (package-reinstall . 8)
 )

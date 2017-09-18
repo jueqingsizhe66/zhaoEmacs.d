@@ -6,4 +6,4 @@
 (defn finny
   [x]
   (println "dff" x))
- 
+(finny 3)

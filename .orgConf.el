@@ -243,7 +243,7 @@
                         ("@errand" . ?e)
                         ("@office" . ?o)
                         ("@home" . ?H)
-                        ("@farm" . ?f)
+                        ("@Dormitry" . ?d)
                         ("@NCEPU" . ?n)
                         ("@F708" . ?f)
 
