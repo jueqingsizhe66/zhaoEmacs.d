@@ -640,12 +640,15 @@ e. Funny place. Emacs can simultaneously open two directory by
 ### modify yassnipet and dired from magnars
 
 `M-x package-install buster-snippet`
+
 `M-x package-install angular-snippet`
+
 `M-x package-install datomic-snippet`
 
 
 
-copy all the snippets folder into your .emacs.d dir.
+1. copy all the snippets folder into your .emacs.d dir.
+2. add require message @init.el(you can check it)
 
 and also add the htmlize, highlight-escape-sequences,and
 js2-mode package
