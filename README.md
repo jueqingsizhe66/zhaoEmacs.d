@@ -355,6 +355,8 @@ add `evil-surround` into my-package list
 
 git配置
 
+*注意，默认的windows git 目录是在 c:/users/username/AppData/Roaming/.gitconfig *
+
 click [magit][5]
 ```
 
