@@ -398,6 +398,8 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
 ```
 
+*注意可以继续使用C-s搜索上一次内容，如果你执行C-s C-w那么就会搜索当前光标下的单词，如果C-r则是反向执行*
+
 我现在都是使用`M-x swiper` `M-x-git` `M-x counsel-find-file`
 
 `M-x counsel-find-library` `M-x counsel-git` 来做实验，看看速度怎么样，
@@ -616,8 +618,10 @@ b. use D to delete the files in prepare, and execute with x
 
 c. when you finish m  , you can move(with command R) ,you can
    copy(with command C), you can delete(with command d)
-   
-d. Funny place. Emacs can simultaneously open two directory by
+ 
+d. use plus(+) to create an new directory.
+
+e. Funny place. Emacs can simultaneously open two directory by
     open two buffers in the left-right zones, so you can use left
     zones as source directory, the right zones as target directory
     for copying and moving files.
