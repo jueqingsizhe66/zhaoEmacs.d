@@ -23,7 +23,7 @@ Added: [2017-09-18 周一 11:07]
    - State "BUG"        from              [2017-09-05 周二 16:48]
    Addd: [2015-05-04 Mon 02:37]
 ** TODOS setting CFD calculation                                      :@work:
-   SCHEDULED: <2017-09-13 周三>
+SCHEDULED: <2017-09-13 周三>
  
  Added: [2017-09-13 周三 01:22]
 *dfdf* 

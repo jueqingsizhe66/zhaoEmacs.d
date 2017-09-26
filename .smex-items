@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- dired
+ zencoding-mode
  package-install
+ expand-region-abbrevs
+ dired
  magit-push
- magit-log-branches
- magit-log-all
  magit-status
- shell
+ magit-log-all
 )
 
 ;; ----- smex-data -----
@@ -16,7 +16,7 @@
  (list-packages . 5)
  (package-list-packages . 8)
  (package-autoremove . 5)
- (package-install . 45)
+ (package-install . 58)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -43,7 +43,7 @@
  (counsel-find-file . 1)
  (counsel-git-grep . 2)
  (markdown-export-pdf . 1)
- (dired . 4)
+ (dired . 9)
  (remember . 3)
  (remember-notes . 2)
  (plan . 1)
@@ -74,12 +74,16 @@
  (mc/mark-all-words-like-this . 2)
  (magit-log . 2)
  (magit-just-amend . 1)
- (magit-status . 10)
+ (magit-status . 11)
  (magit-add-change-log-entry-other-window . 1)
  (magit-add-change-log-entry . 1)
- (magit-log-all . 5)
+ (magit-log-all . 6)
  (shell . 1)
- (magit-push . 5)
+ (magit-push . 11)
  (magit-log-branches . 1)
  (magit-log-refresh . 1)
+ (dired-mouse-find-file-other-window . 1)
+ (sgml-delete-tag . 1)
+ (expand-region-abbrevs . 1)
+ (zencoding-mode . 3)
 )

@@ -40,9 +40,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/customizations/" (22984 39008 0 0) "ui.el" "shell-integration.el" "setup-js.el" "setup-clojure.el" "scheme-editing.el" "perl-editing.el" "new.jpg" "navigation.el" "misc.el" "holyshit.jpg" "font-lock+.el" "elisp-editing.el" "editing.el" "calenar.jpg" "../" "./")
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22986 6230 0 0) "url/" "tutorial/" "themes/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "init.el" "ido.last~" "ido.last" "hello.md" "GTD/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf~" ".recentf" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22986 5799 0 0) "url/" "tutorial/" "themes/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "init.el" "ido.last~" "ido.last" "hello.md" "GTD/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf~" ".recentf" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/customizations/" (22984 39008 0 0) "ui.el" "shell-integration.el" "setup-js.el" "setup-clojure.el" "scheme-editing.el" "perl-editing.el" "new.jpg" "navigation.el" "misc.el" "holyshit.jpg" "font-lock+.el" "elisp-editing.el" "editing.el" "calenar.jpg" "../" "./")
 
  ("e:/clojure-home/" (22982 24725 0 0) "undead_zoobie/" "testClojure.iml" "test-clojure1/" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "hello.md" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "clojure/" "a.org" ".idea/" "../" "./")
 

@@ -151,5 +151,21 @@
 ;(yas-minor-mode 1)
 ;;(yas-reload-all)
 ;;(yas-minor-mode)
-(require 'yasnippet)
+;;(require 'yasnippet)
+
+
+;; for move-text  which will define the M-up and M-down
+;; to call move-text-up and move-text-down function
+(move-text-default-bindings)
+
+
+
+;; Jump to a definition in the current file. (This is awesome)
+;;(global-set-key (kbd "C-x C-i") 'ido-imenu)
+
+
+
+
+
+
 

@@ -107,6 +107,10 @@
      key-chord
      iy-go-to-char
      ace-jump-mode
+
+     htmlize
+     highlight-escape-sequences
+     move-text
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -146,6 +150,8 @@
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
+;;for magnars folders
+(add-to-list 'load-path "~/.emacs.d/customizations/magnars/")
 
 (load "font-lock+.el")
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
@@ -194,7 +200,7 @@
       ("~/.emacs.d/GTD/myPlan/" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
  '(package-selected-packages
    (quote
-    (dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -240,3 +246,9 @@
 ; '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold))) t))
 
 
+(eval-after-load 'dired '(require 'setup-dired))
+(require 'setup-yasnippet)
+(eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
+(require 'setup-html-mode)
+(eval-after-load 'js2-mode '(require 'setup-js2-mode))
+(eval-after-load 'html-mode '(require 'zencoding-mode))

@@ -4,6 +4,8 @@ and ubuntu, all valid for newer.
 
 参考我写的[emacs安装教程 for ubuntu and windows][39]
 
+C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
+[key-binding-convention][45]
 
 ### 1.为了引入clj-refactor(一个好用的补全包的工具)
 
@@ -56,10 +58,15 @@ click [all-the-icons][4]
 
 放在了init.el
 [auto-complete][10]
+
 [dracula-theme][11]
+
 [hlinum][7]
+
 [which-key][6]
+
 [restclient][8]
+
 [browse-kill-ring][9]
 
 
@@ -628,6 +635,42 @@ e. Funny place. Emacs can simultaneously open two directory by
     
 ![dired][43]
 
+
+
+### modify yassnipet and dired from magnars
+
+`M-x package-install buster-snippet`
+`M-x package-install angular-snippet`
+`M-x package-install datomic-snippet`
+
+
+
+copy all the snippets folder into your .emacs.d dir.
+
+and also add the htmlize, highlight-escape-sequences,and
+js2-mode package
+
+
+### html-mode 
+
+#### 函数
+1. zencoding-expand-line
+add the `zencoding-mode` @setup-html-mode.el.
+
+在html-mode中又增加了[zen-conding-mode][47],快捷的编辑html(C-j)
+
+
+### move-text
+
+#### 函数
+1. move-text-up
+2. move-text-down
+
+
+[move-text][48]
+
+(move-text-default-bindings) add in the editing.el,
+
 <hr/>
 
 <hr/>
@@ -678,3 +721,7 @@ e. Funny place. Emacs can simultaneously open two directory by
 [42]:http://emacsrocks.com/e16.html
 [43]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/dired.jpg
 [44]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/ace.png
+[45]:http://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html
+[46]:https://github.com/magnars/.emacs.d 
+[47]:https://github.com/rooney/zencoding
+[48]:https://github.com/emacsfodder/move-text
