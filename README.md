@@ -792,6 +792,9 @@ context类似于签到地方，使用@字符打头的。
 4. [cljr-unwind][64]
 5. [cljr-cycle-privacy][65]
 6. [cljr-add-missing-libspec][66]
+7. [cljr-promote-function][67] 从#(%)匿名函数的形式提高到(fn [k] (-> k ..))的形式,类似于org-mode的%^{}会提醒
+    你输入对应的值，所以现在如果有几个%就会提醒你输入几次
+
 ```
 
 (map square (filter even? [1 2  3 4]))
@@ -814,7 +817,36 @@ context类似于签到地方，使用@字符打头的。
 (defn- foo
   (println "hello"))
 
+
+(map #(-> % (str "!") symbol) '[aaa bbb]) ;;光标定位到#()里头即可
+(map (fn [k] (-> k (str "!") symbol)) '[aaa bbb])
+
+
+(reduce #(assoc %1 %2 (name %2)) {} [:a :b :c])
+(reduce (fn [k m] (assoc k m (name m))) {} [:a :b :c])
+
 ```
+
+
+### 39. 重新思考init.el
+
+你会使用`(add-to-list 'load-path Directory-name)`
+来添加Directory-name的信息到Emacs interpreter的查找路径中，
+这样你就可以load-file或者你可以使用(eval-after-load 'js2-mode '(require 'setup-js2-mode))来加载provide内容(注意你之所以能够require，是因为你做了两部分工作
+
+1. `(add-to-list 'load-path "~/.emacs.d/customizations/magnars/")` 添加文件搜索路径
+2. 你在setup-js2-mode.el最后一行添加了`(provide 'setup-js2-mode) `
+   
+经过1和2两个工作之后你才可以在init.el中执行，
+`(eval-after-load 'js2-mode '(require 'setup-js2-mode)) `
+ 
+ 
+Emacs is an programmable text and plain editor(Emacs lisp is a programmable program langauge), you can extend,tinker,tweak it with your imagenation. Some one said:"If you teach some one emacs command,he can hack one night,and if you teach someone how to create emacs commands
+,he can hack one lifetime". Emacs is wonderful, fucking awesome, fucking flexible.
+
+
+Go to understand what emacs thinks and touch the emacs interpreter, read 
+the book 《[Writing Gnu Emacs Extension][68]》
 <hr/>
 
 <hr/>
@@ -887,3 +919,5 @@ context类似于签到地方，使用@字符打头的。
 [64]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-unwind
 [65]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-cycle-privacy
 [66]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-add-missing-libspec
+[67]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-promote-function
+[68]:https://zhidao.baidu.com/share/f280fd6b0524acc7f16e4b18eed0abc3.html
