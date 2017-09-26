@@ -554,6 +554,8 @@ Seen from [emacs-rocks-10][38]
 3. when you input "C-c SPC" , the minibuffer will prompt you to input
 the character you wana jump.
 
+![ace][44]
+
 ### 25. emacs标记
 
 有时候写着东西，你需要跳转到文内其他地方，查完之后，又想跳回来，vim比较简单(C-o)
@@ -671,3 +673,4 @@ d. Funny place. Emacs can simultaneously open two directory by
 [41]:http://emacsrocks.com/e02.html
 [42]:http://emacsrocks.com/e16.html
 [43]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/dired.jpg
+[44]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/ace.png
