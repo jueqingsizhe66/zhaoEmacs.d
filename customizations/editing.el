@@ -89,6 +89,7 @@
 ;;(ac-config-default)
 
 
+
 ;; Rename file and buffer added on 2016/09/16
 
 (defun rename-this-buffer-and-file ()
@@ -136,3 +137,18 @@
 
 ;; company anything!
 (add-hook 'after-init-hook 'global-company-mode)
+
+
+(require 'key-chord)
+(key-chord-mode 1)
+;; Move to char similar to "f" in vim, f+g forward  d+f backward
+(key-chord-define-global "ff" 'iy-go-to-char)
+(key-chord-define-global "aa" 'iy-go-to-char-backward)
+
+;;; add semicolon to end of line
+;;(key-chord-define js-mode-map ";;" "\C-e;")
+;(yas-minor-mode 1)
+;;(yas-reload-all)
+;;(yas-minor-mode)
+(require 'yasnippet)
+

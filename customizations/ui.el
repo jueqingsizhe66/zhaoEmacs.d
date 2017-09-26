@@ -257,5 +257,9 @@
 ;;----------日记设置结束-----------------
 
 
+;;;magit configure from http://whattheemacsd.com/
+
+;; C-c C-a to amend without any prompt
+
 
 

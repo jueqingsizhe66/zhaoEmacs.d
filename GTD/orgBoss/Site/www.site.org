@@ -1,3 +1,4 @@
 * SITES
 ** www.orgmode.org/manual/index.html
-  
+** http://orgmode.org/orgcard.txt
+ 

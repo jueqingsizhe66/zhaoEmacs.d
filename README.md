@@ -2,6 +2,8 @@ Okay , it comes from flyingmchine,
 I have test in the two systems windows10
 and ubuntu, all valid for newer.
 
+参考我写的[emacs安装教程 for ubuntu and windows][39]
+
 
 ### 1.为了引入clj-refactor(一个好用的补全包的工具)
 
@@ -46,19 +48,9 @@ click [all-the-icons][4]
 
 
 ```
-3. 额外增加了git配置
-
-click [magit][5]
-```
-
-;; set up some useful mode
-(which-key-mode)
-
-;; magit
-(global-set-key (kbd "C-x g") 'magit-status)
 
 
-```
+
 
 ### 3.增加了一些其他插件
 
@@ -120,6 +112,8 @@ click [magit][5]
 ```
 
 ### 5. expand-region(editing.el)
+
+Seen from [emacs-rocks-9][40]
 
 click [expand-region][12]
 ```
@@ -292,20 +286,29 @@ C-x 5 2 打开当前window相同的frame
 
 ### 15. 括号相关的跳转
 
-`C-M-d`  Move down into a  list
-
-`C-M-u`  Move up   out  of a list
-
-`C-M-n`  Move forward to the next list
-
-`C-M-p`  Move backward to the previous list
-
-`C-M-a`  Move to beginning of defun
+`C-M-d` (进一步可以参考标题16) (进一步可以参考标题16)Move down into a  list(进一步可以参考标题16)
+(进一步可以参考标题16)
+`C-M-u`  Move up   out  of a list(进一步可以参考标题16)
+(进一步可以参考标题16)
+`C-M-n`  Move forward to the next list(进一步可以参考标题16)
+(进一步可以参考标题16)
+`C-M-p`  Move backward to the previous list(进一步可以参考标题16)
+(进一步可以参考标题16)
+`C-M-a`  Move to beginning of defun(进一步可以参考标题16)
 
 `C-M-e`  Move to end       of defun
 
 
 ### 16. multiple-cursors(editiing.el)
+
+Seen from [emacs-rocks-13][37]
+
+#### 函数名
+
+1. mc/mark-next-like-this （C->)
+2. mc/edit-lines (C-S-c C-S-c 标记M-h区域)
+3. mc/mark-previous-like-this(C-<)
+4. mc/mark-all-like-this (C-c C-<)
 
 按照官网简单配置
 
@@ -320,6 +323,8 @@ C-x 5 2 打开当前window相同的frame
 键，表示确认
 。
 
+较常用的命令，`M-x mc/mark-all-words-like-this`
+
 ### 17. vim-surround to evil-surround
 
 有时候需要给单词或者字段组合增加个双引号或者单引号， 亦或者括号，
@@ -329,7 +334,39 @@ add `(global-evil-surround-mode 1)` in the editing.el
 
 add `evil-surround` into my-package list
 
-### 18. mo-git-blame
+### 18. mo-git-blame and ivy
+
+#### 函数名
+
+1. ivy-resume
+2. counsel-M-x
+3. counsel-find-file
+4. counsel-describe-variable
+5. counsel-find-library
+6. counsel-info-lookup-symbol
+7. counsel-unicode-char
+8. counsel-ag
+9. counsel-locate
+10. counsel-rhythmbox
+11. counsel-expression-history
+12. counsel-git-grep
+13. swiper
+
+
+git配置
+
+click [magit][5]
+```
+
+;; set up some useful mode
+(which-key-mode)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
+
+```
+
 
 阅读[emacs教程][25]安装了git blame
 git blame 安装
@@ -391,6 +428,13 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 
 ### 20. add calendar and bookmark shortkey
 
+##### 函数名:
+
+1. calendar
+2. list-bookmarks
+
+
+
 edit the ui.el, and add the below information,and also add the
 cal-china-x农历信息
 
@@ -410,100 +454,119 @@ cal-china-x农历信息
 农历的效果。(按下S 可以查看cursor所在的日出日落时间)
 ![calendar][29]
 
-<hr/>
 
-<hr/>
+### 21. 使用21世纪产品complte替换autocomplete
 
-this is a Clojure-friendly emacs config
+##### 函数名:
 
-If you're new to emacs, check out [this introductory tutorial][20]!
-WARNING
 
-This project uses an outdated version of
-[CIDER](https://github.com/clojure-emacs/cider), the package that
-provides much of the functionality for Clojure development. If you run
-into issues, try upgrading (instructions below).
+[company][32]
 
-Why not just update this package to use the latest CIDER, you ask?
-This project uses CIDER 0.8.1 so that
-[Clojure for the Brave and True](http://www.braveclojure.com/basic-emacs/)
-readers are less likely to get confused as they use Emacs for the
-first time.
+1. 增加company in the my-packages @ init.el
+2. write code below in the editing.el
 
-## Installing
-
-1. Close Emacs.
-2. Delete `~/.emacs` or `~/.emacs.d` if they exist. (Windows users, your
-   emacs files will probably live in
-   `C:\Users\your_user_name\AppData\Roaming\`. So, for example, you
-   would delete `C:\Users\jason\AppData\Roaming\.emacs.d`.) This is
-   where Emacs looks for configuration files, and deleting these files
-   and directories will ensure that you start with a clean slate.
-3. Download the Emacs
-   [configuration zip file](https://github.com/flyingmachine/emacs-for-clojure/archive/book1.zip)
-   and unzip it. Its contents should be a folder,
-   `emacs-for-clojure-book1`. Run `mv path/to/emacs-for-clojure-book1
-   ~/.emacs.d`.
-4. Create the file `~/.lein/profiles.clj` (Windows users, this is
-   probably `C:\Users\your_user_name\.lein\profiles.clj`) and add this
-   line to it:
-
-```clojure
-{:user {:plugins [[cider/cider-nrepl "0.8.1"]]}} 
+```
+(add-hook 'after-init-hook 'global-company-mode)
 ```
 
-Then open Emacs.
+3. comment out关于auto-complete的配置@editing.el
+```
+;; subsititude by compltee
+;; init auto-complete
+;;(require 'auto-complete-config)
+;;(ac-config-default)
+```
 
-## Upgrading
+可以进一步阅读[company-mode官网][35]
 
-Before upgrading, ensure that your `.emacs.d` directory is under
-version control so that you can always revert to a known good state.
 
-To upgrade:
+### 22. 添加了evil-surround(但是得有evil，所以暂时搁置)
 
-1. Edit `.emacs.d/init.el`, adding these lines after line 12:
 
-   ```elisp
-   (add-to-list 'package-archives
-                '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-   
-   (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
-   ```
+[evil-surround][31]
 
-2. Close Emacs.
-3. Run `rm -Rf .emacs.d/elpa/cider-*`
-4. Open Emacs. You'll probably see some errors and your theme won't
-   load. That's ok.
-5. In Emacs, run `M-x package-refresh contents`.
-6. In Emacs, run `M-x package-install cider`.
-7. Close and re-open Emacs.
-8. Open `.lein/profiles.clj` and remove `[cider/cider-nrepl "0.8.1"]` from it.
+1. 增加evil-surround in the my-packages @init.el
+2. add the setting code for evil-surround
+```
 
-That should install the latest version. Enjoy!
+(require 'evil-surround)
+(global-evil-surround-mode 1)
 
-## Organization
+```
 
-I've tried to separate everything logically and document the purpose
-of every line. [`init.el`](./init.el) acts as a kind of table of
-contents.  It's a good idea to eventually go through `init.el` and the
-files under the `customizations` directory so that you know exactly
-what's going on.
 
-## Supporting CSS, HTML, JS, etc.
+### 23. 为了使用iy-go-to-char结合key-chord
 
-Emacs has decent support for CSS, HTML, JS, and many other file types out of the box, but if you want better support, then have a look at [my personal emacs config's init.el](https://github.com/flyingmachine/emacs.d/blob/master/init.el). It's meant to read as a table of contents. The emacs.d as a whole adds the following:
+##### 函数名:
 
-* [Customizes js-mode and html editing](https://github.com/flyingmachine/emacs.d/blob/master/customizations/setup-js.el)
-    * Sets indentation level to 2 spaces for JS
-    * enables subword-mode so that M-f and M-b break on capitalization changes
-    * Uses `tagedit` to give you paredit-like functionality when editing html
-    * adds support for coffee mode
-* [Uses enh-ruby-mode for ruby editing](https://github.com/flyingmachine/emacs.d/blob/master/customizations/setup-ruby.el). enh-ruby-mode is a little nicer than the built-in ruby-mode, in my opinion.
-    * Associates many filenames and extensions with enh-ruby-mode (.rb, .rake, Rakefile, etc)
-    * Adds keybindings for running specs
-* Adds support for YAML and SCSS using the yaml-mode and scss-mode packages
+1.iy-go-to-char
+2. 宏名 key-chord-define-global
 
-In general, if you want to add support for a language then you should be able to find good instructions for it through Google. Most of the time, you'll just need to install the "x-lang-mode" package for it.
+
+[iy-go-to-char][33]
+
+[key-chord][34]
+
+
+1. 增加iy-go-to-char and key-chord in the my-package @init.el
+2. add the key-chord setting code @editing.el
+
+```
+
+(require 'key-chord)
+(key-chord-mode 1)
+;; Move to char similar to "f" in vim, f+g forward  d+f backward
+(key-chord-define-global "ff" 'iy-go-to-char)
+(key-chord-define-global "aa" 'iy-go-to-char-backward)
+
+```
+
+3. so 你可以快速的摁下ff(俩字母跳转)跳转到一个输入框让你输入一个char
+或者 aa向后全局跳转(进入重复查找模式，反复摁下搜索字符，逐步向前或者
+向后查找)
+
+key-chord设置的是两个相同的key是最长0.2s延迟输入，若是两个不同的key则是
+0.1s延迟输入,见[keychord.el][36]。
+
+### 24. ace-jump-mode
+
+Seen from [emacs-rocks-10][38]
+#### 函数名
+
+1. ace-jump-mode
+
+[ace-jump-mode][30]
+
+1. add the ace-jump-mode in the my-packags @init.el
+2. add the setting code for the ace-jump-mode @navigation.el
+
+```
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+;; you can select the key you prefer to
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+```
+3. when you input "C-c SPC" , the minibuffer will prompt you to input
+the character you wana jump.
+
+### 25. emacs标记
+
+有时候写着东西，你需要跳转到文内其他地方，查完之后，又想跳回来，vim比较简单(C-o)
+
+emacs对应的先标记
+`C-x SPC a`, a代表标记键，可以为a-z
+然后调回来使用，
+`C-x r j` ,输入a即可
+ 
+ 有些人也说可以用C-SPC，然后C-x c-x跳转即可(进一步可以参考标题16)。
+<hr/>
+
+<hr/>
+
+
 
 [1]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/new.jpg
 [2]:https://github.com/clojure-emacs/clj-refactor.el 
@@ -534,4 +597,14 @@ In general, if you want to add support for a language then you should be able to
 [27]:https://github.com/abo-abo/swiper
 [28]:https://github.com/emacs-helm/helm
 [29]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/calenar.jpg
-
+[30]:https://github.com/winterTTr/ace-jump-mode
+[31]:https://github.com/emacs-evil/evil-surround
+[32]:https://github.com/company-mode/company-mode
+[33]:https://github.com/doitian/iy-go-to-char
+[34]:https://github.com/emacsorphanage/key-chord
+[35]:http://company-mode.github.io/
+[36]:https://github.com/emacsorphanage/key-chord/blob/master/key-chord.el
+[37]:http://emacsrocks.com/e13.html
+[38]:http://emacsrocks.com/e10.html
+[39]:https://segmentfault.com/a/1190000011000873
+[40]:http://emacsrocks.com/e09.html

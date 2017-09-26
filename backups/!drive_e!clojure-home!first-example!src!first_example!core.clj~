@@ -1,5 +1,6 @@
 (ns first-example.core)
 (defn foo
+  "foo document"
   [x]
   (println "hello" x))
 ;;; el
@@ -7,3 +8,76 @@
   [x]
   (println "dff" x))
 (finny 3)
+(defn  train
+  []
+  (println "Cho cho!"))
+
+(defn choose
+  [[first-choice second-choice & important-part]]
+  (println (str "Your first choice is " first-choice))
+  (println (str "Your second choice is " second-choice))
+  (println (str "Your not important choice is " (clojure.string/join "," important-part)))
+)
+
+(choose ["abc" "ef" "g" "hi"])
+(defn announce-treasure-location
+  [{lat :lat lng :lng}]
+  (println (str "Treasure lat" lat))
+  (println (str "Treasure lng" lng))
+)
+(announce-treasure-location {:lng 83.22 :lat 10})
+
+(defn announce-treasure-shortkey
+  [{:keys [lat lng]}]
+  (println (str "Treasure lat" lat))
+  (println (str "Treasure lng " lng))
+)
+
+(defn hell
+  [x]
+  (println "hee"))
+
+
+
+(def fibs 
+  (cons 0 (cons 1 (lazy-seq 
+                   (map +' fibs 
+                        (rest fibs))))))
+
+(def fibs2
+  (lazy-seq (cons 0
+                  (cons 1
+                        (map +' fibs2
+                             (rest fibs2))))))
+(def fibs3
+   (cons 0
+         (lazy-seq (cons 1
+                         (map +' fibs2
+                              (rest fibs2))))))
+(def fibs4
+   (cons 0
+         (cons 1
+               (lazy-seq (map + fibs4
+                              (rest fibs4))))))
+
+(defn my-map [fn xs]
+  (if (empty? xs)
+    ()
+    (cons (fn (first xs)) 
+          (my-map fn (rest xs)))))
+
+(my-map #(+ 1 %) (range 10))
+(defn my-map-lazy
+  [fn xs]
+  (lazy-seq
+   (if-let [xss (seq xs)]
+     (cons (fn (first xs)) 
+           (my-map-lazy fn (rest xs))))))
+
+
+(defn lazify-n! [ n seq ]
+  (loop [n n seq seq]
+    (if (> n 0)
+      (recur (- n 1) (doall (lazify seq)))
+      seq)))
+(println "hello")

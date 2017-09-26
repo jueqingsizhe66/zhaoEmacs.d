@@ -37,13 +37,50 @@
                        "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org"
                        "~/.emacs.d/GTD/orgBoss/Financial/finances.org"
                        "~/.emacs.d/GTD/orgBoss/Film/film.org"
+                       "~/.emacs.d/GTD/orgBoss/IDEA/idea.org"
                        "~/.emacs.d/GTD/orgBoss/Journal/journal.org"
                        "~/.emacs.d/GTD/orgBoss/Private/privnotes.org"
                        "~/.emacs.d/GTD/orgBoss/Someday/someday.org"
                        "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org"
+                       "~/.emacs.d/GTD/orgBoss/Site/www.site.org"
+                       "~/.emacs.d/GTD/writing.org"
                         ))  
 ;  )
 
+;;C-c C-w to redefine terms to different files
+; Targets include this file and any file contributing to the agenda - up to 9 levels deep
+(setq org-refile-targets (quote ((nil :maxlevel . 9)
+                                 (org-agenda-files :maxlevel . 9))))
+
+; Use full outline paths for refile targets - we file directly with IDO
+(setq org-refile-use-outline-path t)
+
+; Targets complete directly with IDO
+(setq org-outline-path-complete-in-steps nil)
+
+; Allow refile to create parent tasks with confirmation
+(setq org-refile-allow-creating-parent-nodes (quote confirm))
+
+; Use IDO for both buffer and file completion and ido-everywhere to t
+(setq org-completion-use-ido t)
+(setq ido-everywhere t)
+(setq ido-max-directory-size 100000)
+(ido-mode (quote both))
+; Use the current window when visiting files and buffers with ido
+(setq ido-default-file-method 'selected-window)
+(setq ido-default-buffer-method 'selected-window)
+; Use the current window for indirect buffer display
+(setq org-indirect-buffer-display 'current-window)
+
+;;;; Refile settings
+; Exclude DONE state tasks from refile targets
+(defun bh/verify-refile-target ()
+  "Exclude todo keywords with a done state from refile targets"
+  (not (member (nth 2 (org-heading-components)) org-done-keywords)))
+
+(setq org-refile-target-verify-function 'bh/verify-refile-target)
+
+;;;refile done!!!
 ;
 ;(add-to-list 'load-path "~/.emacs.d/chinese-pyim/")
 ;(require 'chinese-pyim)
@@ -104,7 +141,7 @@
  (setq remember-annotation-functions '(org-remember-annotation))
  (setq remember-handler-functions '(org-remember-handler))
  (add-hook 'remember-mode-hook 'org-remember-apply-template)
- (define-key global-map (kbd "C-c r") 'org-remember)
+;; (define-key global-map (kbd "C-c r") 'org-remember)
  (define-key global-map (kbd "C-c c") 'org-capture)
 
 ;("j" "Journal"   "~/.emacs.d/GTD/orgBoss/Journal/journal.org" "** %^{Head Line} %U %^g\n%i%?"  )
@@ -222,11 +259,15 @@
 ; sequence 相当于 #+SEQ_TODO   也有两种类型
 ; 可以写出多个sequence 等你工作 学习 继续进行修改 但是注意无论是type还是sequence都得有|
 (setq org-todo-keywords
-  '((type "REPORT(r!)" "BUG(b!)" "KNOWNCAUSE(k!)" "|" "FIXED(f!)")
+  '((type "工作(w!)" "学习(s!)" "休闲(l!)" "|")
+    (type "REPORT(r!)" "BUG(b!)" "KNOWNCAUSE(k!)" "|" "FIXED(f!)")
     (sequence "PENDING(p!)" "TODO(t!)"  "|" "DONE(d!)" "ABORT(a@/!)")
 ))
 (setq org-todo-keyword-faces
-  '(("REPORT" .      (:background "red" :foreground "white" :weight bold))
+  '(("工作" .      (:background "red" :foreground "white" :weight bold))
+    ("学习" .      (:background "white" :foreground "red" :weight bold))
+    ("休闲" .      (:foreground "MediumBlue" :weight bold)) 
+    ("REPORT" .      (:background "red" :foreground "white" :weight bold))
     ("BUG" .      (:background "white" :foreground "red" :weight bold))
     ("KNOWNCAUSE" .      (:foreground "MediumBlue" :weight bold)) 
     ("FIXED" .      (:foreground "yellow" :weight bold)) 
@@ -243,11 +284,12 @@
                         ("@errand" . ?e)
                         ("@office" . ?o)
                         ("@home" . ?H)
-                        ("@Dormitry" . ?d)
+                        ("@Dormitry" . ?D)
                         ("@NCEPU" . ?n)
                         ("@F708" . ?f)
-
                       (:endgroup . nil)
+                       (:newline)
+                      (:startgroup . nil)
                       ("laptop" . ?l) 
                       ("pc" . ?p)
                        ("WAITING" . ?w)
@@ -259,8 +301,28 @@
                         ("NORANG" . ?N)
                         ("crypt" . ?E)
                         ("NOTE" . ?n)
-                        ("CANCELLED" . ?c)
+                        ("CANCELLED" . ?C)
                         ("FLAGGED" . ??)
+                       (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
+                      ("紧急重要" . ?a)
+                      ("紧急不重要" . ?b)
+                      ("不紧急重要" . ?c)
+                      ("不紧急不重要" . ?d)
                       ))
 
 
+;;; privilege
+;; 优先级范围和默认任务的优先级
+(setq org-highest-priority ?A)
+(setq org-lowest-priority  ?E)
+(setq org-default-priority ?E)
+;; 优先级醒目外观
+(setq org-priority-faces
+  '((?A . (:background "red" :foreground "white" :weight bold))
+    (?B . (:background "DarkOrange" :foreground "white" :weight bold))
+    (?C . (:background "yellow" :foreground "DarkGreen" :weight bold))
+    (?D . (:background "DodgerBlue" :foreground "black" :weight bold))
+    (?E . (:background "SkyBlue" :foreground "black" :weight bold))
+))

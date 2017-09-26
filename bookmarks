@@ -2,11 +2,16 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("org-capture-last-stored"
+(("org-refile-last-stored"
  (filename . "~/.emacs.d/GTD/newgtd.org")
- (front-context-string . "** TODOS PhaseVi")
- (rear-context-string . "/slash/\n** sdfd\n")
- (position . 841))
+ (front-context-string . "*** TODOS PhaseV")
+ (rear-context-string . "5-03 Sun 21:38]\n")
+ (position . 499))
+("org-capture-last-stored"
+ (filename . "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org")
+ (front-context-string . "**** logic\n逻辑的意思")
+ (rear-context-string . " 2017-09-20 星期三\n")
+ (position . 82))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

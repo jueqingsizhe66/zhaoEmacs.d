@@ -3,7 +3,13 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        electric-newline-and-maybe-indent
+        end-of-buffer
+        ivy-switch-buffer
         keyboard-escape-quit
+        markdown-follow-link-at-point
+        markdown-outdent-or-delete
+        paredit-semicolon
         smex
         ))
 

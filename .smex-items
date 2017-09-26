@@ -1,22 +1,22 @@
 
 ;; ----- smex-history -----
 (
- package-reinstall
- list-packages
+ magit-just-amend
+ magit-log
+ mc/mark-all-words-like-this
  package-install
- calendar
- holidays
- customize-variable
- cider-jack-in
+ package-list-packages
+ list-packages
+ cljr-create-fn-from-example
 )
 
 ;; ----- smex-data -----
 (
  (cider-jack-in . 15)
- (list-packages . 3)
- (package-list-packages . 7)
+ (list-packages . 5)
+ (package-list-packages . 8)
  (package-autoremove . 5)
- (package-install . 33)
+ (package-install . 43)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -29,7 +29,7 @@
  (customize . 1)
  (cua-mode . 1)
  (server-start . 1)
- (info . 1)
+ (info . 2)
  (mc/mark-next-lines . 8)
  (mc/edit-lines . 11)
  (visual-line-mode . 1)
@@ -54,4 +54,24 @@
  (calendar-list-holidays . 1)
  (company-mode . 1)
  (package-reinstall . 8)
+ (restclient-mode . 1)
+ (key-chord-mode . 2)
+ (iy-go-to-char . 3)
+ (iy-go-up-to-char . 1)
+ (org-info . 1)
+ (find-name-dired . 1)
+ (eww . 5)
+ (eww-list-bookmarks . 1)
+ (emacs-version . 3)
+ (cljr-move-form . 1)
+ (cljr-add-declaration . 1)
+ (cljr-add-use-to-ns . 1)
+ (cljr-add-import-to-ns . 1)
+ (cljr-add-project-dependency . 1)
+ (hydra-cljr-ns-menu/nil . 1)
+ (hydra-cljr-help-menu/hydra-cljr-toplevel-form-menu/body-and-exit . 1)
+ (cljr-create-fn-from-example . 3)
+ (mc/mark-all-words-like-this . 1)
+ (magit-log . 1)
+ (magit-just-amend . 1)
 )
