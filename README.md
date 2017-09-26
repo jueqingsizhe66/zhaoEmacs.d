@@ -570,12 +570,17 @@ emacs对应的先标记
 
 Seen from [emacs-rocks-2 and 3][41]
 
-``
+```
 C-t transpose two chars
+
 M-t transpose two words
+
 C-x C-t transpose lines
+
 M-u make letters uppercase in word from cursor position to end
+
 M-c simply make first letter in word uppercase
+
 M-l opposite to M-u
 ```
 
