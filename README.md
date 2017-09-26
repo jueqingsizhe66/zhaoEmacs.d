@@ -607,10 +607,14 @@ you can see the clean info in the directory, then you can
 use right parenthesis to get the detail info(user,priviliedge,dates etc) ,you can use left parenthesis to hide the details of file.
 
 so
+
 a. use m to mark the files, use u to unmark the files
+
 b. use D to delete the files in prepare, and execute with x
+
 c. when you finish m  , you can move(with command R) ,you can
    copy(with command C), you can delete(with command d)
+   
 d. Funny place. Emacs can simultaneously open two directory by
     open two buffers in the left-right zones, so you can use left
     zones as source directory, the right zones as target directory
