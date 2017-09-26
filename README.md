@@ -286,15 +286,15 @@ C-x 5 2 打开当前window相同的frame
 
 ### 15. 括号相关的跳转
 
-`C-M-d` (进一步可以参考标题16) (进一步可以参考标题16)Move down into a  list(进一步可以参考标题16)
-(进一步可以参考标题16)
-`C-M-u`  Move up   out  of a list(进一步可以参考标题16)
-(进一步可以参考标题16)
-`C-M-n`  Move forward to the next list(进一步可以参考标题16)
-(进一步可以参考标题16)
-`C-M-p`  Move backward to the previous list(进一步可以参考标题16)
-(进一步可以参考标题16)
-`C-M-a`  Move to beginning of defun(进一步可以参考标题16)
+`C-M-d`  Move down into a  list
+
+`C-M-u`  Move up   out  of a list
+
+`C-M-n`  Move forward to the next list
+
+`C-M-p`  Move backward to the previous list
+
+`C-M-a`  Move to beginning of defun
 
 `C-M-e`  Move to end       of defun
 
@@ -562,6 +562,11 @@ emacs对应的先标记
 `C-x r j` ,输入a即可
  
  有些人也说可以用C-SPC，然后C-x c-x跳转即可(进一步可以参考标题16)。
+ 
+ 
+### 26. transpose character and words
+
+Seen from [emacs-rocks-2 and 3][41]
 <hr/>
 
 <hr/>
@@ -608,3 +613,4 @@ emacs对应的先标记
 [38]:http://emacsrocks.com/e10.html
 [39]:https://segmentfault.com/a/1190000011000873
 [40]:http://emacsrocks.com/e09.html
+[41]:http://emacsrocks.com/e02.html
