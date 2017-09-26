@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- magit-just-amend
- magit-log
+ magit-status
+ shell
+ magit-log-all
  mc/mark-all-words-like-this
- package-install
- package-list-packages
- list-packages
- cljr-create-fn-from-example
+ magit-add-change-log-entry
+ magit-add-change-log-entry-other-window
+ magit-log
 )
 
 ;; ----- smex-data -----
@@ -71,7 +71,12 @@
  (hydra-cljr-ns-menu/nil . 1)
  (hydra-cljr-help-menu/hydra-cljr-toplevel-form-menu/body-and-exit . 1)
  (cljr-create-fn-from-example . 3)
- (mc/mark-all-words-like-this . 1)
- (magit-log . 1)
+ (mc/mark-all-words-like-this . 2)
+ (magit-log . 2)
  (magit-just-amend . 1)
+ (magit-status . 8)
+ (magit-add-change-log-entry-other-window . 1)
+ (magit-add-change-log-entry . 1)
+ (magit-log-all . 3)
+ (shell . 1)
 )

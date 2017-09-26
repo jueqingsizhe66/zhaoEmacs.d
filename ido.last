@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" . "CalendarDairy/")
  ("c:/Users/YeZhao/AppData/Roaming/" . "11Game/")
  ("e:/EOPL2014/" . "5010-Program-Design-paradigms/")
  ("e:/" . "EOPL2014/")
@@ -39,6 +40,10 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/CalendarDairy/" (22974 38409 0 0) "diary.org" "../" "./")
+
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22985 63065 0 0) "url/" "tutorial/" "themes/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "init.el" "ido.last~" "ido.last" "hello.md" "GTD/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf~" ".recentf" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "../" "./")
+
  ("e:/clojure-home/undead_zoobie/src/undead_zoobie/" (22984 39190 0 0) "system.clj" "hello.clj" "core.clj" "../" "./")
 
  ("e:/clojure-home/undead_zoobie/" (22982 21988 0 0) "test/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" "CHANGELOG.md" ".hgignore" ".gitignore" ".git/" "../" "./")
@@ -48,8 +53,6 @@
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/" (22978 22748 0 0) "writing.org_archive" "writing.org" "test.org" "remember-2.0/" "planner-3.42/" "package/" "orgTemplate/" "orgBoss/" "newgtd.org" "myPlan/" "muse-3.20/" ".notes.org" "../" "./")
 
  ("e:/clojure-home/first-example/src/first_example/" (22978 10284 0 0) "test.md" "helo.org" "hello.md" "core.clj" "../" "./")
-
- ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22975 25374 0 0) "tutorial/" "themes/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "init.el" "ido.last~" "ido.last" "GTD/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf~" ".recentf" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "../" "./")
 
  ("c:/Users/YeZhao/AppData/Roaming/11Game/" (22903 55572 0 0) "platform/" "../" "./")
 
