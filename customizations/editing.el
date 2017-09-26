@@ -145,6 +145,7 @@
 (key-chord-define-global "ff" 'iy-go-to-char)
 (key-chord-define-global "aa" 'iy-go-to-char-backward)
 
+
 ;;; add semicolon to end of line
 ;;(key-chord-define js-mode-map ";;" "\C-e;")
 ;(yas-minor-mode 1)
