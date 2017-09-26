@@ -40,15 +40,17 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/CalendarDairy/" (22974 38409 0 0) "diary.org" "../" "./")
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/customizations/" (22984 39008 0 0) "ui.el" "shell-integration.el" "setup-js.el" "setup-clojure.el" "scheme-editing.el" "perl-editing.el" "new.jpg" "navigation.el" "misc.el" "holyshit.jpg" "font-lock+.el" "elisp-editing.el" "editing.el" "calenar.jpg" "../" "./")
 
- ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22985 63065 0 0) "url/" "tutorial/" "themes/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "init.el" "ido.last~" "ido.last" "hello.md" "GTD/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf~" ".recentf" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22986 5799 0 0) "url/" "tutorial/" "themes/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "init.el" "ido.last~" "ido.last" "hello.md" "GTD/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf~" ".recentf" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "../" "./")
+
+ ("e:/clojure-home/" (22982 24725 0 0) "undead_zoobie/" "testClojure.iml" "test-clojure1/" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "hello.md" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "clojure/" "a.org" ".idea/" "../" "./")
+
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/CalendarDairy/" (22974 38409 0 0) "diary.org" "../" "./")
 
  ("e:/clojure-home/undead_zoobie/src/undead_zoobie/" (22984 39190 0 0) "system.clj" "hello.clj" "core.clj" "../" "./")
 
  ("e:/clojure-home/undead_zoobie/" (22982 21988 0 0) "test/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" "CHANGELOG.md" ".hgignore" ".gitignore" ".git/" "../" "./")
-
- ("e:/clojure-home/" (22979 26362 0 0) "testClojure.iml" "test-clojure1/" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "hello.md" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "clojure/" "a.org" ".idea/" "../" "./")
 
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/" (22978 22748 0 0) "writing.org_archive" "writing.org" "test.org" "remember-2.0/" "planner-3.42/" "package/" "orgTemplate/" "orgBoss/" "newgtd.org" "myPlan/" "muse-3.20/" ".notes.org" "../" "./")
 
