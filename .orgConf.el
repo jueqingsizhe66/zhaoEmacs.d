@@ -67,6 +67,13 @@
 (setq ido-max-directory-size 100000)
 (ido-mode (quote both))
 ; Use the current window when visiting files and buffers with ido
+#+BEGIN: clocktable :maxlevel 2 :scope subtree
+#+CAPTION: Clock summary at [2017-09-27 周三 12:44]
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
+
 (setq ido-default-file-method 'selected-window)
 (setq ido-default-buffer-method 'selected-window)
 ; Use the current window for indirect buffer display

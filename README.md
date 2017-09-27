@@ -637,7 +637,7 @@ e. Funny place. Emacs can simultaneously open two directory by
 
 
 
-### modify yassnipet and dired from magnars
+### 28. modify yassnipet and dired from magnars
 
 `M-x package-install buster-snippet`
 
@@ -654,7 +654,7 @@ and also add the htmlize, highlight-escape-sequences,and
 js2-mode package
 
 
-### html-mode 
+###  29.html-mode 
 
 #### 函数
 1. zencoding-expand-line
@@ -663,7 +663,7 @@ add the `zencoding-mode` @setup-html-mode.el.
 在html-mode中又增加了[zen-conding-mode][47],快捷的编辑html(C-j)
 
 
-### move-text
+### 30. move-text
 
 #### 函数
 1. move-text-up
@@ -673,6 +673,31 @@ add the `zencoding-mode` @setup-html-mode.el.
 [move-text][48]
 
 (move-text-default-bindings) add in the editing.el,
+
+
+### 31. 我有一个困惑：how should I do with Org-mode
+
+看了Sachac的[baby-steps-org-todo][49],我明白了relate(关系到底是什么),也就是todo大致应该group into project,
+all the subtitle should be connected or related to the project, that's todo!
+
+```
+* Project ABC
+** TODO A task related to Project ABC
+** TODO Another task related to ABC
+** TODO Etc.
+* Project XYZ
+** TODO A task related to Project XYZ
+** TODO Another task related to XYZ
+** TODO Etc.
+* Tasks
+** TODO Miscellaneous
+** TODO tasks
+** TODO go here
+```
+
+![baby-org-mode][50]
+
+Hope ,when you see it, do work for you!
 
 <hr/>
 
@@ -728,3 +753,5 @@ add the `zencoding-mode` @setup-html-mode.el.
 [46]:https://github.com/magnars/.emacs.d 
 [47]:https://github.com/rooney/zencoding
 [48]:https://github.com/emacsfodder/move-text
+[49]:https://github.com/sachac/baby-steps-org-todo/blob/master/index.org
+[50]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/baby-org-mode.png

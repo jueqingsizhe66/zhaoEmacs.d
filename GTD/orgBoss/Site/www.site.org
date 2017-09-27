@@ -1,4 +1,18 @@
 * SITES
 ** www.orgmode.org/manual/index.html
 ** http://orgmode.org/orgcard.txt
- 
+** https://www.reddit.com/r/emacs/
+ the best emacs website?
+** http://wenshanren.org/?p=386
+** https://www.slideshare.net/
+** https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org
+** http://sachachua.com/
+** https://github.com/sachac/emacs-notes
+ good place to learn emacs
+** https://github.com/rejeep/f.el
+ modern ApI for emacs working with file and directories
+** https://github.com/sachac/baby-steps-org-todo/blob/master/index.org
+ Look it again
+one project(related many tasks),maybe one task related many todos.
+Many todos are too much,so don't worry ,make the Most important taks(MIP)
+(If you don't feel working on it, just 
