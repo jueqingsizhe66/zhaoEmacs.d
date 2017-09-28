@@ -699,6 +699,12 @@ all the subtitle should be connected or related to the project, that's todo!
 
 Hope ,when you see it, do work for you!
 
+
+
+### 32. 快速注释
+
+C-x C-; 单行注释
+M-h  M-x comment-with-box 注释一个区域
 <hr/>
 
 <hr/>

@@ -44,6 +44,7 @@
                        "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org"
                        "~/.emacs.d/GTD/orgBoss/Site/www.site.org"
                        "~/.emacs.d/GTD/writing.org"
+                       "~/.emacs.d/GTD/orgBoss/Habit/habits.org"
                         ))  
 ;  )
 
@@ -66,13 +67,7 @@
 (setq ido-everywhere t)
 (setq ido-max-directory-size 100000)
 (ido-mode (quote both))
-; Use the current window when visiting files and buffers with ido
-#+BEGIN: clocktable :maxlevel 2 :scope subtree
-#+CAPTION: Clock summary at [2017-09-27 周三 12:44]
-| Headline     | Time   |
-|--------------+--------|
-| *Total time* | *0:00* |
-#+END:
+
 
 (setq ido-default-file-method 'selected-window)
 (setq ido-default-buffer-method 'selected-window)
@@ -152,18 +147,47 @@
  (define-key global-map (kbd "C-c c") 'org-capture)
 
 ;("j" "Journal"   "~/.emacs.d/GTD/orgBoss/Journal/journal.org" "** %^{Head Line} %U %^g\n%i%?"  )
+
+(defvar my/org-basic-task-template
+"* TODO %^{Task}
+:PROPERTIES:
+:Effort: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+:END:
+Captured %<%Y-%m-%d %H:%M>
+%?
+
+%i
+")
+
 (setq org-capture-templates 
       '(("l" "灵感" entry (file+headline "~/.emacs.d/GTD/writing.org" "创意") 
                         "* %?\n %i\n %a") 
         ("j" "Journal" entry (file+datetree "~/.emacs.d/GTD/orgBoss/Journal/journal.org" ) 
-                        "* %?\n输入于： %U\n %i\n %a")
-        ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")  
-                        "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" )
+                        "* %? [#B] \n输入于： %U\n %i\n %a"
+                        :clock-in t :clock-resume t)
+        ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")
+                    "* TODO [#B] %^{Task} %^g
+                    :PROPERTIES:
+                    :Effort: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+                    :END:
+                    Captured %<%Y-%m-%d %H:%M>
+                    %?
+
+                    %i
+                    " )
+        ("T" "QuickTask" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")  
+                        "* TODO [#C] %^{Task}\nSCHEDULED:%t\n"
+                        :immediate-finish t)
+        ("r" "Interrupted Task" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")  
+                        "* STARTED %^{Task}"
+                        :clock-in :clock-resume)
         ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")  
-                        "* TODO %^{What's your IDEA (Briefly)} \n %?" )
+                        "* TODO [#A] %^{What's your IDEA (Briefly)}  \n %?" 
+                        :immediate-finish t)
           ("c" "Clipboard" entry (file+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")  
-                        "** %^{Head Line} %U %^g\n%c\n%?"  )
-          ("r" "Receipt" entry  (file+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" ) 
+                        "** %^{Head Line} %U %^g\n%c\n%?"  
+                        :immediate-finish t)
+          ("R" "Receipt" entry  (file+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" ) 
                         "** %^{BriefDesc} %U %^g\n%?"   )
           ("b" "Book" entry  (file+datetree "~/.emacs.d/GTD/orgBoss/Book/book.org")   
                         "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n")
@@ -171,19 +195,71 @@
                         "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n")
           ("d" "Daily Review" entry   (file+datetree "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")  
                         "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n")
+          ("a" "Appointment Or Meeting" entry (file+headline "~/.emacs.d/CalendarDairy/diary.org")
+                        "** APP [#B] %^{Description} %^g
+                        %?
+                        Added: %U" 
+                        :clock-in :clock-resume)
         ("w" "SITES" entry  (file+headline "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES")  
                         "* %^{Enter the Name of the Site}\n %?" )
           ("s" "Someday"  entry   (file+datetree "~/.emacs.d/GTD/orgBoss/Someday/someday.org") 
-                        "** %^{Someday Heading} %U\n%?\n"  )
+                        "** %^{Someday Heading} [#B] %U\n%?\n"  )
           ("v" "Vocab"  entry (file+datetree  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" ) 
                         "** %^{Word?}\n%?\n"  )
           ( "p" "Private" entry (file+datetree "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")  
-                         "\n* %^{topic} %T \n%i%?\n")
-         ("a" "contact"  entry  (file+datetree "~/.emacs.d/gtd/phone.org" ) 
+                         "\n* %^{topic} [#A] %T \n%i%?\n")
+         ("o" "contact"  entry  (file+datetree "~/.emacs.d/gtd/phone.org" ) 
                         "\n* %^{name} :contact:\n\n")
+         ("q" "Quick note" item
+          (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Quick notes")
+                        "** %^{Keyword?} [#B]  %^g
+                         Added: %U
+                         %?"
+                        :clock-in t :clock-resume t                    
+          )
+         ("h" "Habit" entry (file "~/.emacs.d/GTD/orgBoss/Habit/habits.org")
+          "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
 
     ))
 
+;; Custom agenda command definitions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (setq org-agenda-custom-commands                               ;;
+;;       (quote (("N" "Notes" tags "NOTE"                         ;;
+;;                ((org-agenda-overriding-header "Notes")         ;;
+;;                 (org-tags-match-list-sublevels t)))            ;;
+;;               ("h" "Habits" tags-todo "STYLE=\"habit\""        ;;
+;;                ((org-agenda-overriding-header "Habits")        ;;
+;;                 (org-agenda-sorting-strategy                   ;;
+;;                  '(todo-state-down effort-up category-keep)))) ;;
+;; )))                                                            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq org-agenda-custom-commands
+      '(("O" "Office block agenda"
+         ((agenda "" ((org-agenda-ndays 1))) 
+                      ;; limits the agenda display to a single day
+          (tags-todo "+PRIORITY=\"A\"")
+          (tags-todo "computer|office|phone")
+          (tags "project+CATEGORY=\"elephants\"")
+          ;(tags "review" ((org-agenda-files '("~/org/circuspeanuts.org"))))
+                          ;; limits the tag search to the file circuspeanuts.org
+          (todo "WAITING"))
+         ((org-agenda-compact-blocks t))) ;; options set here apply to the entire block
+        ;; ...other commands here
+        ("go" "Office" 
+         (tags-todo "@F708")
+         (tags-todo "@work"))
+        ("gc" "Computer" tags-todo "computer")
+        ("gp" "Phone" tags-todo "phone")
+        ("gh" "Home" tags-todo "home")
+        ("gm" "Projects" tags-todo "+multiAxis")
+
+        ("p" . "Priorities")
+        ("pa" "A items" tags-todo "+PRIORITY=\"A\"")
+        ("pb" "B items" tags-todo "+PRIORITY=\"B\"")
+        ("pc" "C items" tags-todo "+PRIORITY=\"C\"")
+        ))
 ; (setq org-capture-templates
 ;     '(("Todo" ?t "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
 ;     ("IDEA" ?i "* TODO %^{What's your IDEA (Briefly)} \n %?" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")
@@ -287,36 +363,45 @@
 ;;相当于设置  #+tags:  在每一个org文件中
 (setq org-tag-alist '((:startgroup . nil)
                       ("@work" . ?w) 
-                      ("@tennisclub" . ?t)
-                        ("@errand" . ?e)
-                        ("@office" . ?o)
-                        ("@home" . ?H)
-                        ("@Dormitry" . ?D)
-                        ("@NCEPU" . ?n)
-                        ("@F708" . ?f)
+
+                      ("@errand" . ?e)
+                      ("@office" . ?o)
+                      ("@home" . ?H)
+                      ("@Dormitry" . ?D)
+                      ("@NCEPU" . ?n)
+                      ("@F708" . ?f)
                       (:endgroup . nil)
-                       (:newline)
+                      (:newline)
                       (:startgroup . nil)
                       ("laptop" . ?l) 
-                      ("pc" . ?p)
-                       ("WAITING" . ?w)
-                        ("HOLD" . ?h)
-                        ("PERSONAL" . ?P)
-                        ("WORK" . ?W)
-                        ("FARM" . ?F)
-                        ("ORG" . ?O)
-                        ("NORANG" . ?N)
-                        ("crypt" . ?E)
-                        ("NOTE" . ?n)
-                        ("CANCELLED" . ?C)
-                        ("FLAGGED" . ??)
-                       (:endgroup . nil)
+                      ("java" . ?j)
+                      ("perl" . ?p)
+                      ("matlab" . ?m)
+                      ("clojure" . ?c)
+                      ("scheme" . ?s)
+                      ("WAITING" . ?w)
+                      ("HOLD" . ?h)
+                      ("PERSONAL" . ?P)
+                      ("WORK" . ?W)
+                      ("ORG" . ?O)
+                      ("crypt" . ?E)
+                      ("NOTE" . ?n)
+                      ("CANCELLED" . ?C)
+                      ("FLAGGED" . ??)
+                      (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
+                      ("+multiAxis" . ?t)
+                      ("+the-parens-of-dead" . ?z)
+                      ("+graduation" . ?g)
+                      (:endgroup . nil)
                       (:newline)
                       (:startgroup . nil)
                       ("紧急重要" . ?a)
                       ("紧急不重要" . ?b)
                       ("不紧急重要" . ?c)
                       ("不紧急不重要" . ?d)
+                      (:endgroup . nil)
                       ))
 
 
@@ -324,7 +409,7 @@
 ;; 优先级范围和默认任务的优先级
 (setq org-highest-priority ?A)
 (setq org-lowest-priority  ?E)
-(setq org-default-priority ?E)
+(setq org-default-priority ?E) 
 ;; 优先级醒目外观
 (setq org-priority-faces
   '((?A . (:background "red" :foreground "white" :weight bold))
@@ -333,3 +418,252 @@
     (?D . (:background "DodgerBlue" :foreground "black" :weight bold))
     (?E . (:background "SkyBlue" :foreground "black" :weight bold))
 ))
+
+
+
+;; for idle time
+(defun jump-to-org-agenda ()
+  (interactive)
+  (let ((buf (get-buffer "*Org Agenda*"))
+        wind)
+    (if buf
+        (if (setq wind (get-buffer-window buf))
+            (select-window wind)
+          (if (called-interactively-p)
+              (progn
+                (select-window (display-buffer buf t t))
+                (org-fit-window-to-buffer)
+                ;; (org-agenda-redo)
+                )
+            (with-selected-window (display-buffer buf)
+              (org-fit-window-to-buffer)
+              ;; (org-agenda-redo)
+              )))
+      (call-interactively 'org-agenda-list)))
+  ;;(let ((buf (get-buffer "*Calendar*")))
+  ;;  (unless (get-buffer-window buf)
+  ;;    (org-agenda-goto-calendar)))
+  )
+
+;; 300s =5min
+(run-with-idle-timer 300 t 'jump-to-org-agenda)
+
+
+;; change "DONE" keyword style
+(setq org-fontify-done-headline t)
+(custom-set-faces
+ '(org-done ((t (:foreground "PaleGreen"   
+                 :weight normal
+                 :strike-through t))))
+ '(org-headline-done 
+            ((((class color) (min-colors 16) (background dark)) 
+               (:foreground "LightSalmon" :strike-through t)))))
+
+(defun my/org-review-month (start-date)
+  "Review the month's clocked tasks and time."
+  (interactive (list (org-read-date)))
+  ;; Set to the beginning of the month
+  (setq start-date (concat (substring start-date 0 8) "01"))
+  (let ((org-agenda-show-log t)
+        (org-agenda-start-with-log-mode t)
+        (org-agenda-start-with-clockreport-mode t)
+        (org-agenda-clockreport-parameter-plist '(:link t :maxlevel 3)))
+    (org-agenda-list nil start-date 'month)))
+
+;; http://pages.sachachua.com/.emacs.d/Sacha.html
+;; Registers allow you to jump to a file or other location quickly. To jump to a register, use C-x r j followed by the letter of the register. Using registers for all these file shortcuts is probably a bit of a waste since I can easily define my own keymap, but since I rarely go beyond register A anyway. Also, I might as well add shortcuts for refiling.
+(defvar my/refile-map (make-sparse-keymap))
+
+(defmacro my/defshortcut (key file)
+  `(progn
+     (set-register ,key (cons 'file ,file))
+     (define-key my/refile-map
+       (char-to-string ,key)
+       (lambda (prefix)
+         (interactive "p")
+         (let ((org-refile-targets '(((,file) :maxlevel . 6)))
+               (current-prefix-arg (or current-prefix-arg '(4))))
+           (call-interactively 'org-refile))))))
+
+
+  (define-key my/refile-map "," 'my/org-refile-to-previous-in-file)
+
+(my/defshortcut ?i "~/.emacs.d/GTD/newgtd.org")
+(my/defshortcut ?f "~/.emacs.d/GTD/orgBoss/Film/film.org")
+(my/defshortcut ?v "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org")
+(my/defshortcut ?s "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
+(my/defshortcut ?S "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
+(my/defshortcut ?B "~/.emacs.d/GTD/orgBoss/Book/book.org")
+(my/defshortcut ?c "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")
+(my/defshortcut ?b "~/.emacs.d/GTD/orgBoss/business/business.org")
+(my/defshortcut ?e "~/.emacs.d/GTD/orgBoss/code/codes.org")
+(my/defshortcut ?W "~/.emacs.d/GTD/orgBoss/Site/blog.org")
+(my/defshortcut ?j "~/.emacs.d/GTD/orgBoss/Journal/journal.org")
+(my/defshortcut ?I "~/.emacs.d/GTD/orgBoss/IDEA/idea.org")
+(my/defshortcut ?d "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")
+(my/defshortcut ?l "~/.emacs.d/GTD/orgBoss/learning.org")
+(my/defshortcut ?q "~/.emacs.d/GTD/orgBoss/questions.org")
+(my/defshortcut ?w "~/.emacs.d/GTD/writing.org")
+
+
+
+
+(add-to-list 'org-global-properties
+      '("Effort_ALL". "0:05 0:15 0:30 1:00 2:00 3:00 4:00"))
+
+
+
+(defvar my/weekly-review-line-regexp
+  "^  \\([^:]+\\): +\\(Sched[^:]+: +\\)?TODO \\(.*?\\)\\(?:[      ]+\\(:[[:alnum:]_@#%:]+:\\)\\)?[        ]*$"
+  "Regular expression matching lines to include.")
+(defvar my/weekly-done-line-regexp
+  "^  \\([^:]+\\): +.*?\\(?:Clocked\\|Closed\\):.*?\\(TODO\\|DONE\\) \\(.*?\\)\\(?:[       ]+\\(:[[:alnum:]_@#%:]+:\\)\\)?[        ]*$"
+  "Regular expression matching lines to include as completed tasks.")
+
+(defun my/quantified-get-hours (category time-summary)
+  "Return the number of hours based on the time summary."
+  (if (stringp category)
+      (if (assoc category time-summary) (/ (cdr (assoc category time-summary)) 3600.0) 0)
+    (apply '+ (mapcar (lambda (x) (my/quantified-get-hours x time-summary)) category))))
+
+(defun _my/extract-tasks-from-agenda (string matchers prefix line-re)
+  (with-temp-buffer
+    (insert string)
+    (goto-char (point-min))
+    (while (re-search-forward line-re nil t)
+      (let ((temp-list matchers))
+        (while temp-list
+          (if (save-match-data
+                (string-match (car (car temp-list)) (match-string 1)))
+              (progn
+                (add-to-list (cdr (car temp-list)) (concat prefix (match-string 3)) t)
+                (setq temp-list nil)))
+          (setq temp-list (cdr temp-list)))))))
+
+(ert-deftest _my/extract-tasks-from-agenda ()
+  (let (list-a list-b (line-re "\\([^:]+\\):\\( \\)\\(.*\\)"))
+    (_my/extract-tasks-from-agenda
+     "listA: Task 1\nother: Task 2\nlistA: Task 3"
+     '(("listA" . list-a)
+       ("." . list-b))
+     "- [ ] "
+     line-re)
+    (should (equal list-a '("- [ ] Task 1" "- [ ] Task 3")))
+    (should (equal list-b '("- [ ] Task 2")))))
+
+(defun _my/get-upcoming-tasks ()
+  (save-window-excursion
+      (org-agenda nil "W")
+      (_my/extract-tasks-from-agenda (buffer-string)
+                                        '(("routines" . ignore)
+                                          ("business" . business-next)
+                                          ("people" . relationships-next)
+                                          ("tasks" . emacs-next)
+                                          ("." . life-next))
+                                        "  - [ ] "
+                                        my/weekly-review-line-regexp)))
+(defun _my/get-previous-tasks ()
+  (let (string)
+    (save-window-excursion
+      (org-agenda nil "W")
+      (org-agenda-later -1)
+      (org-agenda-log-mode 16)
+      (setq string (buffer-string))
+      ;; Get any completed tasks from the current week as well
+      (org-agenda-later 1)
+      (org-agenda-log-mode 16)
+      (setq string (concat string "\n" (buffer-string)))
+      (_my/extract-tasks-from-agenda string
+                                        '(("routines" . ignore)
+                                          ("business" . business)
+                                          ("people" . relationships)
+                                          ("tasks" . emacs)
+                                          ("." . life))
+                                        "  - [X] "
+                                        my/weekly-done-line-regexp))))
+
+(defun my/org-summarize-focus-areas (date)
+  "Summarize previous and upcoming tasks as a list."
+  (interactive (list (org-read-date-analyze (if current-prefix-arg (org-read-date) "-fri") nil '(0 0 0))))
+  (let (business relationships life business-next relationships-next life-next string emacs emacs-next
+                 start end time-summary biz-time ignore base-date)
+    (setq base-date (apply 'encode-time date))
+    (setq start (format-time-string "%Y-%m-%d" (days-to-time (- (time-to-number-of-days base-date) 6))))
+    (setq end (format-time-string "%Y-%m-%d" (days-to-time (1+ (time-to-number-of-days base-date)))))
+    (setq time-summary (quantified-summarize-time start end))
+    (setq biz-time (my/quantified-get-hours "Business" time-summary))
+    (_my/get-upcoming-tasks)
+    (_my/get-previous-tasks)
+    (setq string
+          (concat
+           (format "- *Business* (%.1fh - %d%%)\n" biz-time (/ biz-time 1.68))
+           (mapconcat 'identity business "\n") "\n"
+           (mapconcat 'identity business-next "\n")
+           "\n"
+           (format "  - *Earn* (%.1fh - %d%% of Business)\n"
+                   (my/quantified-get-hours "Business - Earn" time-summary)
+                   (/ (my/quantified-get-hours "Business - Earn" time-summary) (* 0.01 biz-time)))
+           (format "  - *Build* (%.1fh - %d%% of Business)\n"
+                   (my/quantified-get-hours "Business - Build" time-summary)
+                   (/ (my/quantified-get-hours "Business - Build" time-summary) (* 0.01 biz-time)))
+           (format "  - *Connect* (%.1fh - %d%% of Business)\n"
+                   (my/quantified-get-hours "Business - Connect" time-summary)
+                   (/ (my/quantified-get-hours "Business - Connect" time-summary) (* 0.01 biz-time)))
+           (format "- *Relationships* (%.1fh - %d%%)\n"
+                   (my/quantified-get-hours '("Discretionary - Social"
+                                                 "Discretionary - Family") time-summary)
+                   (/ (my/quantified-get-hours '("Discretionary - Social"
+                                                    "Discretionary - Family") time-summary) 1.68))
+           (mapconcat 'identity relationships "\n") "\n"
+           (mapconcat 'identity relationships-next "\n") "\n"
+           "\n"
+           (format "- *Discretionary - Productive* (%.1fh - %d%%)\n"
+                   (my/quantified-get-hours "Discretionary - Productive" time-summary)
+                   (/ (my/quantified-get-hours "Discretionary - Productive" time-summary) 1.68))
+           (format "  - *Drawing* (%.1fh)\n"
+                   (my/quantified-get-hours '("Discretionary - Productive - Drawing")  time-summary))
+           (format "  - *Emacs* (%.1fh)\n"
+                   (my/quantified-get-hours "Discretionary - Productive - Emacs" time-summary))
+           (mapconcat 'identity emacs "\n") "\n"
+           (mapconcat 'identity emacs-next "\n") "\n"
+           (format "  - *Coding* (%.1fh)\n"
+                   (my/quantified-get-hours "Discretionary - Productive - Coding" time-summary))
+           (mapconcat 'identity life "\n") "\n"
+           (mapconcat 'identity life-next "\n") "\n"
+           (format "  - *Sewing* (%.1fh)\n"
+                   (my/quantified-get-hours "Discretionary - Productive - Sewing" time-summary))
+           (format "  - *Writing* (%.1fh)\n"
+                   (my/quantified-get-hours "Discretionary - Productive - Writing" time-summary))
+           (format "- *Discretionary - Play* (%.1fh - %d%%)\n"
+                   (my/quantified-get-hours "Discretionary - Play" time-summary)
+                   (/ (my/quantified-get-hours "Discretionary - Play" time-summary) 1.68))
+           (format "- *Personal routines* (%.1fh - %d%%)\n"
+                   (my/quantified-get-hours "Personal" time-summary)
+                   (/ (my/quantified-get-hours "Personal" time-summary) 1.68))
+           (format "- *Unpaid work* (%.1fh - %d%%)\n"
+                   (my/quantified-get-hours "Unpaid work" time-summary)
+                   (/ (my/quantified-get-hours "Unpaid work" time-summary) 1.68))
+           (format "- *A- (Childcare)* (%.1fh - %d%% of total)\n"
+                   (my/quantified-get-hours '("A-") time-summary)
+                   (/ (my/quantified-get-hours '("A-") time-summary) 1.68))
+           (format "- *Sleep* (%.1fh - %d%% - average of %.1f per day)\n"
+                   (my/quantified-get-hours "Sleep" time-summary)
+                   (/ (my/quantified-get-hours "Sleep" time-summary) 1.68)
+                   (/ (my/quantified-get-hours "Sleep" time-summary) 7)
+                   )))
+    (if (called-interactively-p 'any)
+        (insert string)
+      string)))
+
+
+
+
+;;; agenda view setting
+;; Do not dim blocked tasks
+(setq org-agenda-dim-blocked-tasks nil)
+
+;; Compact the block agenda view
+(setq org-agenda-compact-blocks t)
+
+;; Custom agenda command definitions
+(setq org-agenda-show-future-repeats nil)

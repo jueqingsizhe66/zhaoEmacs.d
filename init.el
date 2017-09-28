@@ -62,8 +62,7 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
-    ;; allow ido usage in as many contexts as possible. see
-    ;; customizations/navigation.el line 23 for a description
+    ;; allow ido usage in as many contexts as possible. see    ;; customizations/navigation.el line 23 for a description
     ;; of ido
     ido-ubiquitous
 
@@ -111,6 +110,7 @@
      htmlize
      highlight-escape-sequences
      move-text
+     ;;use-package
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -200,13 +200,15 @@
       ("~/.emacs.d/GTD/myPlan/" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
  '(package-selected-packages
    (quote
-    (simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-done ((t (:foreground "PaleGreen" :weight normal :strike-through t))))
+ '(org-headline-done ((((class color) (min-colors 16) (background dark)) (:foreground "LightSalmon" :strike-through t))))
  '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold))) t))
 
 
@@ -232,6 +234,8 @@
 (if (file-exists-p "~/.emacs.d/.custom.el") (load-file "~/.emacs.d/.custom.el"))
 (if (file-exists-p "~/.emacs.d/.orgConf.el") (load-file "~/.emacs.d/.orgConf.el"))
 
+
+(require 'quantified)
 ;;不起作用
 ;(if (server-running-p)
 ;"server-running"
@@ -252,3 +256,26 @@
 (require 'setup-html-mode)
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
 (eval-after-load 'html-mode '(require 'zencoding-mode))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (eval-when-compile       ;;
+;;  (require 'use-package)) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;From Sasha Chua
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (use-package engine-mode                                                                       ;; ;;
+;;   :config                                                                                      ;; ;;
+;;   (progn                                                                                       ;; ;;
+;;     (defengine my-blog "https://www.google.ca/search?q=site:sachachua.com+%s" :keybinding "b") ;; ;;
+;;     (defengine my-photos "http://www.flickr.com/search/?w=65214961@N00&q=%s" :keybinding "f")  ;; ;;
+;;     (defengine mail "https://mail.google.com/mail/u/0/#search/%s" :keybinding "m")             ;; ;;
+;;     (defengine google "http://google.com/search?q=%s" :keybinding "g")                         ;; ;;
+;;     (defengine emacswiki "http://google.com/search?q=site:emacswiki.org+%s" :keybinding "e")   ;; ;;
+;;     (bind-key* "C-c /" 'my/engine-mode-hydra/body)                                             ;; ;;
+;;     (engine-mode))                                                                             ;; ;;
+;;  )                                                                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;(find-file "~/.emacs.d/GTD/newgtd.org")
+

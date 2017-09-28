@@ -1,0 +1,87 @@
+* Quick notes
+:LOGBOOK:
+CLOCK: [2017-09-28 周四 13:41]--[2017-09-28 周四 13:42] =>  0:01
+:END:
+** emacs auto open gtd file                                           :NOTE:
+                           Added: [2017-09-28 周四 13:40]
+  
+== Automatically open your todo.org every time you start Emacs ==
+
+Make your life a little bit easier by automatically opening ~/todo.org every time you open Emacs. Add this to the end of your Emacs configuration. To do that,
+
+    C-x C-f ~/.emacs.d/init.el - use find-file to open your configuration file. If it does not yet exist, it is created.
+    Go to the end of this file. (Handy shortcut: C-end)
+    Add (find-file "~/todo.org")
+    Save with C-x C-s (save-buffer).
+
+You can test it with M-x eval-buffer while looking at your ~/.emacs.d/init.el. If it works, it should show you your ~/todo.org file.
+
+You have just written a little Emacs Lisp. Totally not scary.
+
+
+
+http://members.optusnet.com.au/~charles57/GTD/datetree.html
+ %^g prompts for a tag
+I timestamp all my captured items with the line: Added: %U
+Some of my items are filed after a specific headline in a file. Appointments are filed under a heading Calendar.
+Other entries are filed in date trees. These are explained in the next section
+
+
+http://blog.csdn.net/u011729865/article/details/54236547
+
+
+http://blog.csdn.net/jiluben/article/details/39587723
+关于org-capture-templates配置代码的解释
+原创 2014年09月26日 22:13:02
+
+      对于org-capture-templates的配置，网上只有如下几行代码：
+
+   (setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+             "* %?\nEntered on %U\n  %i\n  %a")))
+    大家都是这么写，但是并没有解释每个代码的含义。
+    经过几次的测试，各个代码的意义大体如下：
+    
+    现在以
+
+("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+
+为例进行说明。
+   "t"代表快捷键，如果我们要调用org-capture，必须按下C-c c的组合键，此时emacs就会显示出
+一写字母等，如t、j等，这个"t"就是代码中的"t",我们可以根据自己的意愿设置。
+   "Todo"目前还不清楚。
+    当为"file+headline"时，后面要跟两个参数，一个是文件的地址，如"~/org/gtd.org"，另一个是
+我们当前文档所属的标题。本配置中是"Tasks",意味着当我们在按下C-c c t，并输入内容，再按下
+C-c C-c后，我们的内容会自动归档到gtd.org文件的Tasks标题下，若文件gtd.org中没有Tasks标题，
+系统会自动产生一个。
+    "*"具体意义不知道，如果没有，在按下C-c c后，再按t，无法调出gtd文件。
+     "TODO"会显示再文本标题中，大家也可以换成"SOMEDAY"等，自己想要的状态。
+      "%a"代表你按C-c c前，鼠标所在的内容。
+      其它的内容还没有弄明白。
+
+     附：
+
+     %a          annotation, normally the link created with org-store-link
+     %i          initial content, the region when capture is called with C-u.
+     %t          timestamp, date only
+     %T          timestamp with date and time
+     %u, %U      like the above, but inactive timestamps
+     %?          表示cursor定位于此 开始输入
+
+http://doc.norang.ca/org-mode.html
+
+https://github.com/bbatsov/prelude
+
+https://www.zhihu.com/question/26384934/answer/32686989
+大半年前正值我开写博士论文， 对于这种大部头的写作， 提纲无疑十分重要， 我也尝试过许多mindmap软件来做规划， 结果都乱做一团。 最后还是把维度降到1
+
+
+Org能识别无序列表、有序列表、和描述表
+
+
+https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
+                         
+

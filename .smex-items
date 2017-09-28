@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- zencoding-mode
+ comment-box
  package-install
- expand-region-abbrevs
- dired
+ package-reinstall
+ uncomment-region
+ find-function
+ browse-url-firefox
  magit-push
- magit-status
- magit-log-all
 )
 
 ;; ----- smex-data -----
@@ -16,7 +16,7 @@
  (list-packages . 5)
  (package-list-packages . 8)
  (package-autoremove . 5)
- (package-install . 58)
+ (package-install . 71)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -31,7 +31,7 @@
  (server-start . 1)
  (info . 2)
  (mc/mark-next-lines . 8)
- (mc/edit-lines . 11)
+ (mc/edit-lines . 12)
  (visual-line-mode . 1)
  (undo-tree-visualizer-mode . 1)
  (ivy-mode . 1)
@@ -53,7 +53,7 @@
  (holidays . 3)
  (calendar-list-holidays . 1)
  (company-mode . 1)
- (package-reinstall . 8)
+ (package-reinstall . 11)
  (restclient-mode . 1)
  (key-chord-mode . 2)
  (iy-go-to-char . 3)
@@ -77,13 +77,29 @@
  (magit-status . 11)
  (magit-add-change-log-entry-other-window . 1)
  (magit-add-change-log-entry . 1)
- (magit-log-all . 6)
+ (magit-log-all . 7)
  (shell . 1)
- (magit-push . 11)
+ (magit-push . 15)
  (magit-log-branches . 1)
  (magit-log-refresh . 1)
  (dired-mouse-find-file-other-window . 1)
  (sgml-delete-tag . 1)
  (expand-region-abbrevs . 1)
  (zencoding-mode . 3)
+ (move-text-up . 1)
+ (move-text-down . 1)
+ (org-clock-report . 2)
+ (auto-image-file-mode . 2)
+ (mc/edit-ends-of-lines . 1)
+ (mc/mark-all-in-region . 1)
+ (comment-box . 6)
+ (browse-url-firefox . 5)
+ (find-function . 1)
+ (uncomment-region . 2)
+ (my/org-review-month . 3)
+ (my/org-prepare-weekly-review . 1)
+ (my/org-summarize-focus-areas . 3)
+ (my/org-agenda-projects-and-tasks . 4)
+ (org-narrow-to-subtree . 1)
+ (org-agenda-filter-by-category . 1)
 )

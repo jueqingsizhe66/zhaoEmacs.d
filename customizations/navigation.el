@@ -110,3 +110,10 @@
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+
+;; for firefox
+(setq browse-url-firefox-program
+      "C:/Program Files (x86)/Mozilla Firefox/firefox.exe")
+(setq browse-url-generic-program "google-chrome")
+(setq browse-url-browser-function 'browse-url-generic)

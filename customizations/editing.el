@@ -130,6 +130,19 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   ;; (("C-c m t" . mc/mark-all-like-this)            ;;
+   ;;  ("C-c m m" . mc/mark-all-like-this-dwim)       ;;
+   ;;  ("C-c m l" . mc/edit-lines)                    ;;
+   ;;  ("C-c m e" . mc/edit-ends-of-lines)            ;;
+   ;;  ("C-c m a" . mc/edit-beginnings-of-lines)      ;;
+   ;;  ("C-c m n" . mc/mark-next-like-this)           ;;
+   ;;  ("C-c m p" . mc/mark-previous-like-this)       ;;
+   ;;  ("C-c m s" . mc/mark-sgml-tag-pair)            ;;
+   ;;  ("C-c m d" . mc/mark-all-like-this-in-defun))) ;;
+   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
