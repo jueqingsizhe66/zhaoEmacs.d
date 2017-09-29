@@ -753,6 +753,34 @@ context类似于签到地方，使用@字符打头的。
 ("不紧急不重要" . ?d)
 ```
 
+### 37. org-capture-template的修改
+
+```
+("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")
+                    "* TODO [#B] %^{Task} %^g
+                    :PROPERTIES:
+                    :Effort: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+                    :END:
+                    Captured %<%Y-%m-%d %H:%M>
+                    %?
+
+                    %i
+                    " )
+```
+1. todo模板增加了^g的控制，强制需要输入tag才让你键入org system中
+2. 模板中的%？的作用表示当完成之后 cursor会出现在那里，并且可以开始输入
+3. 增加了权限控制[#A] [#B] [#C] ,并且在随后的org-agenda-custom-command中增加了pa,pb,pc快速定义到满足某一权限的todo terms
+4. 增加了Effort的属性控制， %^{}是一个listbox的选项，prompt you to input the values in the list.
+
+部分org-agenda-custom-command的代码:
+
+```
+        ("p" . "Priorities")
+        ("pa" "A items" tags-todo "+PRIORITY=\"A\"")
+        ("pb" "B items" tags-todo "+PRIORITY=\"B\"")
+        ("pc" "C items" tags-todo "+PRIORITY=\"C\"")
+
+```
 <hr/>
 
 <hr/>
