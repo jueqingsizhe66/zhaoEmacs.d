@@ -706,13 +706,60 @@ Hope ,when you see it, do work for you!
 C-x C-; 单行注释
 
 M-h  M-x comment-with-box 注释一个区域
-<hr/>
+
+
+### 33. projectile介绍
+
+#### 函数
+
+1. projectile-find-file  快捷键C-c p f
+
+你可以使用 M-x projectile 进入projectile模式
+
+在vim中有一个类似的软件叫做[Ctrl-space][52],[projectile][51]会把git或者其他代码管理软件，亦或者你的lein，maven，budler等
+相关的文件夹当作一个project，如果啥都没有创建一个.projectile,那么该文件夹也会被识别为project
+
+
+基本查找项目文件内的file(C-c是保留的快捷键)
+
+
+`C-c p f`
+
+![projectile][55]
+### 34. Web-mode介绍
+
+[web-mode.el][53] is an emacs major mode for editing web templates aka HTML files embedding parts (CSS/JavaScript) and blocks (pre rendered by client/server side engines).
+
+更详细的使用方法参考[Web-mode.org][54]
+
+
+### 35. 自动弹出org-agenda窗口(5min dile)
+
+在阅读[Sachac.org][57]的idle-time了解到在emacs闲置状态时候可以让其自动
+打开org-agenda的命令，她也是参考了[Displaying your Org agenda after idle time][56], 进一步把spacemacs-dark主题替换掉我的dracula-theme,参考editing.el的配置
+
+![spacemacs][59]
+
+### 36. tag标签增加
+
+在emacs配置文件夹下的.orgConf增加了新的标签控制，觉得还是挺有用的，有时候可以在newgtd.org中c-c c-q添加一下
+这样就能提醒你，同时也加入了project和context的思想(参考[todotxt.org][60]),project在标签中使用+打头的，而
+context类似于签到地方，使用@字符打头的。
+
+```
+("紧急重要" . ?a)
+("紧急不重要" . ?b)
+("不紧急重要" . ?c)
+("不紧急不重要" . ?d)
+```
 
 <hr/>
 
+<hr/>
 
 
-[1]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/new.jpg
+
+[1]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/new.jpg
 [2]:https://github.com/clojure-emacs/clj-refactor.el 
 [3]:https://github.com/jaypei/emacs-neotree 
 [4]:https://github.com/domtronn/all-the-icons.el 
@@ -730,7 +777,7 @@ M-h  M-x comment-with-box 注释一个区域
 [16]:http://www.yinwang.org/blog-cn/2013/04/11/scheme-setup 
 [17]:http://www.cnblogs.com/robertzml/archive/2010/02/19/1669204.html
 [18]: https://www.masteringemacs.org/article/beginners-guide-to-emacs
-[19]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/holyshit.jpg
+[19]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/holyshit.jpg
 [20]:https://www.braveclojure.com/basic-emacs/
 [21]:https://github.com/magnars/multiple-cursors.el
 [22]:https://github.com/tpope/vim-surround
@@ -740,7 +787,7 @@ M-h  M-x comment-with-box 注释一个区域
 [26]:http://oremacs.com/swiper/
 [27]:https://github.com/abo-abo/swiper
 [28]:https://github.com/emacs-helm/helm
-[29]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/calenar.jpg
+[29]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/calenar.jpg
 [30]:https://github.com/winterTTr/ace-jump-mode
 [31]:https://github.com/emacs-evil/evil-surround
 [32]:https://github.com/company-mode/company-mode
@@ -754,11 +801,21 @@ M-h  M-x comment-with-box 注释一个区域
 [40]:http://emacsrocks.com/e09.html
 [41]:http://emacsrocks.com/e02.html
 [42]:http://emacsrocks.com/e16.html
-[43]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/dired.jpg
-[44]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/ace.png
+[43]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/dired.jpg
+[44]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/ace.png
 [45]:http://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html
 [46]:https://github.com/magnars/.emacs.d 
 [47]:https://github.com/rooney/zencoding
 [48]:https://github.com/emacsfodder/move-text
 [49]:https://github.com/sachac/baby-steps-org-todo/blob/master/index.org
-[50]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/baby-org-mode.png
+[50]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/baby-org-mode.png
+[51]:https://github.com/bbatsov/projectile
+[52]:https://github.com/vim-ctrlspace/vim-ctrlspace
+[53]:https://github.com/fxbois/web-mode
+[54]:http://web-mode.org/
+[55]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/projectile.jpg
+[56]:http://lists.gnu.org/archive/html/emacs-orgmode/2010-03/msg00367.html
+[57]:https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org
+[58]:https://github.com/nashamri/spacemacs-theme
+[59]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/spacemacs.jpg
+[60]:http://todotxt.org/

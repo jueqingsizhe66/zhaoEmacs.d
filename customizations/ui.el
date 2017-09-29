@@ -27,8 +27,16 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
+(add-to-list 'load-path "~/.emacs.d/themes/spacemacs-theme")
 ;(load-theme 'tomorrow-night-bright t)
-(load-theme 'dracula t)
+(load-theme 'spacemacs-dark t)
+  (setq spacemacs-theme-org-agenda-height nil)
+  (setq spacemacs-theme-org-height nil)
+;; set sizes here to stop spacemacs theme resizing these
+
+
+
+;(load-theme 'dracula t)
 ;; workaround blue problem https://github.com/bbatsov/solarized-emacs/issues/18
 (custom-set-faces
 (if (not window-system)

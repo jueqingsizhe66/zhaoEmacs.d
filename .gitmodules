@@ -1,0 +1,6 @@
+[submodule "use-package"]
+	path = use-package
+	url = https://github.com/jwiegley/use-package
+[submodule "themes/spacemacs-theme"]
+	path = themes/spacemacs-theme
+	url = https://github.com/nashamri/spacemacs-theme

@@ -78,6 +78,43 @@
 (defn lazify-n! [ n seq ]
   (loop [n n seq seq]
     (if (> n 0)
-      (recur (- n 1) (doall (lazify seq)))
+      (print "hell")
+      ;;(recur (- n 1) (doall (lazify seq)))
       seq)))
 (println "hello")
+
+(def sum #(reduce + %))
+(def avg #(/ (sum %) (count %)))
+(defn stats
+ [numbers]
+ (map #(% numbers) [sum  count avg]))
+
+(stats [3 5 10])
+ (def database
+   [{:alias "dagou" :real "zhangsan"}
+    {:alias "ergou" :real "lisi"}
+    {:alias "sangou" :real "wangwu"}
+    {:alias "baga" :real "japen"}])
+
+(map inc [1 2 3])
+(map str ["a"  "b" "c"] ["A"  "B" "C"])
+(map str ["a"  "b" "c"] ["A"  "B" "C" "D"])
+(list (str "a" "A") (str "b" "B") (str "c" "C"))
+
+(into {} 
+      (seq {:a 1 :b 2 :c 3}))
+(seq '(1 2 3))
+(seq [1 2 3])
+(seq #{1 2 3})
+(seq {:name "Bill Gates" :occupation "CEO"})
+
+
+(defn titleize
+  [topic]
+  (str topic "for the Brave and True"))
+
+(map  titleize ["Hamsters" "Ragnarok"])
+(map titleize '("Empthy" "Decorating"))
+(map titleize #{"Elbows" "Soap Carving"})
+(map #(titleize (second %)) {:uncomfortable-thing "winking"})
+

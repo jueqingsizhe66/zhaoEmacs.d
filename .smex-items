@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- comment-box
  package-install
  package-reinstall
+ magit-push
+ magit-log-all
+ comment-box
  uncomment-region
  find-function
- browse-url-firefox
- magit-push
 )
 
 ;; ----- smex-data -----
@@ -16,7 +16,7 @@
  (list-packages . 5)
  (package-list-packages . 8)
  (package-autoremove . 5)
- (package-install . 71)
+ (package-install . 77)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -53,7 +53,7 @@
  (holidays . 3)
  (calendar-list-holidays . 1)
  (company-mode . 1)
- (package-reinstall . 11)
+ (package-reinstall . 14)
  (restclient-mode . 1)
  (key-chord-mode . 2)
  (iy-go-to-char . 3)
@@ -77,9 +77,9 @@
  (magit-status . 11)
  (magit-add-change-log-entry-other-window . 1)
  (magit-add-change-log-entry . 1)
- (magit-log-all . 7)
+ (magit-log-all . 8)
  (shell . 1)
- (magit-push . 15)
+ (magit-push . 19)
  (magit-log-branches . 1)
  (magit-log-refresh . 1)
  (dired-mouse-find-file-other-window . 1)

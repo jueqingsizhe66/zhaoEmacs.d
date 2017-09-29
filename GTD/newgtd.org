@@ -84,15 +84,16 @@ SCHEDULED: <2017-09-29 周五 . +1w>
                     :Effort: 4:00
                     :END:
                     Captured 2017-09-28 13:58
-** TODO [#B] change the list style in org-mode                    :PERSONAL:
-DEADLINE: <2017-09-28 周四>
+** DONE [#B] change the list style in org-mode                    :PERSONAL:
+CLOSED: [2017-09-29 周五 09:45] DEADLINE: <2017-09-28 周四>
                     :PROPERTIES:
                     :Effort: 0:15
                     :END:
+                    - State "DONE"       from "TODO"       [2017-09-29 周五 09:45]
                     Captured 2017-09-28 14:07
                 Doesn't work!                   
 * Tasks
-** TODO Most important thing that you have to do
+** TODO Most important thing that you have to do       :graduation:紧急重要:
 ** TODO Second most important thing that you have to do
 You can also take notes underneath each heading, like this
 ** TODO Etc.
