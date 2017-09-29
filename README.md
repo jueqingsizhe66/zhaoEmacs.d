@@ -736,7 +736,7 @@ M-h  M-x comment-with-box 注释一个区域
 ### 35. 自动弹出org-agenda窗口(5min idle)
 
 在阅读[Sachac.org][57]的idle-time了解到在emacs闲置状态时候可以让其自动
-打开org-agenda的命令，她也是参考了[Displaying your Org agenda after idle time][56], 进一步把spacemacs-dark主题替换掉我的dracula-theme,参考editing.el的配置
+打开org-agenda的命令，她也是参考了[Displaying your Org agenda after idle time][56], 进一步使用spacemacs-dark主题替换掉之前的的dracula-theme,参考editing.el的配置
 
 ![spacemacs][59]
 
