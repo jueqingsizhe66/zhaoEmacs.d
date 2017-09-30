@@ -781,6 +781,40 @@ context类似于签到地方，使用@字符打头的。
         ("pc" "C items" tags-todo "+PRIORITY=\"C\"")
 
 ```
+
+### 38. cljr-refactor实验
+
+#### 函数
+
+1. [cljr-thread-last-all][61] 使用-->进行重构，-->意思抽取最后一个参数放在第一行，然后倒数第二个第二行 依次排列
+2. [cljr-thread-first-all][62] 使用->进行重构, -> 意思抽取最内层的第一个参数放在第一行 然后递归出来。
+3. [cljr-unwind-all][63] -->和->的反向操作
+4. [cljr-unwind][64]
+5. [cljr-cycle-privacy][65]
+6. [cljr-add-missing-libspec][66]
+```
+
+(map square (filter even? [1 2  3 4]))
+(->> [1 2  3 4]
+     (filter even?)
+     (map square))
+(-> square
+    (map (filter even? [1 2  3 4])))
+
+(map str/join (map reverse (map (conj [:a :ab] :abc))))
+;; cljr-unwind-all   pk   cljr-thread-last-all       pk cljr-thread-first-all
+(->> :abc
+     (conj [:a :ab])
+     map
+     (map reverse)
+     (map str/join))
+(map str/join (map reverse (map (conj [:a :ab] :abc))))
+
+;; cljr-cycle-privacy
+(defn- foo
+  (println "hello"))
+
+```
 <hr/>
 
 <hr/>
@@ -847,3 +881,8 @@ context类似于签到地方，使用@字符打头的。
 [58]:https://github.com/nashamri/spacemacs-theme
 [59]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/spacemacs.jpg
 [60]:http://todotxt.org/
+[61]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-last-all
+[62]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-first-all
+[63]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-unwind-all
+[64]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-unwind
+[65]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-cycle-privacy

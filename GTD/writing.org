@@ -24,23 +24,14 @@
 - dsf
 H_2 O
 #<<tag1>>
-* hekf [2/3]
+* TODO hekf [0/1]
+- State "TODO"       from              [2017-09-29 周五 23:42]
 - [ ] dg
 - [X] dgg
 - [X] df [3/3]
   - [X] helo
   - [X] hdf
-  - [X] df
-** renwu2
-- sd
-- [ ] dsf
-- [ ] dfsg
-- [-] sdfd
-  - [ ] sdfd
-  - [X] sdfds
-  - [X] sg
-** dsf
-** dsg
+  - [X] dfa
 DEADLINE:<2017-09-20 周三>
 + sdsdf
 + sdfgs
@@ -48,7 +39,7 @@ DEADLINE:<2017-09-20 周三>
 
 
 [[tag1]]
-** test agenda
+** KNOWNCAUSE test agenda
 SCHEDULED: <2017-09-20 周三>
 
 + [X] sdf

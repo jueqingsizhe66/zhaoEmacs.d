@@ -1,8 +1,31 @@
 * Quick notes
 :LOGBOOK:
-CLOCK: [2017-09-29 周五 11:03]
+CLOCK: [2017-09-30 周六 05:24]
+CLOCK: [2017-09-29 周五 11:03]j
+
+
 CLOCK: [2017-09-28 周四 13:41]--[2017-09-28 周四 13:42] =>  0:01
 :END:
+** cljrefactor call last thread call [#B]                            :@work:
+                           Added: [2017-09-30 周六 05:21]
+-https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-first-all
+
+
+** cljr thread first all [#B]                                        :@work:
+                           Added: [2017-09-30 周六 05:23]
+                           
+https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-last-all
+
+Start with:
+
+(map square (filter even? [1 2 3 4 5]))
+
+Put your cursor in front of the s-exp, and call cljr-thread-last-all:
+
+(->> [1 2 3 4 5]
+     (filter even?)
+     (map square))
+
 ** CFD nacell wiwith bump [#B]                                       :@work:
                            Added: [2017-09-29 周五 11:02]
      首先，总算完成了大小网格的嵌套功能。 划分到机舱的过程中基本上比较正常，就是做了几次o剖而已，然后对应关联而已，

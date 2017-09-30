@@ -23,10 +23,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Habit/habits.org")
- (front-context-string . "* NEXT emacs twe")
- (rear-context-string)
- (position . 1))
+ (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
+ (front-context-string . "- ** cljrefactor")
+ (rear-context-string . " =>  0:01\n:END:\n")
+ (position . 121))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ magit-push
  package-install
  package-reinstall
- magit-push
+ package-delete
+ package-autoremove
+ projectile-mode
  magit-log-all
- comment-box
- uncomment-region
- find-function
 )
 
 ;; ----- smex-data -----
@@ -15,8 +15,8 @@
  (cider-jack-in . 15)
  (list-packages . 5)
  (package-list-packages . 8)
- (package-autoremove . 5)
- (package-install . 77)
+ (package-autoremove . 6)
+ (package-install . 84)
  (cljr-add-missing-libspec . 3)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -53,7 +53,7 @@
  (holidays . 3)
  (calendar-list-holidays . 1)
  (company-mode . 1)
- (package-reinstall . 14)
+ (package-reinstall . 18)
  (restclient-mode . 1)
  (key-chord-mode . 2)
  (iy-go-to-char . 3)
@@ -79,7 +79,7 @@
  (magit-add-change-log-entry . 1)
  (magit-log-all . 8)
  (shell . 1)
- (magit-push . 19)
+ (magit-push . 23)
  (magit-log-branches . 1)
  (magit-log-refresh . 1)
  (dired-mouse-find-file-other-window . 1)
@@ -102,4 +102,6 @@
  (my/org-agenda-projects-and-tasks . 4)
  (org-narrow-to-subtree . 1)
  (org-agenda-filter-by-category . 1)
+ (projectile-mode . 4)
+ (package-delete . 1)
 )

@@ -24,9 +24,10 @@ Added: [2017-09-18 周一 11:07]
 
    - State "BUG"        from              [2017-09-05 周二 16:48]
    Addd: [2015-05-04 Mon 02:37]
-** TODOS setting CFD calculation                                      :@work:
-SCHEDULED: <2017-09-13 周三>
+** DONE TODOS setting CFD calculation                                :@work:
+CLOSED: [2017-09-29 周五 23:41] SCHEDULED: <2017-09-13 周三>
  
+- State "DONE"       from              [2017-09-29 周五 23:41]
  Added: [2017-09-13 周三 01:22]
 *dfdf* 
  /slash/
@@ -71,11 +72,12 @@ worry about missing deadline.(scheduled tasks will be informed of you)
 ****** 5. but still too much. So be realistics and add priviledge to your schedule tasks, eliminate some not so important not so hurry
 *** 6. finally you track all you task (so you know what the time went by)
 *** 7. also you do some overview the process (so you do appreciate how things adds up)
-** TODO [#A] new mesh for the double-sliding mesh :@work::multiAxis:紧急重要:
-SCHEDULED: <2017-09-28 周四>
+** DONE [#A] new mesh for the double-sliding mesh :@work::multiAxis:紧急重要:
+CLOSED: [2017-09-29 周五 23:40] SCHEDULED: <2017-09-28 周四>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
+                    - State "DONE"       from "TODO"       [2017-09-29 周五 23:40]
                     Captured 2017-09-28 13:52
 ** TODO [#B] Read papers related to yaw preparing for the thesis proposal :@work::graduation:紧急重要:
 SCHEDULED: <2017-09-29 周五 . +1w>
