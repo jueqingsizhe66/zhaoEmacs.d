@@ -886,3 +886,4 @@ context类似于签到地方，使用@字符打头的。
 [63]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-unwind-all
 [64]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-unwind
 [65]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-cycle-privacy
+[66]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-add-missing-libspec
