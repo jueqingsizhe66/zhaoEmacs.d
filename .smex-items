@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- magit-push
+ shell
  package-install
+ f90-mode
+ fortpy-install-server
  package-reinstall
- package-delete
- package-autoremove
- projectile-mode
- magit-log-all
+ magit-push
+ cider-jack-in
 )
 
 ;; ----- smex-data -----
@@ -16,8 +16,8 @@
  (list-packages . 5)
  (package-list-packages . 8)
  (package-autoremove . 6)
- (package-install . 84)
- (cljr-add-missing-libspec . 3)
+ (package-install . 92)
+ (cljr-add-missing-libspec . 5)
  (bookmark-load . 1)
  (bookmark-jump . 1)
  (bookmark-bmenu-list . 5)
@@ -53,7 +53,7 @@
  (holidays . 3)
  (calendar-list-holidays . 1)
  (company-mode . 1)
- (package-reinstall . 18)
+ (package-reinstall . 21)
  (restclient-mode . 1)
  (key-chord-mode . 2)
  (iy-go-to-char . 3)
@@ -78,8 +78,8 @@
  (magit-add-change-log-entry-other-window . 1)
  (magit-add-change-log-entry . 1)
  (magit-log-all . 8)
- (shell . 1)
- (magit-push . 23)
+ (shell . 4)
+ (magit-push . 26)
  (magit-log-branches . 1)
  (magit-log-refresh . 1)
  (dired-mouse-find-file-other-window . 1)
@@ -104,4 +104,18 @@
  (org-agenda-filter-by-category . 1)
  (projectile-mode . 4)
  (package-delete . 1)
+ (cljr-thread-last-all . 6)
+ (cljr-thread-first-all . 3)
+ (cljr-unwind-all . 3)
+ (cljr-cycle-privacy . 2)
+ (cljr-add-stubs . 3)
+ (cljr-remove-let . 3)
+ (cljr-promote-function . 4)
+ (fortpy-install-server . 7)
+ (package-refresh-contents . 1)
+ (fia/toggle . 2)
+ (fortpy-show-doc . 1)
+ (fortpy-goto-definition . 3)
+ (fortpy-goto-definition-next . 1)
+ (f90-mode . 1)
 )

@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("e:/BaiduYunDownload/FAST816/Source/" . "dependencies/")
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" . "CalendarDairy/")
  ("c:/Users/YeZhao/AppData/Roaming/" . "11Game/")
  ("e:/EOPL2014/" . "5010-Program-Design-paradigms/")
@@ -40,6 +41,14 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("e:/BaiduYunDownload/FAST816/Source/" (22991 37053 0 0) "FAST_Types.f90" "FAST_Subs.f90" "FAST_Solver.f90" "FAST_Registry.txt" "FAST_Prog.f90" "FAST_Prog.c" "FAST_Mods.f90" "FAST_Lin.f90" "FAST_Library.h" "FAST_Library.f90" "dependencies/" "a.90" "../" "./")
+
+ ("e:/BaiduYunDownload/FAST816/Source/dependencies/AeroDyn/" (22831 21472 0 0) "UnsteadyAero_Types.f90" "UnsteadyAero_Registry.txt" "UnsteadyAero.f90" "mod_root1dim.f90" "fmin_fcn.f90" "BEMT_Types.f90" "BEMT_Registry.txt" "BEMTUncoupled.f90" "BEMT.f90" "AirfoilInfo_Types.f90" "AirfoilInfo_Registry.txt" "AirfoilInfo.f90" "AeroDyn_Types.f90" "AeroDyn_Registry.txt" "AeroDyn_IO.f90" "AeroDyn.f90" "../" "./")
+
+ ("e:/BaiduYunDownload/FAST816/Source/dependencies/" (22831 21473 0 0) "SubDyn/" "ServoDyn/" "Registry/" "OrcaFlex/" "OpenFOAM/" "NWTC_Library/" "NetLib/" "MoorDyn/" "MAP/" "InflowWind/" "IceFloe/" "IceDyn/" "HydroDyn/" "FEAMooring/" "FAST_dependencies.xlsx" "ElastoDyn/" "BeamDyn/" "AeroDyn14/" "AeroDyn/" "../" "./")
+
+ ("e:/BaiduYunDownload/FAST816/" (22831 21481 0 0) "Utilities/" "Source/" "Simulink/" "README_FAST8.pdf" "OutListParameters.xlsx" "NOTICE.txt" "license.txt" "Disclaimer.txt" "Compiling/" "ChangeLog.txt" "CertTest/" "bin/" "ArcWin.txt" "Archive.bat" "ArcFiles.txt" "../" "./")
+
  ("e:/clojure-home/" (22986 27218 0 0) "undead_zoobie/" "testClojure.iml" "test-clojure1/" "src/" "my-app/" "luminus-template/" "luminus/" "lib/" "hello.md" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "clojure/" "a.org" "a.md" "a.html" ".idea/" "../" "./")
 
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (22987 47968 0 0) "url/" "tutorial/" "themes/" "snippets/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "init.el" "ido.last~" "ido.last" "hello.md" "GTD/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".recentf~" ".recentf" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "../" "./")

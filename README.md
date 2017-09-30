@@ -847,6 +847,87 @@ Emacs is an programmable text and plain editor(Emacs lisp is a programmable prog
 
 Go to understand what emacs thinks and touch the emacs interpreter, read 
 the book 《[Writing Gnu Emacs Extension][68]》
+
+### 40. emacs结合fortran(windows 和ubuntu开始有点不一样了)
+
+使用[fortpy][71],但是安装它废了不少劲，首先得安装deferred
+`M-x package-install deferred` 安了4遍才安装上
+
+然后是结合python，所以得事先在python命令行安装
+```
+pip install virtualenv
+pip install epc
+pip install fortpy
+```
+
+安装fortpy python还提醒vcpython.exe(windows user 需要注意)
+```
+针对windows的/问题
+
+stutils.errors.DistutilsError: Setup script exited with error: Microsoft Visual C++ 9.0 is required. Get it from http://aka.ms/vcpython27
+
+
+原因是需要vcpython2.7来编译 fortpy套装的scipy-0.19.1.tar.gz，所以如果事先
+安装scipy,可能不需要vcpython2.7. 这一步编译时间也得10min钟
+
+Installing collected packages: numpy, scipy, pytz, cycler, pyparsing, functools32, matplotlib, tqdm, argparse, pycparser, cffi, pynacl, asn1crypto, idna, ipaddress, enum34, cryptography, bcrypt, pyasn1, paramiko, termcolor, fortpy
+
+总共需要安装的python套件
+
+又遇到这种问题
+      raise NotFoundError('no lapack/blas resources found')
+    numpy.distutils.system_info.NotFoundError: no lapack/blas resources found
+缺少lapacka/blas
+
+通过http://www.voidcn.com/article/p-cyvbbzty-bhh.html
+python资源真是丰富
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
+
+通过http://blog.csdn.net/inter_peng/article/details/53222562
+指示，进行命令行安装whl文件(pip识别文件）
+
+D:\迅雷下载>pip install "numpy-1.13.3+mkl-cp27-cp27m-win_amd64.whl"
+Processing d:\????\numpy-1.13.3+mkl-cp27-cp27m-win_amd64.whl
+Installing collected packages: numpy
+  Found existing installation: numpy 1.13.3
+    Uninstalling numpy-1.13.3:
+      Successfully uninstalled numpy-1.13.3
+Successfully installed numpy-1.13.3+mkl
+
+D:\迅雷下载>pip install scipy-0.19.1-cp27-cp27m-win_amd64.whl
+Processing d:\????\scipy-0.19.1-cp27-cp27m-win_amd64.whl
+Requirement already satisfied: numpy>=1.8.2 in c:\python27\lib\site-packages (from scipy==0.19.1)
+Installing collected packages: scipy
+Successfully installed scipy-0.19.1
+
+
+
+Fuck, it works!
+  Running setup.py install for pycparser ... done
+  Running setup.py install for termcolor ... done
+Successfully installed argparse-1.4.0 asn1crypto-0.23.0 bcrypt-3.1.3 cffi-1.11.0 cryptography-2.0.3 cycler-0.10.0 enum34-1.1.6 fortpy-1.7.7 functools32-3.2.3.post2 idna-2.6 ipaddress-1.0.18 matplotlib-2.0.2 paramiko-2.3.1 pyasn1-0.3.6 pycparser-2.18 pynacl-1.1.2 pyparsing-2.2.0 pytz-2017.2 termcolor-1.1.0 tqdm-4.17.1
+
+
+```
+### 41 使用frotran-index-args
+
+[fortran-index-args][69]
+
+科研遗产fortran代码经常出现大量的变量，为了方便观看最好使用该工具，可以看一个小的[fortran-index-args gif][70]
+
+
+为了使打开fortran90文件加载f90-mode,于是在fortran-editing.el增加如下代码
+
+```
+;;---------------f90--------------------
+(setq auto-mode-alist
+    (append '(("\\.f90\\'" . f90-mode)
+             ("\\.f95\\'" . f90-mode))
+     auto-mode-alist))
+```
+
+![f90-mode][72]
+
 <hr/>
 
 <hr/>
@@ -921,3 +1002,7 @@ the book 《[Writing Gnu Emacs Extension][68]》
 [66]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-add-missing-libspec
 [67]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-promote-function
 [68]:https://zhidao.baidu.com/share/f280fd6b0524acc7f16e4b18eed0abc3.html
+[69]:https://github.com/ffevotte/fortran-index-args
+[70]:http://showterm.io/f5554b8857041dd28dd38#slow
+[71]:https://github.com/rosenbrockc/fortpy-el
+[72]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/f90mode.jpg
