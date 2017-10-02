@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "angular-snippets" "angular-snippets.el" (22986
-;;;;;;  25256 0 0))
+;;;### (autoloads nil "angular-snippets" "angular-snippets.el" (22993
+;;;;;;  41868 0 0))
 ;;; Generated autoloads from angular-snippets.el
 
 (autoload 'ng-snip-show-docs-at-point "angular-snippets" "\
@@ -21,7 +21,7 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("angular-snippets-pkg.el") (22986 25256
+;;;### (autoloads nil nil ("angular-snippets-pkg.el") (22993 41868
 ;;;;;;  0 0))
 
 ;;;***

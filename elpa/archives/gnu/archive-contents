@@ -373,7 +373,7 @@
 	     ((emacs
 	       (25))
 	      (stream
-	       (2 2 3)))
+	       (2 2 4)))
 	     "Expression based interactive search for Emacs Lisp" tar
 	     ((:keywords "lisp")
 	      (:url . "http://elpa.gnu.org/packages/el-search.html"))])

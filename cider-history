@@ -2,4 +2,4 @@
 ;; Automatically written history of CIDER REPL session
 ;; Edit at your own risk
 
-("(sqrt 4)" "(/ 111 8.0)" "（" "(greet \"hdfg\")" "(foo \"hi\")" "(foo \"fo\")" "(+ 3 6)" "（+ 3 6）")
+("(hellolet \"he\")" "(sqrt 4)" "(/ 111 8.0)" "（" "(greet \"hdfg\")" "(foo \"hi\")" "(foo \"fo\")" "(+ 3 6)" "（+ 3 6）")

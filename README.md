@@ -936,6 +936,27 @@ You need to have java in your system first.
 2. download the [lein script][73] in the official network, chmod +x lein
 3. lein repl, ok it runs
 
+
+### 43. quick sort
+
+seen from [jianshu][74]
+
+```
+(defn quick-sort [nums] 
+  (if (< (count nums) 2) 
+    nums 
+    (concat 
+      (quick-sort (filter #(< % (first nums)) nums)) 
+      (filter #(= % (first nums)) nums) 
+      (quick-sort (filter #(> % (first nums)) nums)))))
+
+
+```
+
+`C-c C-e` to see the sexp result,
+
+![quicsort][75]
+
 <hr/>
 
 <hr/>
@@ -1015,3 +1036,5 @@ You need to have java in your system first.
 [71]:https://github.com/rosenbrockc/fortpy-el
 [72]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/f90mode.jpg
 [73]:https://nbcache03.baidupcs.com/file/62c420102bc49b75c2f72eb0bc3376bb?bkt=p3-0000077349e2346b1ab12907a893d1a7719e&xcode=0dca202c7cf6f6cd67dfbddd458d6a75d22b36318ae4295e9717ec4418c70769&fid=1822475311-250528-779334003473883&time=1506791959&sign=FDTAXGERLQBHSK-DCb740ccc5511e5e8fedcff06b081203-ANTjhB%2F5BIHnqoS%2Box7c5vXYJVA%3D&to=p7&size=15370238&sta_dx=15370238&sta_cs=7&sta_ft=jar&sta_ct=6&sta_mt=6&fm2=MH,Yangquan,Netizen-anywhere,,beijing,ct&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=0000077349e2346b1ab12907a893d1a7719e&sl=79364174&expires=8h&rt=sh&r=741626513&mlogid=6332918318081198732&vuk=3546319256&vbdid=2539911141&fin=leiningen-2.7.1-standalone.jar&fn=leiningen-2.7.1-standalone.jar&rtype=1&iv=0&dp-logid=6332918318081198732&dp-callid=0.1.1&hps=1&tsl=100&csl=100&csign=kcI5aH%2F04aSv%2F9sgQdx%2FfIpDnLM%3D&so=0&ut=6&uter=4&serv=0&uc=2541648437&ic=1957061296&ti=42c2e66164287fda4cfd66f9ec9b2ab620b13e6f45aa1efd305a5e1275657320&by=themis
+[74]:http://www.jianshu.com/p/1bd09e10f6db
+[75]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/quicksort.png

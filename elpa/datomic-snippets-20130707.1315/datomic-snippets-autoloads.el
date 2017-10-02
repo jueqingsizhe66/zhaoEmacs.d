@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "datomic-snippets" "datomic-snippets.el" (22986
-;;;;;;  25265 0 0))
+;;;### (autoloads nil "datomic-snippets" "datomic-snippets.el" (22993
+;;;;;;  41967 0 0))
 ;;; Generated autoloads from datomic-snippets.el
 
 (autoload 'datomic-snippets-show-docs-at-point "datomic-snippets" "\
@@ -21,7 +21,7 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("datomic-snippets-pkg.el") (22986 25265
+;;;### (autoloads nil nil ("datomic-snippets-pkg.el") (22993 41967
 ;;;;;;  0 0))
 
 ;;;***
