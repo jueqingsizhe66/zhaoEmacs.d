@@ -1,11 +1,17 @@
-* Quick notes
+ Quick notes
 :LOGBOOK:
-CLOCK: [2017-09-30 周六 05:24]
+CLOCK: [2017-10-02 周一 11:09]
 CLOCK: [2017-09-29 周五 11:03]j
 
 
 CLOCK: [2017-09-28 周四 13:41]--[2017-09-28 周四 13:42] =>  0:01
 :END:
+** tomato time [#B]                                                  :@F708:
+                           Added: [2017-10-02 周一 11:09]
+  ● 开心网的偷菜游戏？你是不是老是惦记着收菜的时间？你收的不是菜，是番茄
+  ● 奥运会倒计时，高考倒计时？很大很重要的一个番茄
+  ● 老板明天要的资料？味道不怎么样的番茄
+我想说的是，番茄时间的核心是倒计时所产生的紧迫感。这是中科院心理学专业毕业的老郭（郭军峰）告诉我的，感谢哦。
 ** cljrefactor call last thread call [#B]                            :@work:
                            Added: [2017-09-30 周六 05:21]
 -https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-first-all

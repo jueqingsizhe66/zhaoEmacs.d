@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ uncomment-region
+ comment-box
  package-install
+ magit-log-all
+ magit-tag
+ magit-push
  package-list-packages
- package-autoremove
- package-reinstall
- shell
- f90-mode
- fortpy-install-server
 )
 
 ;; ----- smex-data -----
@@ -16,7 +16,7 @@
  (list-packages . 5)
  (package-list-packages . 11)
  (package-autoremove . 9)
- (package-install . 100)
+ (package-install . 101)
  (cljr-add-missing-libspec . 5)
  (bookmark-load . 1)
  (bookmark-jump . 1)
@@ -77,9 +77,9 @@
  (magit-status . 11)
  (magit-add-change-log-entry-other-window . 1)
  (magit-add-change-log-entry . 1)
- (magit-log-all . 8)
+ (magit-log-all . 9)
  (shell . 4)
- (magit-push . 26)
+ (magit-push . 28)
  (magit-log-branches . 1)
  (magit-log-refresh . 1)
  (dired-mouse-find-file-other-window . 1)
@@ -92,10 +92,10 @@
  (auto-image-file-mode . 2)
  (mc/edit-ends-of-lines . 1)
  (mc/mark-all-in-region . 1)
- (comment-box . 6)
+ (comment-box . 8)
  (browse-url-firefox . 5)
  (find-function . 1)
- (uncomment-region . 2)
+ (uncomment-region . 4)
  (my/org-review-month . 3)
  (my/org-prepare-weekly-review . 1)
  (my/org-summarize-focus-areas . 3)
@@ -118,4 +118,5 @@
  (fortpy-goto-definition . 3)
  (fortpy-goto-definition-next . 1)
  (f90-mode . 1)
+ (magit-tag . 3)
 )

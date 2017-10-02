@@ -24,9 +24,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
- (front-context-string . "- ** cljrefactor")
+ (front-context-string . "** tomato time [")
  (rear-context-string . " =>  0:01\n:END:\n")
- (position . 121))
+ (position . 153))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

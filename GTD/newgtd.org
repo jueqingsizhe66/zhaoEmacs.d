@@ -94,6 +94,13 @@ CLOSED: [2017-09-29 周五 09:45] DEADLINE: <2017-09-28 周四>
                     - State "DONE"       from "TODO"       [2017-09-29 周五 09:45]
                     Captured 2017-09-28 14:07
                 Doesn't work!                   
+** TODO [#B] First Report for your graduation                        :@work:
+DEADLINE: <2017-10-23 周一> SCHEDULED: <2017-10-02 周一>
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    Captured 2017-10-02 11:05
+                    
 * Tasks
 ** TODO Most important thing that you have to do       :graduation:紧急重要:
 ** TODO Second most important thing that you have to do
