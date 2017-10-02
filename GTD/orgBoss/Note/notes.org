@@ -128,3 +128,10 @@ Org能识别无序列表、有序列表、和描述表
 https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
                          
 
+* Quick notes
+** data science for making decision [#B]                             :@work:
+                           Added: [2017-10-02 周一 21:08]
+                           
+Data science involves principles（原则）, processes（过程）,
+ and techniques（技术  也就是说在后文会介绍这些方面的个中信息） for understanding phenomena via the (automated) analysis of data. For the perspective of this article, the ultimate goal of data science is improving decision making（终极目标提高决策能力）, 
+as this generally is of paramount interest to business（对商业来说也是特别重要的）. 

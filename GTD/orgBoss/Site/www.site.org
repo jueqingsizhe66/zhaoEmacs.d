@@ -23,3 +23,16 @@ Many todos are too much,so don't worry ,make the Most important taks(MIP)
 ** http://sachachua.com/blog/sketched-books/
 ** http://orgmode.org/worg/org-hacks.html                :@NCEPU:不紧急重要:
  org-hacks
+** http://www.trollope.org/scheme.html
+ scheme loves kids, and we all kids
+** http://www.lisperati.com/tellstuff/index.html
+ computer scientist like it , like the website
+** http://www.defmacro.org/
+ how to macro it? market model
+** http://www.jianshu.com/p/ce9c5a312174
+ http://www.lisperati.com/clojure-spels/casting.html
+ casting spels in lisp
+** https://en.wikipedia.org/wiki/Laminar-turbulent_transition
+ 边界层转捩
+** http://en.wikipedia.org/wiki/Flow_separation
+ Flow separation

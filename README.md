@@ -359,6 +359,7 @@ add `evil-surround` into my-package list
 12. counsel-git-grep
 13. swiper
 
+我见过比较好的[git教程][84]
 
 git配置
 
@@ -848,6 +849,8 @@ Emacs is an programmable text and plain editor(Emacs lisp is a programmable prog
 Go to understand what emacs thinks and touch the emacs interpreter, read 
 the book 《[Writing Gnu Emacs Extension][68]》
 
+**C-c 通常代表的是 applied 某种功能到文件中 **
+
 ### 40. emacs结合fortran(windows 和ubuntu开始有点不一样了)
 
 使用[fortpy][71],但是安装它废了不少劲，首先得安装deferred
@@ -964,7 +967,35 @@ seen from [jianshu][74]
 3. [uncle glassman][78]  
 4. [How I use Emacs and Org-mode to implement GTD][14]  very important for using org-mode in emacs!
 5. [Norang: org-mode Organize Your life in plain text][82]
+    6. [Remember Mode Tutorial][85] 早先使用remember mode,现在基本上替换为org capture即可
+6. [Your Mind is for having ideas, not holding them---David Allen][83]  Use org-mode to hold it
 
+   a. Capture(collect what has your attention)
+       ```
+       Use an in-tray, notepad, digital list, or voice recorder to capture everything that has your attention. 
+       Little, big, personal and professional—all your to-do’s, projects, things to handle or finish. 
+       ```
+   b. Clarify(Process what it means)
+       ```
+       Take everything that you capture and ask: Is it actionable? If no, then trash it, incubate it, 
+       or file it as reference. If yes, decide the very next action required. If it will take less than 
+       two minutes, do it now. If not, delegate it if you can; or put it on a list to do when you can. 
+       ```
+   c. Organize(put it where it belongs)
+       ```
+       Put action reminders on the right lists. For example, create lists for the appropriate categories
+       —calls to make, errands to run, emails to send, etc. 
+       ```
+   d. Reflect(review frequently,weekly review, monthly review)
+       ```
+       Look over your lists as often as necessary to trust your choices about what to do next. Do a weekly 
+       review to get clear, get current, and get creative. 
+       ```
+   e. Engage(Simply do)
+       ```
+       Use your system to take appropriate actions with confidence. 
+       ```
+   
 
 
 
@@ -1008,7 +1039,7 @@ add code below in the .orgConf.el
 ![new gtd style][81]
 
 
-### 47. 常见verb
+### 47. 常见verb(*****)
 
 。
 
@@ -1019,7 +1050,14 @@ add code below in the .orgConf.el
 我用以下的词汇来表征任务表：
 ```
 
-处理，提问，回避，购买，变更，明确，收集，委托，从事，深思，想象，决定，延期，开发，废弃，重新实现，下载，输入，整理，跟踪，雇佣，改善，增 加，报告，寻找，维持，测定，检测，订货，描画，打电话，设置优先级，购入，减少，记忆，修理，回复，调查，回顾，时间安排，卖，送，服务，指定，开始， 停止，建议，规划，坐车，更新，升级，写。
+处理，提问，回避，购买，变更，明确（澄清），收集，委托，从事，深思，创建，决定，延期，开发，废弃，
+重做，下载，输入，整理（file)，跟踪，雇佣，改善，增 加，通知，查询，维持，测定，监测，订货，
+描画，打电话，设置优先级，购入，质疑，减少，记忆，修理，回复，报告，调查研究，解决，回顾，
+安排，卖，送，服务，详细设定，开始， 停止，建议，清扫，坐车，更新，升级，写。
+
+构建，定义，执行列表(makefile)，做， 执行, 安排, 推送， 拉取, 观察, 仔细观察,感觉,拾取，拓展
+工作，学习，使用，提高，查找，分类，阅读，练习，分解，深入，
+见面，加载，调试，追踪
 ```
 
  Each task is written to begin with a "Next Action" Verb and an object or target of the verb. It is much easier to take action if you know what you need to do without reassessing the task. For example, "Weekly Report" is unclear whereas "Compile weekly call statistics" tells me what needs to be done.
@@ -1027,8 +1065,15 @@ add code below in the .orgConf.el
 Here is my list of action verbs:
 
 ```
-Address, ask, avoid, buy, change, clarify, collect, commend confront, consider, create, decide, defer, develop, discard, do again, download, enter, file, follow up, hire, improve, increase, inform, inquire, maintain, measure, monitor, order, paint, phone, prioritize, purchase, question, reduce, remember, repair, reply, report, research, resolve, review, schedule, sell, send, service, specify, start, stop, suggest, tidy, train, update, upgrade, write. 
+Address, ask, avoid, buy, change, clarify, collect, commend confront, consider, create, decide, defer, develop, discard, 
+do again, download, enter, file, follow up, hire, improve, increase, inform, inquire, maintain, measure, monitor, order, 
+paint, phone, prioritize, purchase, question, reduce, remember, repair, reply, report, research, resolve, review, schedule, 
+sell, send, service, specify, start, stop, suggest, tidy, train, update, upgrade, write. 
+Build, Define, Make ， do, perform, arrange, push, pull， watch,perceive，sense，pick，extend
+work， learn，use, improve, find, classify, read,practice,break into pieces(decompose),delve into
+meet,load,debug,track
 ```
+
 
 One task list: 
 ```
@@ -1053,19 +1098,59 @@ One task list:
 在各个工程项目的目录中记述项目的内容，换句话说就是细化项目流程，在其下方用目录构造表示。
 与任务的（Next Action）中说明的一样，这里我也用一些动词来表述项目：
     
-    安成，决定，处理，调查，提示，扩大，计划，设计，结束，确定，查询，展开，更新，安装，改良，设定。
+    终结，决定，处理，调查，提交，扩大，组织，设计，完成，
+    确保，研究，展开，更新，安装，改良，设定，缩小。
 
 
  This section is used to store details of each project I am working on. A project is a group of activities with a specific outcome that requires more than one action step and usually has a target date for completion.
 Each project is stored as as heading with a subheading to contain a description of the project, and a work breakdown structure.
 I use a set of Project Verbs in a similar manner to how I write Tasks (Next Actions):
 
-    Finalize, resolve, handle, look into, submit, maximize, organize, design, complete, ensure, research, roll out, update, install, implement, set-up. 
+    Finalize, resolve, handle, look into, submit, maximize, organize, design, complete,
+    ensure, research, roll out, update, install, implement, set-up, minimize. 
 
 
+
+### 48. 被忽略的细节：Tag具有继承性
+
+Tag(org-tag-alist)是有继承性的，也就是说，假如一级标题的tag有work，则该级标题以下的所有子标题无论是否显式注明，都自动具有work的标签。例如：
+
+```
+: * Meeting with sb. :work:
+ 
+: ** Summary with sb1. :boss:notes:
+ 
+: *** TODO Prepare slides for him :action:
+```
+
+Summary with sb1的标签就是work, boss, notes，最后一项的标签就是work, boss, notes, action.
+
+
+### 49. 打开evil-mode和关闭evil-mode
+
+执行一次`M-x evil-mode` 表示打开,这样就可以使用vim的text object, 和跳转之类的命令了。
+
+再执行一次`M-x evil-mode` 表示关闭
+
+### 50. org-mode thinking(philosophy)
+
+writing can be seen from your organization and simplication.
+
+```
+    Writing can be both art and communication; indeed, real communication
+    happens only when writing is charged with artistic passion.
+    For Nils, a key word is Composition. Nils once took a course in photography from a teacher
+    who declared that:
+    Composition = Organisation + Simpliﬁcation.
+    "composition is the best way of seeing"
+```
+
+
+orgmode计时,
+ 在todo.org中，移到一个条目上，按`Ctrl-c Ctrl-x Ctrl-i`即可对该条目开始计时，`Ctrl-c Ctrl-x Ctrl-o`停止当前计时。
+ 如果在Agenda中，移到条目按I(大写)即可对该条目开始计时，O(大写)即可停止计时。
 <hr/>
-
-<hr/>
+    <hr/>
 
 
 
@@ -1151,3 +1236,6 @@ I use a set of Project Verbs in a similar manner to how I write Tasks (Next Acti
 [80]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/org-bullet.jpg
 [81]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/betterbullet.jpg
 [82]:http://doc.norang.ca/org-mode.html#ClockingInDefaultTask
+[83]:http://gettingthingsdone.com/
+[84]:https://www.atlassian.com/git/tutorials/comparing-workflows
+    [85]:http://members.optusnet.com.au/~charles57/GTD/remember.html
