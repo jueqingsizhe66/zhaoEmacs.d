@@ -1010,19 +1010,28 @@ add code below in the .orgConf.el
 
 ### 47. 常见verb
 
-我用以下的词汇来表征任务表：
-处理，提问，回避，购买，变更，明确，收集，委托，从事，深思，想象，决定，延期，开发，废弃，重新实现，下载，输入，整理，跟踪，雇佣，改善，增 加，报告，寻找，维持，测定，检测，订货，描画，打电话，设置优先级，购入，减少，记忆，修理，回复，调查，回顾，时间安排，卖，送，服务，指定，开始， 停止，建议，规划，坐车，更新，升级，写。
+。
 
 #### 任务（TASKS）
 
 任何任务都应该用明确的动词来表征「Next Action」的行为，并记述该动词的目的和行为的目标。这样一来你不需要再次思考任务的形式，从而简单地执行。比如，与其写「周报告」不如以「总结这一周的来表述任务的内容更加能够容易理解该做什么。
+
 我用以下的词汇来表征任务表：
+```
+
 处理，提问，回避，购买，变更，明确，收集，委托，从事，深思，想象，决定，延期，开发，废弃，重新实现，下载，输入，整理，跟踪，雇佣，改善，增 加，报告，寻找，维持，测定，检测，订货，描画，打电话，设置优先级，购入，减少，记忆，修理，回复，调查，回顾，时间安排，卖，送，服务，指定，开始， 停止，建议，规划，坐车，更新，升级，写。
+```
 
  Each task is written to begin with a "Next Action" Verb and an object or target of the verb. It is much easier to take action if you know what you need to do without reassessing the task. For example, "Weekly Report" is unclear whereas "Compile weekly call statistics" tells me what needs to be done.
+ 
 Here is my list of action verbs:
-Address, ask, avoid, buy, change, clarify, collect, commend confront, consider, create, decide, defer, develop, discard, do again, download, enter, file, follow up, hire, improve, increase, inform, inquire, maintain, measure, monitor, order, paint, phone, prioritize, purchase, question, reduce, remember, repair, reply, report, research, resolve, review, schedule, sell, send, service, specify, start, stop, suggest, tidy, train, update, upgrade, write. 
 
+```
+Address, ask, avoid, buy, change, clarify, collect, commend confront, consider, create, decide, defer, develop, discard, do again, download, enter, file, follow up, hire, improve, increase, inform, inquire, maintain, measure, monitor, order, paint, phone, prioritize, purchase, question, reduce, remember, repair, reply, report, research, resolve, review, schedule, sell, send, service, specify, start, stop, suggest, tidy, train, update, upgrade, write. 
+```
+
+One task list: 
+```
    Tasks:      TODO Write descrip of my GTD / orgmode                  :COMPUTER:
    Tasks:      TODO Study the Inkscape Tutorial Book                   :COMPUTER:
    Tasks:      TODO Write an article about org-mode vocabulary capture :COMPUTER:
@@ -1034,18 +1043,24 @@ Address, ask, avoid, buy, change, clarify, collect, commend confront, consider, 
    Projects:   TODO Daily Katakana review on Anki                          :HOME:
    Projects:   TODO Study - Beyond Words: A Guide to Drawing Out Ideas     :HOME:
    Projects:   TODO Read TALE OF THE GENJI                              :READING:
-   
+  
+```
+
+
 #### 工程项目
 
 我使用这个分类来记录各个工程项目中的详细信息。一个工程项目对应一个以上的行动，并且它们通常都付有结束的日期。
 在各个工程项目的目录中记述项目的内容，换句话说就是细化项目流程，在其下方用目录构造表示。
-与任务的（Next Action）中说明的一样，这里我也用一些动词来表述项目：安成，决定，处理，调查，提示，扩大，计划，设计，结束，确定，查询，展开，更新，安装，改良，设定。
+与任务的（Next Action）中说明的一样，这里我也用一些动词来表述项目：
+    
+    安成，决定，处理，调查，提示，扩大，计划，设计，结束，确定，查询，展开，更新，安装，改良，设定。
 
 
  This section is used to store details of each project I am working on. A project is a group of activities with a specific outcome that requires more than one action step and usually has a target date for completion.
 Each project is stored as as heading with a subheading to contain a description of the project, and a work breakdown structure.
 I use a set of Project Verbs in a similar manner to how I write Tasks (Next Actions):
-Finalize, resolve, handle, look into, submit, maximize, organize, design, complete, ensure, research, roll out, update, install, implement, set-up. 
+
+    Finalize, resolve, handle, look into, submit, maximize, organize, design, complete, ensure, research, roll out, update, install, implement, set-up. 
 
 
 <hr/>
